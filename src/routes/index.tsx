@@ -1,26 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AmbientBackground } from "@/components/AmbientBackground";
+import { MarketingHeader } from "@/components/marketing/MarketingHeader";
+import { MarketingFooter } from "@/components/marketing/MarketingFooter";
+import { Hero } from "@/components/marketing/Hero";
+import { LogoMarquee } from "@/components/marketing/LogoMarquee";
+import { Features } from "@/components/marketing/Features";
+import { AiSpotlight } from "@/components/marketing/AiSpotlight";
+import { Stats } from "@/components/marketing/Stats";
+import { Pricing } from "@/components/marketing/Pricing";
+import { Testimonials } from "@/components/marketing/Testimonials";
+import { FAQ } from "@/components/marketing/FAQ";
+import { FinalCTA } from "@/components/marketing/FinalCTA";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Tijera.ai — Tu barbería atiende sola con IA" },
+      {
+        name: "description",
+        content:
+          "Sistema de gestión para barberías con agente de IA que reserva citas por WhatsApp y llamadas automáticamente. Calendario, CRM y panel en una sola herramienta.",
+      },
+      { property: "og:title", content: "Tijera.ai — Tu barbería atiende sola con IA" },
+      { property: "og:description", content: "Agente IA que reserva citas por WhatsApp y llamadas. Sin intervención humana." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen overflow-hidden">
+      <AmbientBackground />
+      <MarketingHeader />
+      <main>
+        <Hero />
+        <LogoMarquee />
+        <Features />
+        <AiSpotlight />
+        <Stats />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <MarketingFooter />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
