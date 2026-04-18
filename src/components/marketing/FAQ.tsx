@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const FAQ = [
+const ITEMS = [
   { q: "¿Necesito instalar algo?", a: "No. Tijera.ai es 100% web. Funciona en tu portátil, tablet o móvil con cualquier navegador moderno." },
   { q: "¿Cómo conecto WhatsApp?", a: "Te guiamos en 2 clics para conectar tu WhatsApp Business oficial. No usamos números personales ni baneables." },
   { q: "¿La IA realmente reserva sola?", a: "Sí. Lee tu agenda, los servicios disponibles y la duración de cada uno. Reserva, mueve y cancela sin avisarte. Solo te interrumpe si el cliente pide algo fuera de lo normal." },
@@ -32,7 +32,7 @@ export function FAQ() {
 
         <Reveal delay={120}>
           <Accordion type="single" collapsible className="mt-10 rounded-2xl glass-panel px-2">
-            {FAQ.map((item) => (
+            {ITEMS.map((item) => (
               <AccordionItem key={item.q} value={item.q} className="border-border/60 px-4">
                 <AccordionTrigger className="text-left text-sm font-medium hover:no-underline">
                   {item.q}
