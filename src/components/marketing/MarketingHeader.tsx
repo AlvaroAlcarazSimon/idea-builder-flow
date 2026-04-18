@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Logo } from "./Logo";
-import { Button } from "./ui/button";
+import { Logo } from "@/components/Logo";
+import { Button } from "@/components/ui/button";
 
 const NAV = [
   { href: "/#features", label: "Producto" },
