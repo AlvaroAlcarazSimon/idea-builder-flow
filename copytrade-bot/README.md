@@ -80,6 +80,12 @@ Todos los parámetros están explicados en ese archivo.
 - **Seguridad**: usa una wallet nueva solo para el bot, nunca tu wallet principal. No compartas el `.env` con nadie ni lo subas a GitHub (ya está en `.gitignore`).
 - Esto no es asesoramiento financiero. Pruébalo en simulación primero.
 
+## Simulación continua
+
+`simulacion/simular.sh` deja el bot en simulación copiando a los traders de `simulacion/traders.json`
+(arranca solo si no está corriendo y restaura el estado guardado). `./simulacion/simular.sh resumen`
+regenera [`simulacion/RESUMEN.md`](simulacion/RESUMEN.md) con el resultado por trader, y `parar` la detiene.
+
 ## Cómo detecta las operaciones
 
 Lo obvio sería suscribirse a "todas las transacciones que mencionan la wallet", pero con traders conocidos no funciona:

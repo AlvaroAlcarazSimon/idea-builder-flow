@@ -8,6 +8,7 @@
     "start": "tsx src/index.ts",
     "analyze": "tsx src/analyze.ts",
     "status": "tsx src/status.ts",
+    "report": "tsx src/report.ts",
     "sell-all": "tsx src/sellAll.ts",
     "wallet:new": "tsx src/newWallet.ts",
     "screen": "tsx src/screen.ts",
