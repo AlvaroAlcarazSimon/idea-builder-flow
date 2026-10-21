@@ -20,6 +20,9 @@ export interface HistoryReport {
   signatures: number;
   mentionsPerMin: number;
   noisy: boolean;
+  /** Transacciones leídas y cuántas firmó la propia wallet (el resto son de terceros: airdrops, spam, bots). */
+  analyzedTxs: number;
+  ownTxs: number;
   /** Horas entre su primera y su última operación analizada. */
   windowHours: number;
   buys: number;
@@ -91,6 +94,8 @@ export async function analyzeHistory(
     signatures: sigs.length,
     mentionsPerMin,
     noisy: sigs.length >= 200 && mentionsPerMin > NOISY_PER_MIN,
+    analyzedTxs: 0,
+    ownTxs: 0,
     windowHours: 0,
     buys: 0,
     buysPerDay: 0,
@@ -121,7 +126,10 @@ export async function analyzeHistory(
     const txs = await Promise.all(batch.map((s) => getTx(conn, s.signature)));
     txs.forEach((tx, j) => {
       if (!tx) return;
-      for (const ev of parseSwaps(fromParsedTransaction(tx), wallet, batch[j].signature)) {
+      const like = fromParsedTransaction(tx);
+      report.analyzedTxs++;
+      if (like.accountKeys.some((k) => k.signer && k.pubkey === wallet)) report.ownTxs++;
+      for (const ev of parseSwaps(like, wallet, batch[j].signature)) {
         const st = stats.get(ev.mint) ?? { spent: 0, received: 0, buys: 0, sells: 0, stillHolding: false };
         const t = (ev.blockTime ?? 0) * 1000;
         eventTimes.push(t);
@@ -179,7 +187,15 @@ export async function analyzeHistory(
 
 /** ¿Se puede copiar con unos segundos de retraso y salir con beneficio? */
 export function verdictFor(r: HistoryReport): HistoryReport["verdict"] {
-  if (r.trades.length < 5) return { level: "no", reason: `pocos trades cerrados para juzgar (${r.trades.length})` };
+  if (r.trades.length < 5) {
+    if (r.analyzedTxs > 0 && r.ownTxs / r.analyzedTxs < 0.3) {
+      return {
+        level: "no",
+        reason: `solo ${r.ownTxs} de ${r.analyzedTxs} transacciones son suyas (el resto, airdrops y spam de terceros): analízala con --live o más --txs`,
+      };
+    }
+    return { level: "no", reason: `pocos trades cerrados para juzgar (${r.trades.length})` };
+  }
   if (r.pnlSol <= 0) return { level: "no", reason: "pierde en el periodo analizado" };
   if (r.scalpPct > 40 || r.medianHoldMin < 2) return { level: "no", reason: "scalper: aguanta demasiado poco para copiarle" };
   if (r.topTradeShare > 0.7) return { level: "dudoso", reason: "casi todo el beneficio viene de un solo trade" };

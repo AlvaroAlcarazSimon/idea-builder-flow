@@ -43,6 +43,7 @@ async function main() {
   const best = [...r.trades].sort((a, b) => b.pnl - a.pnl);
   const sign = (n: number) => (n >= 0 ? "+" : "");
   console.log("═══════════════ RESUMEN ═══════════════");
+  console.log(`Transacciones suyas:        ${r.ownTxs} de ${r.analyzedTxs} (el resto son de terceros)`);
   console.log(`Periodo analizado:          ${r.windowHours.toFixed(1)} h · ${r.buys} compras (${r.buysPerDay.toFixed(1)}/día)`);
   console.log(`Tokens operados (cerrados): ${r.trades.length} · abiertos sin vender: ${r.openPositions}`);
   console.log(`Win rate:                   ${(r.winRate * 100).toFixed(1)}%`);
