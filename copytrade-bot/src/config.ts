@@ -69,6 +69,8 @@ function loadConfig() {
     maxBuySol: num("MAX_BUY_SOL", 0.5),
     minTargetBuySol: num("MIN_TARGET_BUY_SOL", 0.05),
     allowAddOnRebuy: bool("ALLOW_ADD_ON_REBUY", false),
+    /** Copiar solo cuando el trader abre posición (no tenía el token): sus ampliaciones llegan a mitad de trade. */
+    copyOnlyNewPositions: bool("COPY_ONLY_NEW_POSITIONS", true),
     /** Minutos sin volver a comprar un token que acabamos de cerrar (evita entrar y salir en bucle). */
     rebuyCooldownMin: num("REBUY_COOLDOWN_MIN", 5),
     maxSignalAgeSec: num("MAX_SIGNAL_AGE_SEC", 30),

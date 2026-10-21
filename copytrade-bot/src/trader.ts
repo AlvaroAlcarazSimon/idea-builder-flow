@@ -76,6 +76,9 @@ export class Trader {
       this.state.upsertPosition(existing);
     }
     if (existing && !config.allowAddOnRebuy) return skip("ya tengo posición (ALLOW_ADD_ON_REBUY=false)");
+    if (!existing && config.copyOnlyNewPositions && ev.tokenPre > 0n) {
+      return skip("el trader ya tenía este token: es una ampliación a mitad de trade, no una entrada");
+    }
     const closedAt = this.state.lastClosedAt(ev.mint);
     if (!existing && closedAt && Date.now() - closedAt < config.rebuyCooldownMin * 60_000) {
       return skip(`lo cerré hace ${Math.round((Date.now() - closedAt) / 1000)}s (REBUY_COOLDOWN_MIN=${config.rebuyCooldownMin})`);

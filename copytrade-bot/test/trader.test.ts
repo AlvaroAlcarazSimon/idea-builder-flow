@@ -209,3 +209,16 @@ test("no vuelve a entrar en un token recién cerrado (REBUY_COOLDOWN_MIN)", asyn
   await flush();
   assert.equal(state.getPosition(MEME), undefined, "no recompra a los pocos segundos");
 });
+
+test("no copia ampliaciones: si el trader ya tenía el token, no es una entrada", async () => {
+  price = 0.1 / 1_000_000;
+  const state = new State(join(dir, "s7.json"));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const trader = new Trader(fakeExec as any, state) as any;
+  trader.onSwap(ev("buy", { tokenPre: 5000n, tokenPost: 6000n }));
+  await flush();
+  assert.equal(state.getPosition(MEME), undefined);
+  trader.onSwap(ev("buy", { tokenPre: 0n, tokenPost: 1000n }));
+  await flush();
+  assert.ok(state.getPosition(MEME));
+});
