@@ -21,6 +21,22 @@ const closed = state.closed;
 const total = closed.reduce((a, t) => a + t.realizedPnlSol, 0);
 const wins = closed.filter((t) => t.realizedPnlSol > 0).length;
 console.log(`\nCerradas: ${closed.length} · win rate ${closed.length ? ((wins / closed.length) * 100).toFixed(1) : 0}% · PnL total ${fmt(total)} SOL`);
+const bySource = new Map<string, { n: number; wins: number; pnl: number; cost: number }>();
+for (const t of closed) {
+  const s = bySource.get(t.source) ?? { n: 0, wins: 0, pnl: 0, cost: 0 };
+  s.n++;
+  s.wins += t.realizedPnlSol > 0 ? 1 : 0;
+  s.pnl += t.realizedPnlSol;
+  s.cost += t.totalCostSol;
+  bySource.set(t.source, s);
+}
+if (bySource.size > 1) {
+  console.log("Por trader:");
+  for (const [src, s] of [...bySource].sort((a, b) => b[1].pnl - a[1].pnl)) {
+    console.log(`  ${src}  ${s.n} trades · WR ${((s.wins / s.n) * 100).toFixed(0)}% · PnL ${fmt(s.pnl)} SOL (${((s.pnl / s.cost) * 100).toFixed(1)}%)`);
+  }
+  console.log("");
+}
 for (const t of closed.slice(-15).reverse()) {
   console.log(`  ${new Date(t.closedAt).toLocaleString()}  ${t.mint.slice(0, 8)}…  ${fmt(t.realizedPnlSol)} SOL  (${t.reason})`);
 }

@@ -76,6 +76,10 @@ export class Trader {
       this.state.upsertPosition(existing);
     }
     if (existing && !config.allowAddOnRebuy) return skip("ya tengo posición (ALLOW_ADD_ON_REBUY=false)");
+    const closedAt = this.state.lastClosedAt(ev.mint);
+    if (!existing && closedAt && Date.now() - closedAt < config.rebuyCooldownMin * 60_000) {
+      return skip(`lo cerré hace ${Math.round((Date.now() - closedAt) / 1000)}s (REBUY_COOLDOWN_MIN=${config.rebuyCooldownMin})`);
+    }
     if (!existing && this.state.positions.length >= config.maxOpenPositions) {
       return skip(`máximo de posiciones abiertas (${config.maxOpenPositions})`);
     }

@@ -58,6 +58,8 @@ cp .env.example .env
 | `npm start` | Arranca el bot |
 | `npm run analyze -- <wallet> [n]` | Analiza las últimas `n` transacciones de un trader |
 | `npm run analyze -- <wallet> --live [min]` | Escucha al trader en directo y resume lo que hace |
+| `npm run screen -- --kolscan` | Busca traders copiables: coge la clasificación de [kolscan.io](https://kolscan.io/leaderboard), descarta scalpers y analiza el historial de cada uno |
+| `npm run screen -- <w1> <w2> …` | Lo mismo con las wallets que tú le pases |
 | `npm run status` | Posiciones abiertas, historial y PnL |
 | `npm run sell-all` | 🚨 Botón del pánico: vende todo a SOL |
 | `npm run wallet:new` | Genera una wallet nueva para el bot |

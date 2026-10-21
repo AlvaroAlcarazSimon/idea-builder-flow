@@ -69,6 +69,8 @@ function loadConfig() {
     maxBuySol: num("MAX_BUY_SOL", 0.5),
     minTargetBuySol: num("MIN_TARGET_BUY_SOL", 0.05),
     allowAddOnRebuy: bool("ALLOW_ADD_ON_REBUY", false),
+    /** Minutos sin volver a comprar un token que acabamos de cerrar (evita entrar y salir en bucle). */
+    rebuyCooldownMin: num("REBUY_COOLDOWN_MIN", 5),
     maxSignalAgeSec: num("MAX_SIGNAL_AGE_SEC", 30),
     /** No comprar si entraríamos más de este % por encima del precio al que compró el trader. 0 = sin límite. */
     maxEntryPremiumPct: num("MAX_ENTRY_PREMIUM_PCT", 25),

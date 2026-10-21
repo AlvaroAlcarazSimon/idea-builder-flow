@@ -76,6 +76,11 @@ export class State {
   getPosition(mint: string): Position | undefined {
     return this.data.positions[mint];
   }
+  /** Cuándo cerramos por última vez una posición en este token (ms), si alguna vez lo hicimos. */
+  lastClosedAt(mint: string): number | undefined {
+    for (let i = this.data.closed.length - 1; i >= 0; i--) if (this.data.closed[i].mint === mint) return this.data.closed[i].closedAt;
+    return undefined;
+  }
   upsertPosition(p: Position) {
     this.data.positions[p.mint] = p;
     this.save();
