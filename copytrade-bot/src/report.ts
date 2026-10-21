@@ -16,7 +16,13 @@ const short = (s: string) => `${s.slice(0, 4)}…${s.slice(-4)}`;
 const name = (w: string) => names[w] ?? short(w);
 const sol = (n: number) => `${n >= 0 ? "+" : "−"}${Math.abs(n).toFixed(3).replace(".", ",")} SOL`;
 const pct = (n: number) => `${n >= 0 ? "+" : "−"}${Math.abs(n).toFixed(1).replace(".", ",")}%`;
-const utc = (ms: number) => new Date(ms).toISOString().slice(0, 16).replace("T", " ");
+/** Horas en la zona del usuario (por defecto, España). */
+const TZ = process.env.REPORT_TZ || "Europe/Madrid";
+const TZ_LABEL = TZ === "Europe/Madrid" ? "hora de España" : TZ;
+const when = (ms: number) =>
+  new Intl.DateTimeFormat("es-ES", { timeZone: TZ, day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })
+    .format(new Date(ms))
+    .replace(",", "");
 const ago = (ms: number) => {
   const min = (Date.now() - ms) / 60_000;
   return min < 90 ? `${Math.round(min)} min` : `${(min / 60).toFixed(1).replace(".", ",")} h`;
@@ -70,7 +76,7 @@ for (const p of state.positions) {
 const out: string[] = [];
 const started = firstLogTime ?? Math.min(...state.closed.map((t) => t.openedAt), ...state.positions.map((p) => p.openedAt), Date.now());
 out.push("# 🧪 Simulación del bot de copytrade", "");
-out.push(`**Actualizado:** ${utc(Date.now())} UTC · **en marcha desde:** ${utc(started)} UTC (${ago(started)})`, "");
+out.push(`**Actualizado:** ${when(Date.now())} · **en marcha desde:** ${when(started)} (${ago(started)}) · ${TZ_LABEL}`, "");
 out.push("Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.", "");
 
 out.push("## Resultado por trader", "");
@@ -114,10 +120,10 @@ if (state.positions.length) {
 const recent = state.closed.slice(-20).reverse();
 out.push(`## Últimos trades cerrados (${state.closed.length} en total)`, "");
 if (recent.length) {
-  out.push("| Cerrado (UTC) | Token | Trader | Resultado | Duró | Motivo |", "|---|---|---|---|---|---|");
+  out.push(`| Cerrado (${TZ_LABEL}) | Token | Trader | Resultado | Duró | Motivo |`, "|---|---|---|---|---|---|");
   for (const t of recent) {
     out.push(
-      `| ${utc(t.closedAt).slice(5)} | [${short(t.mint)}](https://dexscreener.com/solana/${t.mint}) | ${name(t.source)} | ${sol(t.realizedPnlSol)} (${pct((t.realizedPnlSol / t.totalCostSol) * 100)}) | ${Math.max(1, Math.round((t.closedAt - t.openedAt) / 60_000))} min | ${t.reason} |`,
+      `| ${when(t.closedAt)} | [${short(t.mint)}](https://dexscreener.com/solana/${t.mint}) | ${name(t.source)} | ${sol(t.realizedPnlSol)} (${pct((t.realizedPnlSol / t.totalCostSol) * 100)}) | ${Math.max(1, Math.round((t.closedAt - t.openedAt) / 60_000))} min | ${t.reason} |`,
     );
   }
 }
