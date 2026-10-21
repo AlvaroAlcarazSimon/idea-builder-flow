@@ -114,7 +114,7 @@ async function main() {
   });
 
   console.log("\n═════════════════════════════ RESULTADO ═════════════════════════════");
-  console.log("Trader            Veredicto  PnL periodo     WR   Mediana  <1min  Compras/día  Compra media  Periodo");
+  console.log("Trader            Veredicto  PnL total        Copiable (>5 min)       WR   Mediana  <1min  Compras/día  Compra media  Periodo");
   for (const r of results) {
     const name = (r.name ?? r.wallet.slice(0, 8)).slice(0, 16).padEnd(16);
     if (!r.report) {
@@ -127,8 +127,9 @@ async function main() {
       console.log(`${name}  ${icon}  (historial con ruido de terceros: usa npm run analyze -- ${r.wallet} --live 30)`);
       continue;
     }
+    const sol = (n: number) => `${n >= 0 ? "+" : ""}${fmt(n, 2)} SOL`;
     console.log(
-      `${name}  ${icon}  ${(x.pnlSol >= 0 ? "+" : "") + fmt(x.pnlSol, 2)} SOL`.padEnd(42) +
+      `${name}  ${icon}  ${sol(x.pnlSol).padEnd(15)}  ${`${sol(x.copyablePnl)} (${x.copyableTrades})`.padEnd(22)}` +
         `${fmt(x.winRate * 100, 0).padStart(3)}%  ${fmt(x.medianHoldMin).padStart(6)}m  ${fmt(x.scalpPct, 0).padStart(4)}%  ${fmt(x.buysPerDay).padStart(11)}  ${fmt(x.medianBuySol, 2).padStart(9)} SOL  ${fmt(x.windowHours, 0)} h`,
     );
   }

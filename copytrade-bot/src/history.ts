@@ -3,6 +3,16 @@ import { fromParsedTransaction, parseSwaps } from "./parser.js";
 
 /** Más menciones por minuto que esto = la wallet sale en txs de terceros y el historial no sirve. */
 export const NOISY_PER_MIN = 100;
+/** Trades más largos que esto se pueden copiar con unos segundos de retraso. */
+export const COPYABLE_MIN = 5;
+/** Máximo de tokens vendidos en la ventana cuya compra (anterior) se busca en el historial de su cuenta. */
+const MAX_PREWINDOW_LOOKUPS = 20;
+
+const TOKEN_PROGRAMS = [
+  new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+  new PublicKey("TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"),
+];
+const ATA_PROGRAM = new PublicKey("ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL");
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -40,6 +50,13 @@ export interface HistoryReport {
   under5MinPct: number;
   /** Parte del beneficio total que viene del mejor trade (1 = todo). */
   topTradeShare: number;
+  /** Beneficio de los trades de ≥ COPYABLE_MIN minutos: lo que un copiador con retraso puede capturar. */
+  copyablePnl: number;
+  copyableTrades: number;
+  /** Parte del beneficio copiable que viene de su mejor trade copiable. */
+  topCopyableShare: number;
+  /** Beneficio de los trades de menos de 1 minuto (no copiable). */
+  scalpPnl: number;
   verdict: { level: "ok" | "dudoso" | "no"; reason: string };
 }
 
@@ -109,6 +126,10 @@ export async function analyzeHistory(
     scalpPct: 0,
     under5MinPct: 0,
     topTradeShare: 0,
+    copyablePnl: 0,
+    copyableTrades: 0,
+    topCopyableShare: 0,
+    scalpPnl: 0,
     verdict: { level: "no", reason: "" },
   };
   if (report.noisy) {
@@ -130,25 +151,27 @@ export async function analyzeHistory(
       report.analyzedTxs++;
       if (like.accountKeys.some((k) => k.signer && k.pubkey === wallet)) report.ownTxs++;
       for (const ev of parseSwaps(like, wallet, batch[j].signature)) {
-        const st = stats.get(ev.mint) ?? { spent: 0, received: 0, buys: 0, sells: 0, stillHolding: false };
-        const t = (ev.blockTime ?? 0) * 1000;
-        eventTimes.push(t);
-        if (ev.side === "buy") {
-          st.buys++;
-          st.spent += Math.max(0, -ev.solDelta);
-          st.firstBuy ??= t;
-          if (-ev.solDelta > 0) buySizes.push(-ev.solDelta);
-        } else if (!ev.isTransfer) {
-          st.sells++;
-          st.received += Math.max(0, ev.solDelta);
-          st.lastSell = t;
-        }
-        st.stillHolding = ev.tokenPost > 0n;
+        const st = stats.get(ev.mint) ?? emptyStats();
+        accumulate(st, ev);
         stats.set(ev.mint, st);
+        eventTimes.push((ev.blockTime ?? 0) * 1000);
+        if (ev.side === "buy" && -ev.solDelta > 0) buySizes.push(-ev.solDelta);
       }
     });
     onProgress?.(Math.min(i + 5, ordered.length), ordered.length);
     await sleep(200);
+  }
+
+  // Tokens que vende en la ventana pero compró antes: son sus posiciones largas (las más copiables).
+  // Su compra se busca en el historial de su cuenta de ese token, que no tiene ruido de terceros.
+  const processed = new Set(ordered.map((s) => s.signature));
+  const preWindow = [...stats.entries()]
+    .filter(([, s]) => s.sells > 0 && s.buys === 0)
+    .sort((a, b) => b[1].received - a[1].received)
+    .slice(0, MAX_PREWINDOW_LOOKUPS);
+  for (const [mint] of preWindow) {
+    const full = await tokenHistory(conn, pk, new PublicKey(mint), processed);
+    if (full && full.buys > 0) stats.set(mint, full);
   }
 
   const trades: ClosedTrade[] = [...stats.entries()]
@@ -163,6 +186,9 @@ export async function analyzeHistory(
     }));
   const pnl = trades.reduce((a, t) => a + t.pnl, 0);
   const best = trades.reduce((a, t) => Math.max(a, t.pnl), 0);
+  const copyable = trades.filter((t) => t.holdMin >= COPYABLE_MIN);
+  const copyablePnl = copyable.reduce((a, t) => a + t.pnl, 0);
+  const bestCopyable = copyable.reduce((a, t) => Math.max(a, t.pnl), 0);
   const windowMs = eventTimes.length > 1 ? Math.max(...eventTimes) - Math.min(...eventTimes) : 0;
   const pct = (n: number) => (trades.length ? (n / trades.length) * 100 : 0);
 
@@ -180,6 +206,10 @@ export async function analyzeHistory(
     scalpPct: pct(trades.filter((t) => t.holdMin < 1).length),
     under5MinPct: pct(trades.filter((t) => t.holdMin < 5).length),
     topTradeShare: pnl > 0 ? best / pnl : 0,
+    copyablePnl,
+    copyableTrades: copyable.length,
+    topCopyableShare: copyablePnl > 0 ? bestCopyable / copyablePnl : 0,
+    scalpPnl: trades.filter((t) => t.holdMin < 1).reduce((a, t) => a + t.pnl, 0),
   });
   report.verdict = verdictFor(report);
   return report;
@@ -196,9 +226,51 @@ export function verdictFor(r: HistoryReport): HistoryReport["verdict"] {
     }
     return { level: "no", reason: `pocos trades cerrados para juzgar (${r.trades.length})` };
   }
-  if (r.pnlSol <= 0) return { level: "no", reason: "pierde en el periodo analizado" };
-  if (r.scalpPct > 40 || r.medianHoldMin < 2) return { level: "no", reason: "scalper: aguanta demasiado poco para copiarle" };
-  if (r.topTradeShare > 0.7) return { level: "dudoso", reason: "casi todo el beneficio viene de un solo trade" };
-  if (r.winRate < 0.3) return { level: "dudoso", reason: "acierta poco: vive de pocos pelotazos" };
-  return { level: "ok", reason: "copiable" };
+  if (r.copyableTrades < 3) return { level: "no", reason: `scalper: casi no aguanta más de ${COPYABLE_MIN} min` };
+  if (r.copyablePnl <= 0) {
+    return { level: "no", reason: r.pnlSol > 0 ? `solo gana con trades de menos de ${COPYABLE_MIN} min (no copiable)` : "pierde en el periodo analizado" };
+  }
+  if (r.topCopyableShare > 0.7) return { level: "dudoso", reason: "su beneficio copiable viene casi todo de un solo trade" };
+  return { level: "ok", reason: `copiable: gana con trades de más de ${COPYABLE_MIN} min` };
+}
+
+function emptyStats(): TokenStats {
+  return { spent: 0, received: 0, buys: 0, sells: 0, stillHolding: false };
+}
+
+function accumulate(st: TokenStats, ev: ReturnType<typeof parseSwaps>[number]) {
+  const t = (ev.blockTime ?? 0) * 1000;
+  if (ev.side === "buy") {
+    st.buys++;
+    st.spent += Math.max(0, -ev.solDelta);
+    st.firstBuy ??= t;
+  } else if (!ev.isTransfer) {
+    st.sells++;
+    st.received += Math.max(0, ev.solDelta);
+    st.lastSell = t;
+  }
+  st.stillHolding = ev.tokenPost > 0n;
+}
+
+/** Historial completo de la wallet en un token, leído de su cuenta de ese token (Token y Token-2022). */
+async function tokenHistory(conn: Connection, owner: PublicKey, mint: PublicKey, known: Set<string>): Promise<TokenStats | null> {
+  const sigs: ConfirmedSignatureInfo[] = [];
+  for (const program of TOKEN_PROGRAMS) {
+    const [ata] = PublicKey.findProgramAddressSync([owner.toBuffer(), program.toBuffer(), mint.toBuffer()], ATA_PROGRAM);
+    sigs.push(...(await conn.getSignaturesForAddress(ata, { limit: 200 }).catch(() => [])));
+  }
+  if (sigs.length === 0) return null;
+  const st = emptyStats();
+  const unique = [...new Map(sigs.filter((s) => !s.err).map((s) => [s.signature, s])).values()];
+  unique.sort((a, b) => (a.slot ?? 0) - (b.slot ?? 0));
+  for (const s of unique) {
+    const tx = await getTx(conn, s.signature);
+    if (!tx) continue;
+    known.add(s.signature);
+    for (const ev of parseSwaps(fromParsedTransaction(tx), owner.toBase58(), s.signature)) {
+      if (ev.mint === mint.toBase58()) accumulate(st, ev);
+    }
+    await sleep(100);
+  }
+  return st;
 }

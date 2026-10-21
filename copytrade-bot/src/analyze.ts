@@ -51,6 +51,8 @@ async function main() {
   console.log(`Tamaño mediano de compra:   ${r.medianBuySol.toFixed(3)} SOL`);
   console.log(`Tiempo mediano en posición: ${r.medianHoldMin.toFixed(1)} min · <1 min: ${r.scalpPct.toFixed(0)}% · <5 min: ${r.under5MinPct.toFixed(0)}%`);
   if (r.pnlSol > 0) console.log(`Peso del mejor trade:       ${(r.topTradeShare * 100).toFixed(0)}% del beneficio`);
+  console.log(`Beneficio copiable:         ${sign(r.copyablePnl)}${r.copyablePnl.toFixed(3)} SOL en ${r.copyableTrades} trades de más de 5 min`);
+  console.log(`Beneficio de scalping:      ${sign(r.scalpPnl)}${r.scalpPnl.toFixed(3)} SOL en trades de menos de 1 min (no copiable)`);
   console.log("\nMejores trades:");
   for (const t of best.slice(0, 5)) console.log(`  ${t.mint}  ${sign(t.pnl)}${t.pnl.toFixed(3)} SOL (${t.pct.toFixed(0)}%) · ${t.holdMin.toFixed(1)} min`);
   console.log("Peores trades:");
