@@ -15,7 +15,7 @@
         "SIM-mvigcbtk-dj3abd"
       ],
       "sourceTokens": "35818920684361",
-      "lastValueSol": 0.129627484
+      "lastValueSol": 0.125293287
     }
   },
   "closed": [
@@ -162,6 +162,15 @@
       "openedAt": 1792609929761,
       "closedAt": 1792614248250,
       "reason": "stop loss (-47.4%)"
+    },
+    {
+      "mint": "5ExrYyePj2u31RRSbeT7FsEPAusjYB8Mt8HzHpg3pump",
+      "source": "8oQoMhfBQnRspn7QtNAq2aPThRE4q94kLSTwaaFQvRgs",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": 0.02121536999999998,
+      "openedAt": 1792615412414,
+      "closedAt": 1792615592811,
+      "reason": "copia venta del trader"
     }
   ],
   "processed": [
@@ -281,9 +290,21 @@
     "2TjX7qQ8FDBVPXz324zYh9GsMdwXGPQTiG1wS3BBoVSDuEU6mrDK9Z7e8pj7FGeNKrPMuaXbJdW1vqnUpnkVf5F1",
     "5wyueRWksTjsvmRKp5TDXd9Ro5KrDS8b7qTRzeGka7yvyhvxgPMwZ9WhmbxdteSxVQUyQ55X1UELKQ9UBVuN2t4s",
     "3k9qX2YTHb4cwKUQMnZZ7pw3xhcW3a1csSgbKtbsLzdUCVPat6fB8VX7Yo5pPAjhyTPcyPvvK42KDRhSzpCxTkdw",
-    "5SiAWqYN9iJpCuBftCa8NDJyCHijk7mDKKG2zx2cPv8NJ2Mws6xFJQADRjPPZZbPTpBLDKcaswZtJkfPbHv3RMAv"
+    "5SiAWqYN9iJpCuBftCa8NDJyCHijk7mDKKG2zx2cPv8NJ2Mws6xFJQADRjPPZZbPTpBLDKcaswZtJkfPbHv3RMAv",
+    "598sqpDAQq1yzv137hdkKCDs8RhLe8J42gY6iCtQgZGViEFaJuxRD1jfPN3sQmy3wqpyvfYkPMyAVxiNhQsKehiw",
+    "3TsnDZvEz7691gaBW9PTPCyLW7JzdtzvG2cojTJvSUJgWm2ZnuqsX1yYURfsCipsTMK9NfvfaU8YED5QUzKWwbgb",
+    "43jS99eeMEmNQSogd2oxLrGWTFT3p4XVGjH3387fjHS4pVGbQExXTv67NSgAP8fs8TvzsgzUinyRXcqCWRSM95ya",
+    "31qXtuaWUCKP1A6H2PY3KrZBqubGtAYh6QAUt9NgYvtVVhPhZpgkuai94kjbX8KJpyg2gD6dhtHtxEKjiKGkqWZi",
+    "2ArWrsx2BEQMmN9mzB4Vpv5sm4kYzRLQRNBc3dKWaSo8WT2kmnrb1FZwR7MJarGgQCAfFAqfVk6cV6pvFarXuuuJ",
+    "42vZ2RFrZsz4Tpg2cPz2RpLVLMtDKR6YoZdeJpJoCfEcjNHKEGaJCjF8tpNt4b8bGiNasF4Tdri9UxRAfvc8XQVy",
+    "4t3W5UbwdS93MBueLYTmPgxkDJD8wDdzZtBYrDfmpufEN9ocqakLGuRydpAREcmoXmuPXXfz7ijmUE9HBwR8NkyR",
+    "35NKvR7fqhy4CSMfCG8ym2NJRRjU4favGckVwqSK2FHQgetqUCB3Zw2hPJg3x3mvDFgraqQdmQ7PXYYnfVKEqiMm",
+    "3r2MENmvHKHioYLHKKd4zsFJmXqWPeMSzSWGa1TkWXneeh7kS4xKSwGvqWTWvXLkeLuXfrwW6Tpca4heH9GcEN3G",
+    "5GFHZoXBJm3ePdC4YqRzMK3RQZMcJ4dG4LjzmS7gyGzup2Q27XGQ2jm2a7HS9dmxx1T8gnbT9pKHHwD9aZAjkxfs",
+    "yYZszReXbRQGjdXmGWVEJbfUDhUDSsg7YLrRjAEvGvXSJEeT8EdhVud3hbUJrkup7ynbjeXSgn7m5E1KrhvX3so",
+    "Lp9uQu9hWEtC3ZtAhV25YpeMtZEP4v2J6wCqoTezw2mMjayehvwuY3hKCfVVTEAFX1xCHMQhRou4QfmTVCVQdWs"
   ],
   "dailyPnl": {
-    "2026-10-21": -0.14487850700000007
+    "2026-10-21": -0.12366313700000009
   }
 }
