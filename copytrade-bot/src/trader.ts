@@ -183,12 +183,20 @@ export class Trader {
    */
   private async mirrorSourceSell(pos: Position, now: bigint, reason: string, tag: string, fallbackFraction?: number) {
     const before = pos.sourceTokens !== undefined ? BigInt(pos.sourceTokens) : undefined;
+    if (before !== undefined && now >= before) {
+      pos.sourceTokens = now.toString();
+      this.state.upsertPosition(pos);
+      return log.info(`${tag} esa venta ya estaba contabilizada`);
+    }
+    const raw = before === undefined ? (fallbackFraction ?? 1) : before > 0n ? 1 - Number((now * 1_000_000n) / before) / 1_000_000 : 1;
+    // Reducciones pequeñas: se acumulan (no se actualiza la referencia) hasta que merezca la pena pagar la fee
+    if (now > 0n && raw * 100 < config.minMirrorSellPct) {
+      return log.info(`${tag} ha soltado solo el ${fmt(raw * 100, 1)}%: lo acumulo hasta llegar al ${config.minMirrorSellPct}%`);
+    }
     pos.sourceTokens = now.toString();
     this.state.upsertPosition(pos);
-    if (before !== undefined && now >= before) return log.info(`${tag} esa venta ya estaba contabilizada`);
     if (!config.mirrorSells) return log.info(`${tag} MIRROR_SELLS=false, mantengo`);
 
-    const raw = before === undefined ? (fallbackFraction ?? 1) : before > 0n ? 1 - Number((now * 1_000_000n) / before) / 1_000_000 : 1;
     // Si vende el 90% o más lo tratamos como salida completa
     const fraction = raw >= 0.9 ? 1 : raw;
     log.info(`${tag} el trader ha soltado el ${fmt(raw * 100, 0)}% de su bolsa → vendo el ${fmt(fraction * 100, 0)}%`);

@@ -222,3 +222,21 @@ test("no copia ampliaciones: si el trader ya tenía el token, no es una entrada"
   await flush();
   assert.ok(state.getPosition(MEME));
 });
+
+test("acumula reducciones pequeñas del trader y vende cuando suman suficiente", async () => {
+  price = 0.1 / 1_000_000;
+  const state = new State(join(dir, "s8.json"));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const trader = new Trader(fakeExec as any, state) as any;
+  trader.onSwap(ev("buy", { tokenPost: 1000n }));
+  await flush();
+  // Suelta un 4% y otro 4%: aún no merece la pena vender
+  trader.onSwap(ev("sell", { tokenPre: 1000n, tokenPost: 960n, sellFraction: 0.04, isTransfer: true }));
+  trader.onSwap(ev("sell", { tokenPre: 960n, tokenPost: 920n, sellFraction: 0.042, isTransfer: true }));
+  await flush();
+  assert.equal(state.getPosition(MEME)!.tokens, "1000000");
+  // Otro 4% más: ya suma un 12% desde la última referencia → vende ese 12%
+  trader.onSwap(ev("sell", { tokenPre: 920n, tokenPost: 880n, sellFraction: 0.043, isTransfer: true }));
+  await flush();
+  assert.equal(state.getPosition(MEME)!.tokens, "880000");
+});

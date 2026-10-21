@@ -90,6 +90,8 @@ function loadConfig() {
     // Ventas / gestión de la posición
     mirrorSells: bool("MIRROR_SELLS", true),
     mirrorTransfersAsSell: bool("MIRROR_TRANSFERS_AS_SELL", true),
+    /** Reducciones del trader más pequeñas que este % se acumulan en vez de copiarse una a una (ahorra fees). */
+    minMirrorSellPct: num("MIN_MIRROR_SELL_PCT", 10),
     takeProfitPct: num("TAKE_PROFIT_PCT", 100),
     takeProfitSellPct: num("TAKE_PROFIT_SELL_PCT", 50),
     stopLossPct: num("STOP_LOSS_PCT", 40),
