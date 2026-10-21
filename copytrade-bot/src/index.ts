@@ -8,8 +8,6 @@ import { State } from "./state.js";
 import { Trader } from "./trader.js";
 import { Watcher } from "./watcher.js";
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-
 async function main() {
   setLogFile(config.logFile);
   const conn = new Connection(config.rpcUrl, { commitment: config.commitment, wsEndpoint: config.wsUrl });
@@ -29,32 +27,13 @@ async function main() {
   );
   log.info(`Posiciones abiertas recuperadas: ${state.positions.length}`);
 
-  const handleSignature = async (signature: string, wallet: string) => {
+  const watcher = new Watcher(conn, config.targets, (tx, signature, wallet) => {
     if (!state.markProcessed(signature)) return;
-    // La tx puede tardar unos cientos de ms en estar disponible por RPC
-    for (let attempt = 0; attempt < 8; attempt++) {
-      const tx = await conn
-        .getParsedTransaction(signature, { maxSupportedTransactionVersion: 0, commitment: "confirmed" })
-        .catch(() => null);
-      if (tx) {
-        for (const ev of parseSwaps(tx, wallet, signature)) trader.onSwap(ev);
-        return;
-      }
-      await sleep(300 + attempt * 200);
-    }
-    log.warn(`No se pudo leer la tx ${signature} de ${short(wallet)}`);
-  };
-
-  // Cola por wallet: las txs de un mismo trader se procesan en orden (una venta nunca adelanta a su compra)
-  const queues = new Map<string, Promise<void>>();
-  const enqueue = (sig: string, wallet: string) => {
-    const next = (queues.get(wallet) ?? Promise.resolve()).then(() => handleSignature(sig, wallet)).catch((e) => log.error("handleSignature", e));
-    queues.set(wallet, next);
-  };
-
-  const watcher = new Watcher(conn, config.targets, enqueue);
+    for (const ev of parseSwaps(tx, wallet, signature)) trader.onSwap(ev);
+  });
   await watcher.start();
   trader.startMonitor();
+  trader.startSourceCheck();
   const saver = setInterval(() => state.save(), 30_000);
 
   await notify(

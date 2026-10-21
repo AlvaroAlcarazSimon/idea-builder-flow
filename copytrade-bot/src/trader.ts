@@ -10,12 +10,27 @@ const LAMPORTS_PER_SOL = 1_000_000_000;
 const sol = (lamports: bigint) => Number(lamports) / LAMPORTS_PER_SOL;
 const fmt = (n: number, d = 4) => n.toFixed(d);
 
+/**
+ * Diferencia (%) entre nuestro precio de entrada y el del trader, en SOL por token.
+ * Solo se puede calcular si él pagó en SOL.
+ */
+export function entryPremiumPct(ev: SwapEvent, ourInLamports: string, ourOutTokens: string): number | undefined {
+  const traderTokens = ev.tokenPost - ev.tokenPre;
+  if (ev.solDelta >= -0.003 || traderTokens <= 0n || BigInt(ourOutTokens) <= 0n) return undefined;
+  const traderPrice = (-ev.solDelta * LAMPORTS_PER_SOL) / Number(traderTokens);
+  const ourPrice = Number(ourInLamports) / Number(ourOutTokens);
+  return (ourPrice / traderPrice - 1) * 100;
+}
+
 export class Trader {
   /** Cola por mint: compra, venta y monitor del mismo token nunca se pisan. */
   private locks = new Map<string, Promise<unknown>>();
   /** Cuántos chequeos de precio seguidos han fallado por token (rug / sin liquidez). */
   private quoteFailures = new Map<string, number>();
+  /** Bajadas de saldo del trader vistas por el sondeo, pendientes de confirmar en la siguiente ronda. */
+  private pendingSourceDrops = new Map<string, bigint>();
   private monitorTimer?: NodeJS.Timeout;
+  private sourceTimer?: NodeJS.Timeout;
 
   constructor(
     private exec: Executor,
@@ -42,16 +57,24 @@ export class Trader {
   private async handleBuy(ev: SwapEvent) {
     const tag = `[${short(ev.wallet)} compra ${short(ev.mint)}]`;
     const targetSol = -ev.solDelta;
-    log.info(`${tag} el trader gastó ${fmt(targetSol)} SOL${ev.stableDelta < 0 ? ` / ${fmt(-ev.stableDelta, 2)} USD` : ""}`);
+    const age = ev.blockTime ? Math.max(0, Math.round(Date.now() / 1000 - ev.blockTime)) : undefined;
+    log.info(
+      `${tag} el trader gastó ${fmt(targetSol)} SOL${ev.stableDelta < 0 ? ` / ${fmt(-ev.stableDelta, 2)} USD` : ""}` +
+        (age !== undefined ? ` · hace ${age}s` : "") +
+        ` · ${ev.signature}`,
+    );
 
     const skip = (why: string) => log.info(`${tag} ⏭  no copio: ${why}`);
 
-    if (ev.blockTime && Date.now() / 1000 - ev.blockTime > config.maxSignalAgeSec) {
-      return skip(`señal demasiado vieja (${Math.round(Date.now() / 1000 - ev.blockTime)}s)`);
-    }
+    if (age !== undefined && age > config.maxSignalAgeSec) return skip(`señal demasiado vieja (${age}s)`);
     if (config.tokenBlacklist.has(ev.mint)) return skip("token en blacklist");
 
     const existing = this.state.getPosition(ev.mint);
+    if (existing && existing.source === ev.wallet) {
+      // Recordar cuánto tiene ahora el trader, para medir bien sus ventas posteriores
+      existing.sourceTokens = ev.tokenPost.toString();
+      this.state.upsertPosition(existing);
+    }
     if (existing && !config.allowAddOnRebuy) return skip("ya tengo posición (ALLOW_ADD_ON_REBUY=false)");
     if (!existing && this.state.positions.length >= config.maxOpenPositions) {
       return skip(`máximo de posiciones abiertas (${config.maxOpenPositions})`);
@@ -80,6 +103,15 @@ export class Trader {
 
     const impact = Number(quote.priceImpactPct) * 100;
     if (impact > config.maxPriceImpactPct) return skip(`price impact ${fmt(impact, 1)}% > ${config.maxPriceImpactPct}%`);
+
+    // ¿Cuánto más caro que él vamos a entrar? Si el precio ya se ha disparado, la ventaja se ha esfumado.
+    const premium = entryPremiumPct(ev, quote.inAmount, quote.outAmount);
+    if (premium !== undefined) {
+      log.info(`${tag} entraría un ${fmt(premium, 1)}% ${premium >= 0 ? "más caro" : "más barato"} que el trader`);
+      if (config.maxEntryPremiumPct > 0 && premium > config.maxEntryPremiumPct) {
+        return skip(`el precio ya ha subido un ${fmt(premium, 0)}% desde su compra (máx ${config.maxEntryPremiumPct}%)`);
+      }
+    }
 
     if (config.checkSellRoute) {
       // Simula vender lo que vamos a comprar: detecta honeypots y tokens con impuestos abusivos
@@ -112,6 +144,7 @@ export class Trader {
         peakMultiple: 1,
         takeProfitDone: false,
         buySignatures: [res.signature],
+        sourceTokens: ev.tokenPost.toString(),
       };
       this.state.upsertPosition(pos);
     }
@@ -128,14 +161,31 @@ export class Trader {
     const pos = this.state.getPosition(ev.mint);
     if (!pos) return;
     const tag = `[${short(ev.wallet)} vende ${short(ev.mint)}]`;
-    if (!config.mirrorSells) return log.info(`${tag} MIRROR_SELLS=false, mantengo`);
     if (pos.source !== ev.wallet) return log.info(`${tag} la posición la abrió otra wallet (${short(pos.source)}), ignoro`);
-    if (ev.isTransfer && !config.mirrorTransfersAsSell) return log.info(`${tag} es una transferencia, ignoro`);
+    if (ev.isTransfer && !config.mirrorTransfersAsSell) {
+      pos.sourceTokens = ev.tokenPost.toString();
+      this.state.upsertPosition(pos);
+      return log.info(`${tag} es una transferencia, ignoro`);
+    }
+    await this.mirrorSourceSell(pos, ev.tokenPost, ev.isTransfer ? "trader movió los tokens" : "copia venta del trader", tag, ev.sellFraction);
+  }
 
+  /**
+   * El trader ha pasado de `pos.sourceTokens` a `now` tokens: vendemos la misma proporción.
+   * La usan tanto la detección en tiempo real como el sondeo de saldo, sin vender dos veces.
+   */
+  private async mirrorSourceSell(pos: Position, now: bigint, reason: string, tag: string, fallbackFraction?: number) {
+    const before = pos.sourceTokens !== undefined ? BigInt(pos.sourceTokens) : undefined;
+    pos.sourceTokens = now.toString();
+    this.state.upsertPosition(pos);
+    if (before !== undefined && now >= before) return log.info(`${tag} esa venta ya estaba contabilizada`);
+    if (!config.mirrorSells) return log.info(`${tag} MIRROR_SELLS=false, mantengo`);
+
+    const raw = before === undefined ? (fallbackFraction ?? 1) : before > 0n ? 1 - Number((now * 1_000_000n) / before) / 1_000_000 : 1;
     // Si vende el 90% o más lo tratamos como salida completa
-    const fraction = (ev.sellFraction ?? 1) >= 0.9 ? 1 : (ev.sellFraction ?? 1);
-    log.info(`${tag} el trader ${ev.isTransfer ? "ha movido" : "ha vendido"} el ${fmt(fraction * 100, 0)}% → copio`);
-    await this.sell(pos, fraction, ev.isTransfer ? "trader movió los tokens" : "copia venta del trader");
+    const fraction = raw >= 0.9 ? 1 : raw;
+    log.info(`${tag} el trader ha soltado el ${fmt(raw * 100, 0)}% de su bolsa → vendo el ${fmt(fraction * 100, 0)}%`);
+    await this.sell(pos, fraction, reason);
   }
 
   /** Vende `fraction` (0..1) de la posición, con reintentos subiendo el slippage. */
@@ -143,7 +193,7 @@ export class Trader {
     const tag = `[venta ${short(pos.mint)}]`;
     let held = BigInt(pos.tokens);
     if (!config.dryRun) {
-      held = await this.exec.tokenBalance(pos.mint);
+      held = await this.exec.tokenBalance(this.exec.pubkey!, pos.mint);
       if (held === 0n) {
         log.warn(`${tag} no hay tokens en la wallet, cierro la posición`);
         this.state.closePosition(pos.mint, "sin tokens en la wallet");
@@ -211,6 +261,46 @@ export class Trader {
 
   stopMonitor() {
     clearTimeout(this.monitorTimer);
+    clearTimeout(this.sourceTimer);
+  }
+
+  // ───────────────────────────── RED DE SEGURIDAD DE VENTAS ─────────────────────────────
+
+  /** Mira directamente cuántos tokens le quedan al trader: si vendió y se nos escapó el aviso, copiamos igual. */
+  startSourceCheck() {
+    if (config.sourceCheckIntervalSec <= 0 || !config.mirrorSells) return;
+    const tick = async () => {
+      for (const pos of this.state.positions) {
+        await this.withLock(pos.mint, () => this.checkSource(pos.mint)).catch((e) =>
+          log.warn(`Saldo del trader en ${short(pos.mint)}`, e),
+        );
+      }
+      this.sourceTimer = setTimeout(tick, config.sourceCheckIntervalSec * 1000);
+    };
+    this.sourceTimer = setTimeout(tick, config.sourceCheckIntervalSec * 1000);
+  }
+
+  private async checkSource(mint: string) {
+    const pos = this.state.getPosition(mint);
+    if (!pos || pos.sourceTokens === undefined) return;
+    const before = BigInt(pos.sourceTokens);
+    const now = await this.exec.tokenBalance(pos.source, mint);
+    if (now >= before) {
+      this.pendingSourceDrops.delete(mint);
+      if (now > before) {
+        pos.sourceTokens = now.toString();
+        this.state.upsertPosition(pos);
+      }
+      return;
+    }
+    // Se exige ver la bajada dos veces seguidas: un nodo RPC desfasado no debe hacernos vender
+    const pending = this.pendingSourceDrops.get(mint);
+    if (pending === undefined || now > pending) {
+      this.pendingSourceDrops.set(mint, now);
+      return;
+    }
+    this.pendingSourceDrops.delete(mint);
+    await this.mirrorSourceSell(pos, now, "venta del trader detectada por saldo", `[${short(pos.source)} ${short(mint)}]`);
   }
 
   private async checkPosition(mint: string) {

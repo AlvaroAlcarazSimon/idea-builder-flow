@@ -1,4 +1,4 @@
-import type { ParsedTransactionWithMeta, TokenBalance } from "@solana/web3.js";
+import type { ParsedTransactionWithMeta } from "@solana/web3.js";
 
 export const WSOL_MINT = "So11111111111111111111111111111111111111112";
 export const USDC_MINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
@@ -31,13 +31,47 @@ export interface SwapEvent {
   slot: number;
 }
 
+/**
+ * Lo mínimo que necesita el parser. Sirve igual para una tx de getParsedTransaction
+ * que para una tx de un bloque leído en modo "accounts" (que no trae instrucciones).
+ */
+export interface TxLike {
+  slot: number;
+  blockTime?: number | null;
+  meta: {
+    err: unknown;
+    fee: number;
+    preBalances: number[];
+    postBalances: number[];
+    preTokenBalances?: TokenBalanceLike[] | null;
+    postTokenBalances?: TokenBalanceLike[] | null;
+  } | null;
+  /** Direcciones en base58: comparar strings es mucho más rápido que crear miles de PublicKey por bloque. */
+  accountKeys: { pubkey: string; signer: boolean }[];
+}
+
+export interface TokenBalanceLike {
+  mint: string;
+  owner?: string;
+  uiTokenAmount: { amount: string; decimals: number };
+}
+
+export function fromParsedTransaction(tx: ParsedTransactionWithMeta): TxLike {
+  return {
+    slot: tx.slot,
+    blockTime: tx.blockTime,
+    meta: tx.meta,
+    accountKeys: tx.transaction.message.accountKeys.map((k) => ({ pubkey: k.pubkey.toBase58(), signer: k.signer })),
+  };
+}
+
 interface MintBalance {
   pre: bigint;
   post: bigint;
   decimals: number;
 }
 
-function addBalances(map: Map<string, MintBalance>, balances: TokenBalance[] | null | undefined, wallet: string, key: "pre" | "post") {
+function addBalances(map: Map<string, MintBalance>, balances: TokenBalanceLike[] | null | undefined, wallet: string, key: "pre" | "post") {
   for (const b of balances ?? []) {
     if (b.owner !== wallet) continue;
     const entry = map.get(b.mint) ?? { pre: 0n, post: 0n, decimals: b.uiTokenAmount.decimals };
@@ -47,7 +81,7 @@ function addBalances(map: Map<string, MintBalance>, balances: TokenBalance[] | n
 }
 
 /** Variaciones de tokens SPL (incluye Token-2022) de `wallet` en una tx. */
-export function tokenBalanceChanges(tx: ParsedTransactionWithMeta, wallet: string): Map<string, MintBalance> {
+export function tokenBalanceChanges(tx: TxLike, wallet: string): Map<string, MintBalance> {
   const map = new Map<string, MintBalance>();
   addBalances(map, tx.meta?.preTokenBalances, wallet, "pre");
   addBalances(map, tx.meta?.postTokenBalances, wallet, "post");
@@ -59,15 +93,14 @@ export function tokenBalanceChanges(tx: ParsedTransactionWithMeta, wallet: strin
  * (para medir el tamaño del swap del trader); sin ella, es el impacto real en el saldo (para nuestro PnL).
  */
 export function solChange(
-  tx: ParsedTransactionWithMeta,
+  tx: TxLike,
   wallet: string,
   tokenChanges = tokenBalanceChanges(tx, wallet),
   excludeFee = true,
 ): number {
   const meta = tx.meta;
   if (!meta) return 0;
-  const keys = tx.transaction.message.accountKeys;
-  const idx = keys.findIndex((k) => k.pubkey.toBase58() === wallet);
+  const idx = tx.accountKeys.findIndex((k) => k.pubkey === wallet);
   let lamports = 0;
   if (idx >= 0) {
     lamports = meta.postBalances[idx] - meta.preBalances[idx];
@@ -83,8 +116,11 @@ export function solChange(
  * Funciona con cualquier DEX/agregador (Pump.fun, Raydium, Meteora, Jupiter, Photon, BullX, Axiom...)
  * porque mira cómo cambian los balances, no qué programa se ha usado.
  */
-export function parseSwaps(tx: ParsedTransactionWithMeta, wallet: string, signature: string): SwapEvent[] {
+export function parseSwaps(tx: TxLike, wallet: string, signature: string): SwapEvent[] {
   if (!tx.meta || tx.meta.err) return [];
+  // Solo cuentan las txs que firma la propia wallet. Hay programas de terceros que la incluyen como
+  // cuenta de solo lectura en cientos de txs por segundo, y eso no son operaciones suyas.
+  if (!tx.accountKeys.some((k) => k.signer && k.pubkey === wallet)) return [];
 
   const changes = tokenBalanceChanges(tx, wallet);
   const solDelta = solChange(tx, wallet, changes);

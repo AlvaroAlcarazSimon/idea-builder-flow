@@ -1,11 +1,9 @@
 import { Connection, Keypair, PublicKey, VersionedTransaction } from "@solana/web3.js";
 import { config } from "./config.js";
 import { getQuote, getSwapTransaction, type QuoteResponse } from "./jupiter.js";
-import { solChange, tokenBalanceChanges, WSOL_MINT } from "./parser.js";
+import { fromParsedTransaction, solChange, tokenBalanceChanges, WSOL_MINT } from "./parser.js";
 
 const LAMPORTS_PER_SOL = 1_000_000_000;
-const TOKEN_PROGRAM = new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA");
-const TOKEN_2022_PROGRAM = new PublicKey("TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb");
 
 export interface SwapResult {
   signature: string;
@@ -77,10 +75,11 @@ export class Executor {
   private async actualAmounts(signature: string, quote: QuoteResponse): Promise<SwapResult> {
     const fallback = { signature, inAmount: BigInt(quote.inAmount), outAmount: BigInt(quote.outAmount) };
     for (let i = 0; i < 5; i++) {
-      const tx = await this.conn
-        .getParsedTransaction(signature, { maxSupportedTransactionVersion: 0, commitment: "confirmed" })
+      const parsed = await this.conn
+        .getParsedTransaction(signature, { maxSupportedTransactionVersion: 1, commitment: "confirmed" })
         .catch(() => null);
-      if (tx?.meta) {
+      if (parsed?.meta) {
+        const tx = fromParsedTransaction(parsed);
         const changes = tokenBalanceChanges(tx, this.pubkey!);
         const lamports = BigInt(Math.round(solChange(tx, this.pubkey!, changes, false) * LAMPORTS_PER_SOL));
         const tokenMint = quote.inputMint === WSOL_MINT ? quote.outputMint : quote.inputMint;
@@ -101,17 +100,11 @@ export class Executor {
     return (await this.conn.getBalance(this.keypair.publicKey, "confirmed")) / LAMPORTS_PER_SOL;
   }
 
-  /** Balance real del token en la wallet del bot (suma todas las cuentas de ese mint). */
-  async tokenBalance(mint: string): Promise<bigint> {
-    if (!this.keypair) throw new Error("tokenBalance requiere PRIVATE_KEY");
+  /** Tokens (raw) de `mint` que tiene `owner`, sumando todas sus cuentas de ese mint. */
+  async tokenBalance(owner: string, mint: string): Promise<bigint> {
+    const { value } = await this.conn.getParsedTokenAccountsByOwner(new PublicKey(owner), { mint: new PublicKey(mint) }, "confirmed");
     let total = 0n;
-    for (const programId of [TOKEN_PROGRAM, TOKEN_2022_PROGRAM]) {
-      const { value } = await this.conn.getParsedTokenAccountsByOwner(this.keypair.publicKey, { programId }, "confirmed");
-      for (const acc of value) {
-        const info = acc.account.data.parsed?.info;
-        if (info?.mint === mint) total += BigInt(info.tokenAmount.amount);
-      }
-    }
+    for (const acc of value) total += BigInt(acc.account.data.parsed?.info?.tokenAmount?.amount ?? 0);
     return total;
   }
 }

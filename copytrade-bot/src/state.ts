@@ -19,6 +19,8 @@ export interface Position {
   lastValueSol?: number;
   takeProfitDone: boolean;
   buySignatures: string[];
+  /** Tokens que tenía el trader la última vez que lo vimos (raw): sirve para medir sus ventas. */
+  sourceTokens?: string;
 }
 
 export interface ClosedTrade {

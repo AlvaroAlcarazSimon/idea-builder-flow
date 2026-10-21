@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { Keypair, type ParsedTransactionWithMeta, type TokenBalance } from "@solana/web3.js";
-import { parseSwaps, USDC_MINT, WSOL_MINT } from "../src/parser.js";
+import { fromParsedTransaction, parseSwaps, USDC_MINT, WSOL_MINT, type TxLike } from "../src/parser.js";
 
 const trader = Keypair.generate().publicKey;
 const other = Keypair.generate().publicKey;
@@ -20,17 +20,25 @@ function makeTx(opts: {
   post: TokenBalance[];
   fee?: number;
   err?: unknown;
-}): ParsedTransactionWithMeta {
-  return {
+  /** false = la wallet aparece en la tx pero no la firma (programa de terceros que la lee). */
+  traderSigns?: boolean;
+}): TxLike {
+  const signs = opts.traderSigns ?? true;
+  return fromParsedTransaction({
     slot: 1,
     blockTime: Math.floor(Date.now() / 1000),
     transaction: {
       signatures: ["sig"],
       message: {
-        accountKeys: [
-          { pubkey: trader, signer: true, writable: true },
-          { pubkey: other, signer: false, writable: true },
-        ],
+        accountKeys: signs
+          ? [
+              { pubkey: trader, signer: true, writable: true },
+              { pubkey: other, signer: false, writable: true },
+            ]
+          : [
+              { pubkey: other, signer: true, writable: true },
+              { pubkey: trader, signer: false, writable: false },
+            ],
         instructions: [],
         recentBlockhash: "x",
       },
@@ -38,14 +46,14 @@ function makeTx(opts: {
     meta: {
       err: opts.err ?? null,
       fee: opts.fee ?? 5000,
-      preBalances: [opts.solPre, 0],
-      postBalances: [opts.solPost, 0],
+      preBalances: signs ? [opts.solPre, 0] : [0, opts.solPre],
+      postBalances: signs ? [opts.solPost, 0] : [0, opts.solPost],
       preTokenBalances: opts.pre,
       postTokenBalances: opts.post,
       innerInstructions: [],
       logMessages: [],
     },
-  } as unknown as ParsedTransactionWithMeta;
+  } as unknown as ParsedTransactionWithMeta);
 }
 
 test("compra con SOL (ATA creada en la misma tx)", () => {
@@ -117,4 +125,13 @@ test("ignora balances de otras wallets y txs fallidas", () => {
   assert.deepEqual(parseSwaps(tx, W, "s8"), []);
   const failed = makeTx({ solPre: 10 * SOL, solPost: 9 * SOL, pre: [], post: [bal(2, MEME, W, 1000n)], err: { x: 1 } });
   assert.deepEqual(parseSwaps(failed, W, "s9"), []);
+});
+
+test("si la wallet no firma la tx, no es una operación suya (aunque cambien sus balances)", () => {
+  // Caso real: programas de terceros incluyen wallets conocidas como cuenta de solo lectura,
+  // y los estafadores les mandan tokens. Nada de eso debe disparar una copia.
+  const buyLike = makeTx({ solPre: 10 * SOL, solPost: 9 * SOL, pre: [], post: [bal(2, MEME, W, 1000n)], traderSigns: false });
+  assert.deepEqual(parseSwaps(buyLike, W, "s10"), []);
+  const sellLike = makeTx({ solPre: 1 * SOL, solPost: 2 * SOL, pre: [bal(2, MEME, W, 1000n)], post: [], traderSigns: false });
+  assert.deepEqual(parseSwaps(sellLike, W, "s11"), []);
 });

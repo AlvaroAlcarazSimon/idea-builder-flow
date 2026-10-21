@@ -70,6 +70,8 @@ function loadConfig() {
     minTargetBuySol: num("MIN_TARGET_BUY_SOL", 0.05),
     allowAddOnRebuy: bool("ALLOW_ADD_ON_REBUY", false),
     maxSignalAgeSec: num("MAX_SIGNAL_AGE_SEC", 30),
+    /** No comprar si entraríamos más de este % por encima del precio al que compró el trader. 0 = sin límite. */
+    maxEntryPremiumPct: num("MAX_ENTRY_PREMIUM_PCT", 25),
 
     // Ejecución
     slippageBps: num("SLIPPAGE_BPS", 1500),
@@ -106,8 +108,12 @@ function loadConfig() {
     maxMarketCapUsd: num("MAX_MARKET_CAP_USD", 0),
     tokenBlacklist: new Set(list("TOKEN_BLACKLIST")),
 
-    // Respaldo por si el websocket se cae
-    pollIntervalSec: num("POLL_INTERVAL_SEC", 4),
+    // Detección: respaldo por si el websocket se pierde algo
+    pollIntervalSec: num("POLL_INTERVAL_SEC", 2),
+    maxBackfillSlots: num("MAX_BACKFILL_SLOTS", 25),
+    maxScansPerMin: num("MAX_SCANS_PER_MIN", 60),
+    /** Cada cuánto se comprueba el saldo del trader en los tokens que tenemos (detecta ventas perdidas). */
+    sourceCheckIntervalSec: num("SOURCE_CHECK_INTERVAL_SEC", 15),
 
     // Notificaciones
     telegramToken: process.env.TELEGRAM_BOT_TOKEN?.trim() || undefined,
