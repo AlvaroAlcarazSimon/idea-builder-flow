@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 2026-10-21 19:21 UTC · **en marcha desde:** 2026-10-21 16:22 UTC (3,0 h)
+**Actualizado:** 2026-10-21 20:24 UTC · **en marcha desde:** 2026-10-21 16:22 UTC (4,0 h)
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,29 +8,29 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
-| peacefuldestroy | 39 | 10 | 9 | 44% | +0,088 SOL (+9,7%) | 1 (+37,4%) |
+| peacefuldestroy | 39 | 10 | 9 | 44% | +0,088 SOL (+9,7%) | 1 (+29,6%) |
 | CookDoc | 2 | 0 | 0 | — | — | — |
 | Walta | 0 | 0 | 0 | — | — | — |
 | Killua | 0 | 0 | 0 | — | — | — |
-| big bags bobby | 4 | 2 | 1 | 0% | −0,031 SOL (−31,2%) | 1 (+6,8%) |
+| big bags bobby | 4 | 2 | 2 | 50% | −0,004 SOL (−2,0%) | — |
 | Pikalosi | 1 | 1 | 1 | 0% | −0,045 SOL (−45,3%) | — |
 | Jijo (descartado) | 19 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
 
-**Total cerrado:** −0,172 SOL (−11,5%) · **abierto:** +0,044 SOL sobre 0,20 SOL
+**Total cerrado:** −0,145 SOL (−9,1%) · **abierto:** +0,030 SOL sobre 0,10 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
-## Posiciones abiertas (2)
+## Posiciones abiertas (1)
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy | 0,100 SOL | +37,4% | ×1,43 | 47 min |
-| [E87G…pump](https://dexscreener.com/solana/E87GHFj823bqtMUfgjYYdWM84X2kwUx8RrkLkqSGpump) | big bags bobby | 0,100 SOL | +6,8% | ×1,07 | 9 min |
+| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy | 0,100 SOL | +29,6% | ×1,43 | 1,8 h |
 
-## Últimos trades cerrados (15 en total)
+## Últimos trades cerrados (16 en total)
 
 | Cerrado (UTC) | Token | Trader | Resultado | Duró | Motivo |
 |---|---|---|---|---|---|
+| 10-21 20:24 | [E87G…pump](https://dexscreener.com/solana/E87GHFj823bqtMUfgjYYdWM84X2kwUx8RrkLkqSGpump) | big bags bobby | +0,027 SOL (+27,1%) | 72 min | stop loss (-47.4%) |
 | 10-21 19:00 | [FrWs…pump](https://dexscreener.com/solana/FrWsoz8b3ySwcARforVsEzhCrq1Ww42r7LThqHZYpump) | peacefuldestroy | −0,002 SOL (−2,3%) | 2 min | trailing stop (pico x1.48, ahora x0.98) |
 | 10-21 18:54 | [Fm4U…pump](https://dexscreener.com/solana/Fm4UW2mk5zhrSXSyEcCF8D6tx9KYS9g6Uhzjyog2pump) | peacefuldestroy | +0,024 SOL (+23,8%) | 1 min | trailing stop (pico x1.92, ahora x1.23) |
 | 10-21 18:52 | [539T…pump](https://dexscreener.com/solana/539TfRomJLoGzTKqhyzdTQKcCyyhCdu9wzJy9xgVpump) | peacefuldestroy | −0,053 SOL (−52,6%) | 1 min | stop loss (-52.6%) |
