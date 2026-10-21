@@ -1,0 +1,29 @@
+{
+  "name": "memecoin-copytrade-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bot de copytrading de memecoins en Solana: copia las compras/ventas de una o varias wallets vía Jupiter.",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "analyze": "tsx src/analyze.ts",
+    "status": "tsx src/status.ts",
+    "sell-all": "tsx src/sellAll.ts",
+    "wallet:new": "tsx src/newWallet.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.16.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.3"
+  }
+}
