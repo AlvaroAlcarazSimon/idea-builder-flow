@@ -15,24 +15,24 @@
         "SIM-mvigcbtk-dj3abd"
       ],
       "sourceTokens": "35818920684361",
-      "lastValueSol": 0.132458635
+      "lastValueSol": 0.116326137
     },
-    "21qjavef4eWJNTGHVDr4Xw3T9eeXVxvUXuAq7D5Qpump": {
-      "mint": "21qjavef4eWJNTGHVDr4Xw3T9eeXVxvUXuAq7D5Qpump",
+    "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump": {
+      "mint": "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump",
       "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
       "decimals": 6,
-      "tokens": "660403904090",
-      "costSol": 0.0750001,
+      "tokens": "157774753241",
+      "costSol": 0.1,
       "totalCostSol": 0.1,
-      "realizedPnlSol": -0.0027515330000000005,
-      "openedAt": 1792627662081,
-      "peakMultiple": 1.4034805153593128,
+      "realizedPnlSol": 0,
+      "openedAt": 1792631254523,
+      "peakMultiple": 1,
       "takeProfitDone": false,
       "buySignatures": [
-        "SIM-mvis84jk-c8lp1z"
+        "SIM-mviud4hm-b6kepb"
       ],
-      "sourceTokens": "37767736469667",
-      "lastValueSol": 0.075163014
+      "sourceTokens": "18073385188251",
+      "lastValueSol": 0.089028029
     }
   },
   "closed": [
@@ -260,6 +260,87 @@
       "openedAt": 1792627080074,
       "closedAt": 1792627221901,
       "reason": "trailing stop (pico x1.34, ahora x0.92)"
+    },
+    {
+      "mint": "EVmUGx253WuDaa7JpRjJex68PzmuF1igax1ac6Mpump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.04357073100000001,
+      "openedAt": 1792628669717,
+      "closedAt": 1792628769094,
+      "reason": "copia venta del trader"
+    },
+    {
+      "mint": "4Y846EqbU83yWJb99kNETFNKQ14HfALHAcXp3s91pump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.039956657000000007,
+      "openedAt": 1792628871959,
+      "closedAt": 1792628908250,
+      "reason": "copia venta del trader"
+    },
+    {
+      "mint": "D6Tgd46zqRVjM1CvF1TgeGFdqvUT2VnXii1xq2hKpump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.03872123500000001,
+      "openedAt": 1792628914389,
+      "closedAt": 1792628971799,
+      "reason": "copia venta del trader"
+    },
+    {
+      "mint": "D6Tgd46zqRVjM1CvF1TgeGFdqvUT2VnXii1xq2hKpump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.05738042100000001,
+      "openedAt": 1792629373182,
+      "closedAt": 1792629482914,
+      "reason": "stop loss (-56.7%)"
+    },
+    {
+      "mint": "51GmLE2LDtVC6WgN9ei2GfoAgNuDz5vdU8HbfVuwpump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.030409325,
+      "openedAt": 1792629638961,
+      "closedAt": 1792629734368,
+      "reason": "copia venta del trader"
+    },
+    {
+      "mint": "21qjavef4eWJNTGHVDr4Xw3T9eeXVxvUXuAq7D5Qpump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": 0.0004722870000000018,
+      "openedAt": 1792627662081,
+      "closedAt": 1792630452846,
+      "reason": "trailing stop (pico x1.66, ahora x1.04)"
+    },
+    {
+      "mint": "D6Tgd46zqRVjM1CvF1TgeGFdqvUT2VnXii1xq2hKpump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.023210470000000007,
+      "openedAt": 1792630368660,
+      "closedAt": 1792630607304,
+      "reason": "copia venta del trader"
+    },
+    {
+      "mint": "9VmKNgDZpyUCCRcmShuPU8wrswJAcsgxMYv2kYXFpump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.04095331900000001,
+      "openedAt": 1792630515485,
+      "closedAt": 1792630658069,
+      "reason": "stop loss (-41.0%)"
+    },
+    {
+      "mint": "Ekn1Jn3yzBUoX2gsCSkas6JgjMqSwiTB8PGs2eruSTNK",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.047920684000000005,
+      "openedAt": 1792629941109,
+      "closedAt": 1792630915736,
+      "reason": "stop loss (-47.9%)"
     }
   ],
   "processed": [
@@ -477,10 +558,44 @@
     "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",
-    "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"
+    "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"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
-    "2026-10-22": -0.02402315100000002
+    "2026-10-22": -0.342922173
   }
 }
