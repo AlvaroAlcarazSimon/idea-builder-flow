@@ -1,5 +1,5 @@
 """Verifica wallets leyendo las transacciones originales (sin el filtro type=SWAP de Helius, que se deja operaciones).
-Uso: RPC_URL=<rpc> python3 simulacion/verificar_wallets.py <wallet1> <wallet2> ...   (30 días; lo no vendido cuenta como pérdida)
+Uso: RPC_URL=<rpc> [PAUSA=0.1] python3 simulacion/verificar_wallets.py <wallet1> <wallet2> ...   (30 días; lo no vendido cuenta como pérdida)
 """
 import json, sys, time, urllib.request
 import os
@@ -28,7 +28,7 @@ def verify(w, days=30):
     toks={}; own=0; fees=0; kinds={}; fail=0; sol_out={}; sol_in={}
     for i,s in enumerate(sigs):
         tx=rpc("getTransaction",[s["signature"],{"encoding":"jsonParsed","maxSupportedTransactionVersion":0}])
-        time.sleep(0.6)
+        time.sleep(float(os.environ.get("PAUSA","0.6")))
         if not tx: fail+=1; continue
         keys=[k["pubkey"] for k in tx["transaction"]["message"]["accountKeys"]]
         if keys[0]!=w:

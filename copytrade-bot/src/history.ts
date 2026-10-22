@@ -57,6 +57,14 @@ export interface HistoryReport {
   topCopyableShare: number;
   /** Beneficio de los trades de menos de 1 minuto (no copiable). */
   scalpPnl: number;
+  /**
+   * Beneficio neto de TODOS los tokens que compró en la ventana (lo no vendido cuenta como pérdida).
+   * Es lo que importa: el bot copia todas sus compras, no sabe de antemano cuáles aguantará.
+   */
+  netPnl: number;
+  netTokens: number;
+  /** netPnl sin su mejor token: si es negativo, todo depende de un pelotazo. */
+  netPnlWithoutBest: number;
   verdict: { level: "ok" | "dudoso" | "no"; reason: string };
 }
 
@@ -130,6 +138,9 @@ export async function analyzeHistory(
     copyableTrades: 0,
     topCopyableShare: 0,
     scalpPnl: 0,
+    netPnl: 0,
+    netTokens: 0,
+    netPnlWithoutBest: 0,
     verdict: { level: "no", reason: "" },
   };
   if (report.noisy) {
@@ -189,6 +200,8 @@ export async function analyzeHistory(
   const copyable = trades.filter((t) => t.holdMin >= COPYABLE_MIN);
   const copyablePnl = copyable.reduce((a, t) => a + t.pnl, 0);
   const bestCopyable = copyable.reduce((a, t) => Math.max(a, t.pnl), 0);
+  const bought = [...stats.values()].filter((s) => s.buys > 0 && s.spent > 0).map((s) => s.received - s.spent);
+  const netPnl = bought.reduce((a, p) => a + p, 0);
   const windowMs = eventTimes.length > 1 ? Math.max(...eventTimes) - Math.min(...eventTimes) : 0;
   const pct = (n: number) => (trades.length ? (n / trades.length) * 100 : 0);
 
@@ -210,6 +223,9 @@ export async function analyzeHistory(
     copyableTrades: copyable.length,
     topCopyableShare: copyablePnl > 0 ? bestCopyable / copyablePnl : 0,
     scalpPnl: trades.filter((t) => t.holdMin < 1).reduce((a, t) => a + t.pnl, 0),
+    netPnl,
+    netTokens: bought.length,
+    netPnlWithoutBest: bought.length ? netPnl - Math.max(...bought) : 0,
   });
   report.verdict = verdictFor(report);
   return report;
@@ -230,8 +246,13 @@ export function verdictFor(r: HistoryReport): HistoryReport["verdict"] {
   if (r.copyablePnl <= 0) {
     return { level: "no", reason: r.pnlSol > 0 ? `solo gana con trades de menos de ${COPYABLE_MIN} min (no copiable)` : "pierde en el periodo analizado" };
   }
-  if (r.topCopyableShare > 0.7) return { level: "dudoso", reason: "su beneficio copiable viene casi todo de un solo trade" };
-  return { level: "ok", reason: `copiable: gana con trades de más de ${COPYABLE_MIN} min` };
+  if (r.netPnl <= 0) {
+    return { level: "no", reason: "copiando todas sus compras se pierde (lo que no vende cuenta como pérdida)" };
+  }
+  if (r.topCopyableShare > 0.7 || r.netPnlWithoutBest <= 0) {
+    return { level: "dudoso", reason: "su beneficio viene casi todo de un solo trade" };
+  }
+  return { level: "ok", reason: `copiable: gana copiando todas sus compras y con trades de más de ${COPYABLE_MIN} min` };
 }
 
 function emptyStats(): TokenStats {

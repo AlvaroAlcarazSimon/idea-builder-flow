@@ -15,6 +15,9 @@ function report(trades: ClosedTrade[], extra: Partial<HistoryReport> = {}): Hist
     copyablePnl, copyableTrades: copyable.length,
     topCopyableShare: copyablePnl > 0 ? Math.max(...copyable.map((t) => t.pnl)) / copyablePnl : 0,
     scalpPnl: trades.filter((t) => t.holdMin < 1).reduce((a, t) => a + t.pnl, 0),
+    netPnl: trades.reduce((a, t) => a + t.pnl, 0),
+    netTokens: trades.length,
+    netPnlWithoutBest: trades.reduce((a, t) => a + t.pnl, 0) - Math.max(...trades.map((t) => t.pnl)),
     verdict: { level: "no", reason: "" },
     ...extra,
   };
@@ -44,4 +47,15 @@ test("un solo pelotazo → dudoso", () => {
 test("historial de airdrops de terceros", () => {
   const r = report([trade(0.1, 10)], { analyzedTxs: 100, ownTxs: 5 });
   assert.match(verdictFor(r).reason, /airdrops/);
+});
+
+test("gana con lo que vende, pero lo que no vende lo hunde → no", () => {
+  const r = report([trade(0.5, 30), trade(0.4, 60), trade(-0.2, 10), trade(0.3, 120), trade(-0.1, 8)], { netPnl: -3, netTokens: 40 });
+  assert.equal(verdictFor(r).level, "no");
+  assert.match(verdictFor(r).reason, /todas sus compras/);
+});
+
+test("neto positivo solo gracias al mejor token → dudoso", () => {
+  const r = report([trade(0.5, 30), trade(0.4, 60), trade(-0.2, 10), trade(0.3, 120), trade(-0.1, 8)], { netPnl: 2, netPnlWithoutBest: -1 });
+  assert.equal(verdictFor(r).level, "dudoso");
 });

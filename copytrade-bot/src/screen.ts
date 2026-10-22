@@ -110,11 +110,11 @@ async function main() {
   results.sort((a, b) => {
     const la = a.report ? rank[a.report.verdict.level] : 3;
     const lb = b.report ? rank[b.report.verdict.level] : 3;
-    return la - lb || (b.report?.pnlSol ?? 0) - (a.report?.pnlSol ?? 0);
+    return la - lb || (b.report?.netPnl ?? 0) - (a.report?.netPnl ?? 0);
   });
 
   console.log("\n═════════════════════════════ RESULTADO ═════════════════════════════");
-  console.log("Trader            Veredicto  PnL total        Copiable (>5 min)       WR   Mediana  <1min  Compras/día  Compra media  Periodo");
+  console.log("Trader            Veredicto  Neto (todo)      PnL cerrado      Copiable (>5 min)       WR   Mediana  <1min  Compras/día  Compra media  Periodo");
   for (const r of results) {
     const name = (r.name ?? r.wallet.slice(0, 8)).slice(0, 16).padEnd(16);
     if (!r.report) {
@@ -129,7 +129,7 @@ async function main() {
     }
     const sol = (n: number) => `${n >= 0 ? "+" : ""}${fmt(n, 2)} SOL`;
     console.log(
-      `${name}  ${icon}  ${sol(x.pnlSol).padEnd(15)}  ${`${sol(x.copyablePnl)} (${x.copyableTrades})`.padEnd(22)}` +
+      `${name}  ${icon}  ${sol(x.netPnl).padEnd(15)}  ${sol(x.pnlSol).padEnd(15)}  ${`${sol(x.copyablePnl)} (${x.copyableTrades})`.padEnd(22)}` +
         `${fmt(x.winRate * 100, 0).padStart(3)}%  ${fmt(x.medianHoldMin).padStart(6)}m  ${fmt(x.scalpPct, 0).padStart(4)}%  ${fmt(x.buysPerDay).padStart(11)}  ${fmt(x.medianBuySol, 2).padStart(9)} SOL  ${fmt(x.windowHours, 0)} h`,
     );
   }
