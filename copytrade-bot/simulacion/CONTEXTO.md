@@ -41,7 +41,8 @@ Buscar **wallets rentables y poco conocidas** (que no copie casi nadie) usando H
 - Regla nueva: no volver a entrar en un token donde el bot ya perdió.
 
 ## Ojo
-- La simulación de la sesión anterior la mantiene viva una tarea programada que se dispara cada hora en
-  *esa* sesión ("Resumen horario simulación copytrade"). Si el usuario quiere seguirla aquí, hay que
-  pararla allí para no tener dos.
+- La simulación de la sesión anterior está **parada** (el usuario lo pidió el 22/10 a las 12:36 hora de
+  España) y su tarea programada ("Resumen horario simulación copytrade") está desactivada. El estado final
+  está en `simulacion/estado.json` y `simulacion/RESUMEN.md`. Para retomarla aquí:
+  `SIM_DIR=<carpeta> ./simulacion/simular.sh primer-plano` (como tarea en segundo plano vigilada).
 - Nunca pedir al usuario que pegue claves en el chat. Siempre `DRY_RUN=true` hasta que el usuario decida.
