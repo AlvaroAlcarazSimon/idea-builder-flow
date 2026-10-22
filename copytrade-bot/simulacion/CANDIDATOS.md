@@ -1,5 +1,10 @@
 # Traders poco conocidos encontrados con Helius (22/10/2026)
 
+> ⚠️ **AVISO (22/10 noche): esta tabla NO es fiable.** El historial de Helius con `type=SWAP` se dejaba muchas
+> operaciones y la métrica de "beneficio copiable" excluía las operaciones cortas. Verificado con los datos
+> originales: 7ciZ tiene 246 compras, 31 aciertos y +51,5 SOL (no 17/17 y +195). 5vid casi empata y AMTM pierde.
+> Ver `CONTEXTO.md` y usar `verificar_wallets.py`.
+
 **Método:** 14 tokens de pump.fun que hicieron x50–x1000 en los últimos días (DexScreener) → sus primeros
 ~800 movimientos con Helius → 1.482 compradores tempranos → fuera bots (>40 swaps/día) → 455 wallets
 analizadas 30 días → filtros: beneficio copiable (trades ≥5 min), que no dependa de un pelotazo, que gane
