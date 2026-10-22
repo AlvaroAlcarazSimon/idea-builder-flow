@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 22/10 14:00 · **en marcha desde:** 22/10 12:40 (79 min) · hora de España
+**Actualizado:** 22/10 14:21 · **en marcha desde:** 22/10 12:40 (1,7 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,29 +8,30 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
+| Pequeño constante (5vid) | 1 | 1 | 0 | — | — | 1 (+152,0%) |
 | Pikalosi | 2 | 5 | 5 | 20% | +0,055 SOL (+11,0%) | — |
 | big bags bobby | 0 | 5 | 5 | 60% | +0,011 SOL (+2,3%) | — |
 | CookDoc | 0 | 0 | 0 | — | — | — |
 | Killua | 0 | 0 | 0 | — | — | — |
 | Holder paciente (7ciZ) | 0 | 0 | 0 | — | — | — |
 | Constante (7q3C) | 0 | 0 | 0 | — | — | — |
-| Pequeño constante (5vid) | 0 | 0 | 0 | — | — | — |
 | Racha reciente (ADR2) | 0 | 0 | 0 | — | — | — |
 | Sin seguidores (AMTM) | 0 | 0 | 0 | — | — | — |
 | Walta | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy | 0 | 28 | 26 | 31% | −0,193 SOL (−7,4%) | 2 (−2,8%) |
+| peacefuldestroy | 0 | 28 | 26 | 31% | −0,193 SOL (−7,4%) | 2 (−3,8%) |
 
-**Total cerrado:** −0,352 SOL (−8,6%) · **abierto:** −0,006 SOL sobre 0,20 SOL
+**Total cerrado:** −0,352 SOL (−8,6%) · **abierto:** +0,144 SOL sobre 0,30 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
-## Posiciones abiertas (2)
+## Posiciones abiertas (3)
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy | 0,100 SOL | +11,2% | ×1,50 | 17,4 h |
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy | 0,100 SOL | −16,8% | ×1,00 | 10,9 h |
+| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy | 0,100 SOL | +9,2% | ×1,50 | 17,8 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy | 0,100 SOL | −16,8% | ×1,00 | 11,2 h |
+| [DMhs…pump](https://dexscreener.com/solana/DMhsNrFYoKtENT2WKrF3JWC5P9VPg15kZ7qiRSxJpump) | Pequeño constante (5vid) | 0,023 SOL | +214,0% | ×3,14 | 8 min |
 
 ## Últimos trades cerrados (41 en total)
 
