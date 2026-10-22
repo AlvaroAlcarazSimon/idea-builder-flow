@@ -32,7 +32,7 @@
         "SIM-mvjnqjn8-njgip6"
       ],
       "sourceTokens": "14430616116979",
-      "lastValueSol": 0.077518494
+      "lastValueSol": 0.077438715
     },
     "Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump": {
       "mint": "Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump",
@@ -49,7 +49,7 @@
         "SIM-mvjw9j1w-3zv0tl"
       ],
       "sourceTokens": "44409431754004",
-      "lastValueSol": 0.181019872
+      "lastValueSol": 0.181026002
     },
     "J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump": {
       "mint": "J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump",
@@ -67,6 +67,23 @@
       ],
       "sourceTokens": "28397203411532",
       "lastValueSol": 0.088496411
+    },
+    "7UbyjgAnW8ZYE6BwDmV7HGVYy4SYnKUp2aSUwidipump": {
+      "mint": "7UbyjgAnW8ZYE6BwDmV7HGVYy4SYnKUp2aSUwidipump",
+      "source": "8oQoMhfBQnRspn7QtNAq2aPThRE4q94kLSTwaaFQvRgs",
+      "decimals": 6,
+      "tokens": "220626082168",
+      "costSol": 0.0510301,
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.002237523000000005,
+      "openedAt": 1792710124744,
+      "peakMultiple": 1,
+      "takeProfitDone": false,
+      "buySignatures": [
+        "SIM-mvk5bl53-vrjkhw"
+      ],
+      "sourceTokens": "18711921239705",
+      "lastValueSol": 0.03186966
     }
   },
   "closed": [
@@ -1202,10 +1219,14 @@
     "4u6dDLzibuNPgwdCLNcvAJkZdUxCZL3ePpyNpfyFkHQnWeq5h3J9NzSpUbhMnHFxk2Mzcr8ijqaecDE9ASGPohS9",
     "2E5SM3UQqUQhDv5bmhCFLZ76hNXJi2jUHqJuDNTDveMzP2sqNGUUB1qz1jUni6hNcPcje9K2PVeKG2tRprhg4V7K",
     "3poFSbheB4sUiGCNXGbeTQaVS38S4zgfygcFRwMgboxHSTVBzJXPZX9iuzRxaG5nKpM6NafjLof5wD5bLnSjf4td",
-    "odh6Adx8XfafrsnHZE3RrAXDHEhueWmBH9m6EaAGpT7SoZLk7NEa51mXqxnwBgEY5qVspcZ9TzmyD6GFtmXKGNz"
+    "odh6Adx8XfafrsnHZE3RrAXDHEhueWmBH9m6EaAGpT7SoZLk7NEa51mXqxnwBgEY5qVspcZ9TzmyD6GFtmXKGNz",
+    "641m7BnPkUKCySSRVajwuUxpSi8X7ntzzU6N9nejQQXqwYnmahkfKi5wSRf8C3Gc3BTBUNcT7DtksB9UkpqDAEHq",
+    "5g5P8vFybRvTX93NCXZppMt8C4TGd2DK6oEWMJZZRKTbk5H1ZSRSEZ6hgDapyst4PGgwdecWW5gTA3QWQC2h968P",
+    "2466ZHa8E3LM87ms8tjrKt8n6dKefjrsg3QNc2vevRN2zFqWmXNMDK4kmuMCGC1aBSWYg2ZeH8gsfp15KCzvqbTo",
+    "2uFDnTZjMgbbJg7wJazbpTRYXKdtaj971DYNLy82XMAK8EnMc4HaAKNYZ5z1Ja29vXLDbBnuHwihSyeasrf9DCh5"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
-    "2026-10-22": 0.16598447599999988
+    "2026-10-22": 0.16374695299999986
   }
 }
