@@ -15,7 +15,7 @@
         "SIM-mvigcbtk-dj3abd"
       ],
       "sourceTokens": "35818920684361",
-      "lastValueSol": 0.108744434
+      "lastValueSol": 0.108584802
     },
     "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump": {
       "mint": "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump",
@@ -32,7 +32,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.087771103
+      "lastValueSol": 0.085901751
     }
   },
   "closed": [
@@ -646,7 +646,10 @@
     "3BzYcH7rKRusx4ZPSixK4jGy764QV9m5bhP6xHuu1hqoewXW8kRbDvcks6iN6bFg9AF1stui9c8QUeRJWCbvLbiu",
     "4Q5S8QZ4bRaooHkz1apo7QzrXXc7D1hfUPjjuQVCBwP88Y7LqiCFJV221DtfZHrdXTK4YC2GF3xrvsRJbLXVxHT7",
     "fQn5W8S2QH5f6CSRbU7PQJCrS7iir5unJXmVZSeQEpBxLhEjYf3t6bpJM8CUvjp1UYVWV9vxdfi12D9Bg7Qm6RP",
-    "Xd2WhFJK6tvfUZBGpAJn9hyC6RWdxaZYmj9jcYkWnKGreoroWgmDSwYDqAhR8UT5UAMduH5ZG6eX8wWELaP1Khj"
+    "Xd2WhFJK6tvfUZBGpAJn9hyC6RWdxaZYmj9jcYkWnKGreoroWgmDSwYDqAhR8UT5UAMduH5ZG6eX8wWELaP1Khj",
+    "4nTtQuemEhRUvdupcZ9vmwtJt21BLrNUq9C5Kn39SNYsYKVrrjpoA9zh1fTsd9x3ghNCJoTNk652KGdFF9SmM3Ke",
+    "8BDg3eWm1y2iybZ8gDakLsSZRRdosN5tSuFCtg2N1XR2iY4VCDVFjFXegPFhnb3oYhnmpniTB7RzzT9HUNFd9oV",
+    "2Qc7uHhsQR4afnc2iSpPLsj7PYJnVnxHiT1rwtTcZQVshPPh6VzHkF9ByEwmcqmqKVZ3gKxFVtK8H5zvHG5nF8NG"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
