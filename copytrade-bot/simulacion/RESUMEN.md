@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 22/10 18:00 · **en marcha desde:** 22/10 12:40 (5,3 h) · hora de España
+**Actualizado:** 22/10 18:13 · **en marcha desde:** 22/10 12:40 (5,6 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -19,7 +19,7 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Racha reciente (ADR2) | 6 | 2 | 1 | 0% | −0,056 SOL (−56,4%) | 1 (+9,5%) |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 26 | 31% | −0,193 SOL (−7,4%) | 2 (−6,8%) |
+| peacefuldestroy (descartado) | 0 | 28 | 26 | 31% | −0,193 SOL (−7,4%) | 2 (−7,0%) |
 
 **Total cerrado:** −0,300 SOL (−5,8%) · **abierto:** −0,004 SOL sobre 0,30 SOL
 
@@ -29,9 +29,9 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy (descartado) | 0,100 SOL | +10,5% | ×1,50 | 21,4 h |
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −24,0% | ×1,00 | 14,9 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | +9,5% | ×1,09 | 70 min |
+| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy (descartado) | 0,100 SOL | +10,5% | ×1,50 | 21,6 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −24,4% | ×1,00 | 15,1 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | +9,5% | ×1,09 | 84 min |
 
 ## Últimos trades cerrados (52 en total)
 
