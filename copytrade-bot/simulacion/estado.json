@@ -15,7 +15,7 @@
         "SIM-mvigcbtk-dj3abd"
       ],
       "sourceTokens": "35818920684361",
-      "lastValueSol": 0.113536214
+      "lastValueSol": 0.110550827
     },
     "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump": {
       "mint": "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump",
@@ -350,6 +350,15 @@
       "openedAt": 1792637140598,
       "closedAt": 1792637183255,
       "reason": "copia venta del trader"
+    },
+    {
+      "mint": "8KmoXhoeqPDhhrJ1b3hs1qPAdk5RYQr1JdCzs1JfUK4Q",
+      "source": "39q2g5tTQn9n7KnuapzwS2smSx3NGYqBoea11tBjsGEt",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.04226251200000001,
+      "openedAt": 1792642119423,
+      "closedAt": 1792642684120,
+      "reason": "stop loss (-42.3%)"
     }
   ],
   "processed": [
@@ -619,10 +628,16 @@
     "2LkVPXceqEXC3WeF9UfxMhEDh3xawt8MXFEFVnL6o7fbH8i8RvWo19xv2eGi65F6yhskWN8aJB3Li2M3d1V64exR",
     "63CVirguYBpxDorFXqs44YcHsNiPkiDEiaJVNuhFRhUWP63CtfNLVXsj4EQ928ZBLie14iqkbrvAqHTYHZ3HSoZb",
     "HvkgJ2aNGUcwV8meo2QBnB6K6HseLqUYKBwEzPHyfbrFxsfPoKRrkkDmLWVwfCjC53AAoYiXKaoWuRD8ScGQoLW",
-    "3UKYAspL866a8hcf99ZRDMmieg7E7zcBxaT69BejuWVjGSnaRu2xLDtUmugmWdGkX34V512QWC1cFZ5AX4rFa7fk"
+    "3UKYAspL866a8hcf99ZRDMmieg7E7zcBxaT69BejuWVjGSnaRu2xLDtUmugmWdGkX34V512QWC1cFZ5AX4rFa7fk",
+    "213gUPFHRoFRTVa2CHgvuY4Ty9BmsU5mp7dx4FzxspWA92X6pKyQadYx9agSdAKrt1syhP3YknowCkarDYBmjdS5",
+    "5G9eydZh7mizZ5nXfJHkh6DLiKPCSkEeZS5vHmcw8r6VsuQrk4Fu7Gz4W7xoT8KHeyrmP4Z6UXchUrCXPybWkyj",
+    "3qfTEXpLESY7ZLXA4gRKe2wwXJQRPzT4wniBP4SLMqfUZtoHbRsxaMVfj4gvSbZpk2btsgh5qsubFH8mDRYqNDb1",
+    "4u2bcKGvnjyqGfCJLDVxjSmvV9CAMDoHvSkVB8yNgAtuWtaipshLJNe2xEjxka2skphMWeF9zsDnDqogdPwQAuCX",
+    "2VXadGYMWzmtu4qsZvpXhF6FNWYqdXmSRzzNFDnamC1MuR5erhPMrRBqPK4QUT1NSyVgKRAmQFRJ4B1ozMoEVozr",
+    "3BzYcH7rKRusx4ZPSixK4jGy764QV9m5bhP6xHuu1hqoewXW8kRbDvcks6iN6bFg9AF1stui9c8QUeRJWCbvLbiu"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
-    "2026-10-22": -0.40616359
+    "2026-10-22": -0.44842610200000005
   }
 }
