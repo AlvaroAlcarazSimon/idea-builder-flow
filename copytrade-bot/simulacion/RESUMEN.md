@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 22/10 18:13 · **en marcha desde:** 22/10 12:40 (5,6 h) · hora de España
+**Actualizado:** 22/10 19:00 · **en marcha desde:** 22/10 12:40 (6,3 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,20 +8,20 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
-| Pequeño constante (5vid) | 10 | 9 | 9 | 56% | +0,130 SOL (+14,4%) | — |
+| Pequeño constante (5vid) | 11 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
 | big bags bobby | 0 | 5 | 5 | 60% | +0,011 SOL (+2,3%) | — |
 | CookDoc (descartado) | 0 | 0 | 0 | — | — | — |
 | Killua (descartado) | 0 | 0 | 0 | — | — | — |
 | Holder paciente (7ciZ) | 1 | 0 | 0 | — | — | — |
-| Constante (7q3C) | 0 | 0 | 0 | — | — | — |
+| Constante (7q3C) | 1 | 0 | 0 | — | — | — |
 | Sin seguidores (AMTM) (descartado) | 0 | 0 | 0 | — | — | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Racha reciente (ADR2) | 6 | 2 | 1 | 0% | −0,056 SOL (−56,4%) | 1 (+9,5%) |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 26 | 31% | −0,193 SOL (−7,4%) | 2 (−7,0%) |
+| peacefuldestroy (descartado) | 0 | 28 | 26 | 31% | −0,193 SOL (−7,4%) | 2 (−8,3%) |
 
-**Total cerrado:** −0,300 SOL (−5,8%) · **abierto:** −0,004 SOL sobre 0,30 SOL
+**Total cerrado:** −0,345 SOL (−6,5%) · **abierto:** −0,007 SOL sobre 0,30 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
@@ -29,14 +29,15 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy (descartado) | 0,100 SOL | +10,5% | ×1,50 | 21,6 h |
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −24,4% | ×1,00 | 15,1 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | +9,5% | ×1,09 | 84 min |
+| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy (descartado) | 0,100 SOL | +7,9% | ×1,50 | 22,4 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −24,5% | ×1,00 | 15,9 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | +9,5% | ×1,09 | 2,2 h |
 
-## Últimos trades cerrados (52 en total)
+## Últimos trades cerrados (53 en total)
 
 | Cerrado (hora de España) | Token | Trader | Resultado | Duró | Motivo |
 |---|---|---|---|---|---|
+| 22/10 18:36 | [UcMF…pump](https://dexscreener.com/solana/UcMFp6CCUhGDgEndWdXGk1UKMtnct37G33PGgDvpump) | Pequeño constante (5vid) | −0,045 SOL (−45,2%) | 2 min | copia venta del trader |
 | 22/10 17:43 | [5tZ8…pump](https://dexscreener.com/solana/5tZ8P4pgsc9nnsZEi9rTzu25EC54WdwyMgAe9bzjpump) | Pequeño constante (5vid) | +0,011 SOL (+10,7%) | 6 min | copia venta del trader |
 | 22/10 17:30 | [3aau…pump](https://dexscreener.com/solana/3aau1aojGfAd99rbZr5wtibiYgfyoCgXJ7mUhTHkpump) | Pequeño constante (5vid) | −0,025 SOL (−24,5%) | 3 min | copia venta del trader |
 | 22/10 16:56 | [62FG…qSq6](https://dexscreener.com/solana/62FGaimmKD1KBkG5tLc9HWDYyCc9qYyWP7mqESbRqSq6) | Pequeño constante (5vid) | −0,025 SOL (−24,5%) | 1 min | copia venta del trader |
@@ -56,4 +57,3 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 | 22/10 06:18 | [8Kmo…UK4Q](https://dexscreener.com/solana/8KmoXhoeqPDhhrJ1b3hs1qPAdk5RYQr1JdCzs1JfUK4Q) | Walta (descartado) | −0,042 SOL (−42,3%) | 9 min | stop loss (-42.3%) |
 | 22/10 04:46 | [68Pw…pump](https://dexscreener.com/solana/68Pw8tQ3CVYqNssTBH4A3u2Erg9DPYwhs6pmALRjpump) | peacefuldestroy (descartado) | −0,063 SOL (−63,2%) | 1 min | copia venta del trader |
 | 22/10 03:01 | [Ekn1…STNK](https://dexscreener.com/solana/Ekn1Jn3yzBUoX2gsCSkas6JgjMqSwiTB8PGs2eruSTNK) | peacefuldestroy (descartado) | −0,048 SOL (−47,9%) | 16 min | stop loss (-47.9%) |
-| 22/10 02:57 | [9VmK…pump](https://dexscreener.com/solana/9VmKNgDZpyUCCRcmShuPU8wrswJAcsgxMYv2kYXFpump) | peacefuldestroy (descartado) | −0,041 SOL (−41,0%) | 2 min | stop loss (-41.0%) |
