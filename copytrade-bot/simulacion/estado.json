@@ -15,7 +15,7 @@
         "SIM-mvigcbtk-dj3abd"
       ],
       "sourceTokens": "35818920684361",
-      "lastValueSol": 0.109366827
+      "lastValueSol": 0.110397051
     },
     "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump": {
       "mint": "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump",
@@ -32,24 +32,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.076153315
-    },
-    "EXEm2pxezh7qB2pzsbaFMdJ9ZXnpdSX2vZ8mpwrxpump": {
-      "mint": "EXEm2pxezh7qB2pzsbaFMdJ9ZXnpdSX2vZ8mpwrxpump",
-      "source": "5vidUWGKW2WkEJMgf2BKv2ZgL7nKPiznfRtJgxpmoppa",
-      "decimals": 6,
-      "tokens": "950679594341",
-      "costSol": 0.1,
-      "totalCostSol": 0.1,
-      "realizedPnlSol": 0,
-      "openedAt": 1792677559782,
-      "peakMultiple": 1.53092618,
-      "takeProfitDone": false,
-      "buySignatures": [
-        "SIM-mvjlxluu-qlwk5k"
-      ],
-      "sourceTokens": "953286734549",
-      "lastValueSol": 0.153092618
+      "lastValueSol": 0.073821771
     }
   },
   "closed": [
@@ -439,6 +422,33 @@
       "openedAt": 1792675301440,
       "closedAt": 1792675311073,
       "reason": "copia venta del trader"
+    },
+    {
+      "mint": "EXEm2pxezh7qB2pzsbaFMdJ9ZXnpdSX2vZ8mpwrxpump",
+      "source": "5vidUWGKW2WkEJMgf2BKv2ZgL7nKPiznfRtJgxpmoppa",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": 0.009132094999999993,
+      "openedAt": 1792677559782,
+      "closedAt": 1792677744106,
+      "reason": "trailing stop (pico x1.61, ahora x1.09)"
+    },
+    {
+      "mint": "4hvJMAiXj75kngsXxbxAhi3MWpEGhvaAdmqY47BJpump",
+      "source": "5vidUWGKW2WkEJMgf2BKv2ZgL7nKPiznfRtJgxpmoppa",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": 0.070510146,
+      "openedAt": 1792678129929,
+      "closedAt": 1792678332944,
+      "reason": "trailing stop (pico x2.07, ahora x1.36)"
+    },
+    {
+      "mint": "9uzGhPyQzsiNdC1LmQuFaKmauxSFZ8QjcvwAiWrhs7J9",
+      "source": "ADR2siyXuAZwqqJixh2K7V6GiWCqkZw8szBCAF1nrkaC",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.056402665000000005,
+      "openedAt": 1792678326019,
+      "closedAt": 1792678363635,
+      "reason": "copia venta del trader"
     }
   ],
   "processed": [
@@ -772,10 +782,16 @@
     "2A7asjR3urSST5kPReVkdTHNT4VWu2NqmKsXqdmAP2UNntdBtarX8qp94hm79zV7bky58nd1VEMULKdxvpHMG6GK",
     "5aq16H4RA2fXct4w7P2G51RJyyoE83nZ4M1Kft7s9HkdKMSm1Fb5AzdQB6hVXSRQLeQNiPHnirSrkQRBsjWuXTph",
     "3PRHk1vW9WkKPkcMR5sDqKXUTQei6uvZB6FNMkLLcaHnfgQdyaaR872Ris1XowDdBWJ5d7K9gSg39k6dTjcoaa9j",
-    "27nq5y4e6PnEqMn49HU8kfFMv8a7uDqQxH4pZwhp1WZdHpt12PUDovPsrvYGy15JbF3LMxoozeUHX93jJ9oBw1S8"
+    "27nq5y4e6PnEqMn49HU8kfFMv8a7uDqQxH4pZwhp1WZdHpt12PUDovPsrvYGy15JbF3LMxoozeUHX93jJ9oBw1S8",
+    "HJ8Fxv1TN4hcdsBByjxzdz2QbwnGUsYw5PdoXFiL1NpAzhT5YMSK3JEysx4eLZqkv92BeHbWtGqmENgXyVaHsub",
+    "29SJByaU3oGz8Fe5ebEKSV7DjaRG4DAnrwYbXEsxDwmer4jdgtK8CiCRw6KTnPZc2cAGVYaLTtsxkuBMVbUWvFCM",
+    "BAgJzzXCorJcAeqtzqzB8vKmdbMoBCiYnWnF7GuH1MPMc3wdyg5jAwJ6Bhrt1j3hFZm4hcPnnxcBNK55De66JZk",
+    "B4C2eKEdUvT9GFqNqWmTSQcoq5YLERuM8cgC4oXaknQEbPM7UatBrzfcHgHbAWocv38rdfjG9MPqkHxFx1QCSGv",
+    "4AQF6sd4q3ySHhefkuEP1QbVcMYXomXNpmsuaRNBmeCCCo8HBMHJnPVuTKrLQh8how1Tm1uMrnYtfFpnfzw7q5W8",
+    "3u2ZhvhVWwVLVct5rjvm9PJDxbTTXK3nxPr2M5rNCECEh4pLb7sV9rkPExtYvptHUsu6dAZbBbxTNfYeRFXAHmRX"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
-    "2026-10-22": -0.24737934100000003
+    "2026-10-22": -0.22413976500000005
   }
 }
