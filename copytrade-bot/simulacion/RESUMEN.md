@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 22/10 03:22 · **en marcha desde:** 21/10 18:22 (9,0 h) · hora de España
+**Actualizado:** 22/10 04:21 · **en marcha desde:** 21/10 18:22 (10,0 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -9,14 +9,14 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
 | big bags bobby | 18 | 4 | 4 | 75% | +0,019 SOL (+4,8%) | — |
-| CookDoc | 6 | 0 | 0 | — | — | — |
+| CookDoc | 10 | 0 | 0 | — | — | — |
 | Walta | 0 | 0 | 0 | — | — | — |
 | Killua | 0 | 0 | 0 | — | — | — |
 | Pikalosi | 1 | 1 | 1 | 0% | −0,045 SOL (−45,3%) | — |
-| peacefuldestroy | 98 | 27 | 25 | 32% | −0,130 SOL (−5,2%) | 2 (+2,7%) |
+| peacefuldestroy | 98 | 27 | 25 | 32% | −0,130 SOL (−5,2%) | 2 (+1,4%) |
 | Jijo (descartado) | 19 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
 
-**Total cerrado:** −0,339 SOL (−10,0%) · **abierto:** +0,005 SOL sobre 0,20 SOL
+**Total cerrado:** −0,339 SOL (−10,0%) · **abierto:** +0,003 SOL sobre 0,20 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
@@ -24,8 +24,8 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy | 0,100 SOL | +16,3% | ×1,50 | 6,8 h |
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy | 0,100 SOL | −11,0% | ×1,00 | 15 min |
+| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy | 0,100 SOL | +14,5% | ×1,50 | 7,8 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy | 0,100 SOL | −11,6% | ×1,00 | 74 min |
 
 ## Últimos trades cerrados (34 en total)
 
