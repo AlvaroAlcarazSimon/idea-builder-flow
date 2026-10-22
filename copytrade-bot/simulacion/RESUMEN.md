@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 23/10 00:00 · **en marcha desde:** 22/10 12:40 (11,3 h) · hora de España
+**Actualizado:** 23/10 00:13 · **en marcha desde:** 22/10 12:40 (11,5 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,7 +8,8 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
-| Racha reciente (ADR2) | 36 | 11 | 9 | 56% | +0,362 SOL (+40,2%) | 2 (+28,1%) |
+| Racha reciente (ADR2) | 36 | 11 | 9 | 56% | +0,362 SOL (+40,2%) | 2 (+29,2%) |
+| big bags bobby | 34 | 8 | 7 | 43% | −0,037 SOL (−5,3%) | 1 (+247,4%) |
 | Pequeño constante (5vid) | 12 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
 | CookDoc (descartado) | 0 | 0 | 0 | — | — | — |
@@ -16,22 +17,22 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 | Holder paciente (7ciZ) | 2 | 0 | 0 | — | — | — |
 | Constante (7q3C) | 1 | 0 | 0 | — | — | — |
 | Sin seguidores (AMTM) (descartado) | 0 | 0 | 0 | — | — | — |
-| big bags bobby | 28 | 7 | 7 | 43% | −0,037 SOL (−5,3%) | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
 | peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−30,9%) |
 
-**Total cerrado:** +0,026 SOL (+0,4%) · **abierto:** +0,025 SOL sobre 0,30 SOL
+**Total cerrado:** +0,026 SOL (+0,4%) · **abierto:** +0,275 SOL sobre 0,40 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
-## Posiciones abiertas (3)
+## Posiciones abiertas (4)
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −30,9% | ×1,00 | 20,9 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −22,5% | ×1,09 | 7,2 h |
-| [Q1iJ…pump](https://dexscreener.com/solana/Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump) | Racha reciente (ADR2) | 0,100 SOL | +78,6% | ×1,79 | 3,2 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −30,9% | ×1,00 | 21,1 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −22,5% | ×1,09 | 7,4 h |
+| [Q1iJ…pump](https://dexscreener.com/solana/Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump) | Racha reciente (ADR2) | 0,100 SOL | +80,8% | ×1,82 | 3,4 h |
+| [334j…pump](https://dexscreener.com/solana/334j9dCg9WBfvC56tzRsp7RVFcYzpF5R2zC54zJdpump) | big bags bobby | 0,050 SOL | +385,2% | ×4,85 | 7 min |
 
 ## Últimos trades cerrados (64 en total)
 

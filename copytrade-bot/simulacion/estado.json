@@ -43,13 +43,30 @@
       "totalCostSol": 0.1,
       "realizedPnlSol": 0,
       "openedAt": 1792694912180,
-      "peakMultiple": 1.78607077,
+      "peakMultiple": 1.8226076999999998,
       "takeProfitDone": false,
       "buySignatures": [
         "SIM-mvjw9j1w-3zv0tl"
       ],
       "sourceTokens": "44409431754004",
-      "lastValueSol": 0.178607077
+      "lastValueSol": 0.18084552
+    },
+    "334j9dCg9WBfvC56tzRsp7RVFcYzpF5R2zC54zJdpump": {
+      "mint": "334j9dCg9WBfvC56tzRsp7RVFcYzpF5R2zC54zJdpump",
+      "source": "8oQoMhfBQnRspn7QtNAq2aPThRE4q94kLSTwaaFQvRgs",
+      "decimals": 6,
+      "tokens": "640180626224",
+      "costSol": 0.0500001,
+      "totalCostSol": 0.1,
+      "realizedPnlSol": 0.05482756599999999,
+      "openedAt": 1792706753803,
+      "peakMultiple": 4.852198935602129,
+      "takeProfitDone": true,
+      "buySignatures": [
+        "SIM-mvk3bc3u-4de6l3"
+      ],
+      "sourceTokens": "19602405430466",
+      "lastValueSol": 0.242610432
     }
   },
   "closed": [
@@ -1159,10 +1176,16 @@
     "5S461k8eUFYyGhG6JoQugTYKsxCrN72sbH1Kttf6cJgniehQJW6LMKymDjVZnvUBc6qvqy6HgMen784RGvUFbuJB",
     "4XopXYqH8bvN7bVwBpkthSGPSgZ7WZR5LbsbSYQSjgb94wAzj8Coms61iUxTAo3xigdCaVzd2cFJTf72nJiPvbrZ",
     "dPa2MEuFqP2oiNzYBdHR1cvMSwxsaVRc9naVRxiCaa8ir5kTwrvXicH1HAh7Ktn9CCjq5aJ8xvMPELwJ2VnLWgG",
-    "3jxoUYYnnUXgzGbgjovJa6XUfF9FR3YUi7jKnVrTb9Sk8HffJJEBn3cnUaUqx7QADQz4NTLnWHcBB2oW1A6YXcEb"
+    "3jxoUYYnnUXgzGbgjovJa6XUfF9FR3YUi7jKnVrTb9Sk8HffJJEBn3cnUaUqx7QADQz4NTLnWHcBB2oW1A6YXcEb",
+    "3HnSKSvXY3uRaaLHFuZ72454fJmUQQTPCvP7e5Zmmx8gYpxo6qFHFtbcVbyFb53EEQM1CJvawjMXbNcs8dD7pnNu",
+    "4sHaYWKYUnPWA7rgVy9y9WjZ1L11gdPF2co3KWASU69xcwscp4YvQRbf7kVUoVfEt5ms3xgnAMFGVUSA8zVPijci",
+    "5RxDrQfMzTob4afy3qG2Jh47yuEoBFcCN1bEv9eZwyYLTx2jMrX8QHRwuFGoFykFhSyJQtmnMYSJZDed3V7ZS6p5",
+    "3zGZx43eTV1wUJFvsbEPFHx2kEqaewyMyyRtVQoTFLMioAoZ75aFQPisiBQehMxFXFu8cM8SPQ57jAqCpKJwiYhr",
+    "5rvfaDdm6EAhhwqCwd9H7ZNFGtwnmWparK6eLxXJBmh9kZRndVozhPU1kwJxW4LP417ub5WTVJS8JFLpFJpub8Dd",
+    "5SF6hmeQvbAaNPDmgTu2AX49ugpUekcfNaESqBuzRaP8WdVpkB55bmvQM4DQEemqqSejMM2ApkCmgLA9mXHWfqEV"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
-    "2026-10-22": 0.02218717999999989
+    "2026-10-22": 0.07701474599999988
   }
 }
