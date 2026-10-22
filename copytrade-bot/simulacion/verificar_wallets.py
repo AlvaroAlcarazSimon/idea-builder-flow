@@ -21,6 +21,7 @@ def verify(w, days=30):
         p={"limit":1000}; 
         if before: p["before"]=before
         r=rpc("getSignaturesForAddress",[w,p]); time.sleep(1)
+        if r is None: raise SystemExit(f"{w}: el RPC no responde (¿límite o saldo agotado?)")
         if not r: break
         sigs+=[s for s in r if s["err"] is None and (s.get("blockTime") or 0)>=cut]
         before=r[-1]["signature"]
