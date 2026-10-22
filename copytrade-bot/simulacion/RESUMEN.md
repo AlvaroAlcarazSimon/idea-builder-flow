@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 22/10 21:00 · **en marcha desde:** 22/10 12:40 (8,3 h) · hora de España
+**Actualizado:** 22/10 21:12 · **en marcha desde:** 22/10 12:40 (8,5 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,7 +8,7 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
-| Racha reciente (ADR2) | 33 | 10 | 7 | 71% | +0,427 SOL (+61,1%) | 3 (−18,1%) |
+| Racha reciente (ADR2) | 36 | 11 | 8 | 63% | +0,395 SOL (+49,3%) | 3 (−0,9%) |
 | Pequeño constante (5vid) | 12 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
 | big bags bobby | 23 | 5 | 5 | 60% | +0,011 SOL (+2,3%) | — |
@@ -21,7 +21,7 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
 | peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−32,6%) |
 
-**Total cerrado:** +0,141 SOL (+2,3%) · **abierto:** −0,087 SOL sobre 0,40 SOL
+**Total cerrado:** +0,108 SOL (+1,8%) · **abierto:** −0,035 SOL sobre 0,40 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
@@ -29,15 +29,16 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −32,6% | ×1,00 | 17,9 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −22,5% | ×1,09 | 4,2 h |
-| [4Pbx…pump](https://dexscreener.com/solana/4PbxcLPioEQNQT8jCdTnvfM2CddTzHrDStnxniRypump) | Racha reciente (ADR2) | 0,100 SOL | −19,2% | ×1,23 | 31 min |
-| [Q1iJ…pump](https://dexscreener.com/solana/Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump) | Racha reciente (ADR2) | 0,100 SOL | −12,8% | ×1,00 | 11 min |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −32,6% | ×1,00 | 18,1 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −22,5% | ×1,09 | 4,4 h |
+| [Q1iJ…pump](https://dexscreener.com/solana/Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump) | Racha reciente (ADR2) | 0,100 SOL | +28,6% | ×1,55 | 24 min |
+| [dGZB…pump](https://dexscreener.com/solana/dGZBnosZWr8aVtPp8hDKhkzcdhWgwevgu9uoGaApump) | Racha reciente (ADR2) | 0,083 SOL | −13,4% | ×1,22 | 5 min |
 
-## Últimos trades cerrados (60 en total)
+## Últimos trades cerrados (61 en total)
 
 | Cerrado (hora de España) | Token | Trader | Resultado | Duró | Motivo |
 |---|---|---|---|---|---|
+| 22/10 21:06 | [4Pbx…pump](https://dexscreener.com/solana/4PbxcLPioEQNQT8jCdTnvfM2CddTzHrDStnxniRypump) | Racha reciente (ADR2) | −0,033 SOL (−32,8%) | 38 min | venta del trader detectada por saldo |
 | 22/10 20:38 | [kUKm…USDQ](https://dexscreener.com/solana/kUKmJCHDUf79uVfXceZ8GJXF4iKuS9YXarQLYd5USDQ) | Racha reciente (ADR2) | −0,008 SOL (−8,3%) | 9 min | trailing stop (pico x1.32, ahora x0.92) |
 | 22/10 20:37 | [Gi2Q…pump](https://dexscreener.com/solana/Gi2QR7yZ5ZrHDziyuRC9riEAgX5h1VB5114xdRDCpump) | Racha reciente (ADR2) | +0,181 SOL (+180,9%) | 2 min | venta del trader detectada por saldo |
 | 22/10 20:14 | [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy (descartado) | +0,002 SOL (+1,8%) | 1420 min | trailing stop (pico x1.50, ahora x1.02) |
@@ -57,4 +58,3 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 | 22/10 16:02 | [EXEm…pump](https://dexscreener.com/solana/EXEm2pxezh7qB2pzsbaFMdJ9ZXnpdSX2vZ8mpwrxpump) | Pequeño constante (5vid) | +0,009 SOL (+9,1%) | 3 min | trailing stop (pico x1.61, ahora x1.09) |
 | 22/10 15:21 | [CHHU…pump](https://dexscreener.com/solana/CHHUkGNdugHYU5p8rHwhEPbgWqf463tFrQrR1ewLpump) | Pikalosi (descartado) | −0,021 SOL (−21,3%) | 1 min | copia venta del trader |
 | 22/10 14:25 | [DMhs…pump](https://dexscreener.com/solana/DMhsNrFYoKtENT2WKrF3JWC5P9VPg15kZ7qiRSxJpump) | Pequeño constante (5vid) | +0,130 SOL (+130,0%) | 12 min | trailing stop (pico x3.14, ahora x2.16) |
-| 22/10 13:35 | [9aiY…pump](https://dexscreener.com/solana/9aiYfPqWM1JYCZK28qZJt5x5XFoh741CfUrRzcuYpump) | Pikalosi (descartado) | −0,015 SOL (−15,1%) | 1 min | copia venta del trader |
