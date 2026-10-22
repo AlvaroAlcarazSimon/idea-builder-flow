@@ -32,7 +32,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.081860679
+      "lastValueSol": 0.075304388
     }
   },
   "closed": [
@@ -413,6 +413,15 @@
       "openedAt": 1792671201599,
       "closedAt": 1792671909569,
       "reason": "trailing stop (pico x3.14, ahora x2.16)"
+    },
+    {
+      "mint": "CHHUkGNdugHYU5p8rHwhEPbgWqf463tFrQrR1ewLpump",
+      "source": "9cdZg6xR4c9kZiqKSzqjn4QHCXNQuC9HEWBzzMJ3mzqw",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.021302928,
+      "openedAt": 1792675301440,
+      "closedAt": 1792675311073,
+      "reason": "copia venta del trader"
     }
   ],
   "processed": [
@@ -740,10 +749,13 @@
     "3Hsu8c3cMSpkpRBBctL5eF7N9R8LszptoK5NdDkAQQeoVkLRM3GyRMtdEa5x2nEt8JByzUvYFM81L3zU81iVgxru",
     "2W6fQQugJXHovi8Jpg3bzmutWqJkavV6tQK36dGfuw9cDQbjdN8aDj4aMmu6xGfwbTsNeW4rZ8LHp41Wx748p6y3",
     "4tDpCGNN9KWd7YJ5AKyZBXeJqjtDD5JxcKrSP4RgBFXa8gnRBToa4eC1F54bNSwfmCbB9TvRsAnxr1t7R2pUCWNg",
-    "vc2L5WdqR8xchV9MnZgkANoZNoGgQtgtbuyCgCUP7gRiyeXtYbYhb8wG5Wm8EaKbdXtrsMZ4kzNcMJSPrjxwQ2y"
+    "vc2L5WdqR8xchV9MnZgkANoZNoGgQtgtbuyCgCUP7gRiyeXtYbYhb8wG5Wm8EaKbdXtrsMZ4kzNcMJSPrjxwQ2y",
+    "2An2zj4Wvim3RArPGn4xAxyuTHw8fZDXpAAsiNsTta2sPTtnDTZEHKoJsSA33mWS3mHRSRSrhGgxQ8qAQcbmwWnK",
+    "3VETCF5rdTbrTo78i1EupRTuMaKv5sepRy3Hzrb2hGKg5XkJ4uid1PyusXsk9vwYHQWvpChkZ2xEMvSiMH1KDA8t",
+    "2A7asjR3urSST5kPReVkdTHNT4VWu2NqmKsXqdmAP2UNntdBtarX8qp94hm79zV7bky58nd1VEMULKdxvpHMG6GK"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
-    "2026-10-22": -0.22607641300000003
+    "2026-10-22": -0.24737934100000003
   }
 }
