@@ -15,7 +15,7 @@
         "SIM-mvigcbtk-dj3abd"
       ],
       "sourceTokens": "35818920684361",
-      "lastValueSol": 0.114487463
+      "lastValueSol": 0.113536214
     },
     "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump": {
       "mint": "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump",
@@ -32,7 +32,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.088407415
+      "lastValueSol": 0.088260865
     }
   },
   "closed": [
@@ -341,6 +341,15 @@
       "openedAt": 1792629941109,
       "closedAt": 1792630915736,
       "reason": "stop loss (-47.9%)"
+    },
+    {
+      "mint": "68Pw8tQ3CVYqNssTBH4A3u2Erg9DPYwhs6pmALRjpump",
+      "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.06324141700000001,
+      "openedAt": 1792637140598,
+      "closedAt": 1792637183255,
+      "reason": "copia venta del trader"
     }
   ],
   "processed": [
@@ -597,10 +606,23 @@
     "5V8HVJ4eHLgYSSNT3u8o8cY71puQv2fAeyi7CkumcTmGHZq4YTZd3CpkQ7sKp6pHBvu5iiGuFaiDqiGzqodVWJ6t",
     "2AsK6jxP1qejndNf726nhqykdoggSY8DsVFhznBaDDx9HMvgQShxvMweaF2P3JoCwyRE9rNhYhSxfN7UVsFkgrmb",
     "gcwHj1GkvaDEnLbKvLkiC3yu5PWGbDr2NGrB53EsC6pT7SnXG5ai9qDs1x8JYZ79d6v6wV2oLVK81uhM4ksFML2",
-    "2vHvDVTht9VersFuiBcL1Re9d4hiSaBsvy3ZjSeaQmhw9KwM8QtpVUxWKNFTppC3LGcrcRfEx9A9eVkF6wGy2KLe"
+    "2vHvDVTht9VersFuiBcL1Re9d4hiSaBsvy3ZjSeaQmhw9KwM8QtpVUxWKNFTppC3LGcrcRfEx9A9eVkF6wGy2KLe",
+    "4RAP9UrhXZUAeuztVBF6rSdqBE8wip9Up95HEvCBgrL2HLcXtnpPvX9r33YfahELgjMtStLT7scVgTVTKf1YcVUP",
+    "5mLee2qQzQYB7m4QjdukvucWWKFvo4Qj4uVMCeeqGx227uJsbhqkDuMcUxUTKnFuQdHPhVejnsa75zEaMULAiTHc",
+    "xgegEmzpDGh1ZjWVHNpXaqtesUzTCPcNjk7d55dQC3XWFRAgjibuJ6HuU1bmGjFjbv1sFSyoZwBTdVFHunLHhop",
+    "56nn9MwQJ9kKs8kJyiDDeyDXYvpbDDJeQbSjJ16kYciwQ966sodDyhXRbbSjqgzF42PdemjPK82MoARHB69qh5TD",
+    "4jBFFGynWr6Yt4coSGGXmPvG22DvTgv4j4ffTPCXy7TNciqYt7AiX5MNqT6QQSHTrujMEwzNo2kTNjMJCPUHH3h",
+    "2aKHhZVHoPXXdLo9W5rPeWsnAfMw9A6AL27uS3haKhE3jutoToZ4Y2tpJgFaCKXD3mzCDvHGLGmvDr79DX3mUW29",
+    "57xnqRWDe112HmxtAfw2wGWgSv2RHPw9mYjdGYfcpkctjhuc6M1HqFgTznneRTsZVzg7q6EiMVa21EVZeHCA4HV3",
+    "2CW4F9zk1JHmJHhuEpAvwyn1DTFzBVKZxmjtxEvSjuYuWQdhqaFJ5Df2SQo2hsZgGR42Sn2ZbRaktuwf1KkEJFKk",
+    "5hoA78Jc4jtzyVr5zMbJPh4F5HKncVQ1ET11q8SSfaqL2UntAyN82Z73wTmPYGfs4dpSLoRHNqHe5Nsm7ehnbvKe",
+    "2LkVPXceqEXC3WeF9UfxMhEDh3xawt8MXFEFVnL6o7fbH8i8RvWo19xv2eGi65F6yhskWN8aJB3Li2M3d1V64exR",
+    "63CVirguYBpxDorFXqs44YcHsNiPkiDEiaJVNuhFRhUWP63CtfNLVXsj4EQ928ZBLie14iqkbrvAqHTYHZ3HSoZb",
+    "HvkgJ2aNGUcwV8meo2QBnB6K6HseLqUYKBwEzPHyfbrFxsfPoKRrkkDmLWVwfCjC53AAoYiXKaoWuRD8ScGQoLW",
+    "3UKYAspL866a8hcf99ZRDMmieg7E7zcBxaT69BejuWVjGSnaRu2xLDtUmugmWdGkX34V512QWC1cFZ5AX4rFa7fk"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
-    "2026-10-22": -0.342922173
+    "2026-10-22": -0.40616359
   }
 }
