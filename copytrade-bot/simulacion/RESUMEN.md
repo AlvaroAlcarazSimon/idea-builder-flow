@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 22/10 19:00 · **en marcha desde:** 22/10 12:40 (6,3 h) · hora de España
+**Actualizado:** 22/10 19:13 · **en marcha desde:** 22/10 12:40 (6,5 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,7 +8,7 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
-| Pequeño constante (5vid) | 11 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
+| Pequeño constante (5vid) | 12 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
 | big bags bobby | 0 | 5 | 5 | 60% | +0,011 SOL (+2,3%) | — |
 | CookDoc (descartado) | 0 | 0 | 0 | — | — | — |
@@ -17,11 +17,11 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 | Constante (7q3C) | 1 | 0 | 0 | — | — | — |
 | Sin seguidores (AMTM) (descartado) | 0 | 0 | 0 | — | — | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
-| Racha reciente (ADR2) | 6 | 2 | 1 | 0% | −0,056 SOL (−56,4%) | 1 (+9,5%) |
+| Racha reciente (ADR2) | 6 | 2 | 1 | 0% | −0,056 SOL (−56,4%) | 1 (+1,3%) |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 26 | 31% | −0,193 SOL (−7,4%) | 2 (−8,3%) |
+| peacefuldestroy (descartado) | 0 | 28 | 26 | 31% | −0,193 SOL (−7,4%) | 2 (−8,4%) |
 
-**Total cerrado:** −0,345 SOL (−6,5%) · **abierto:** −0,007 SOL sobre 0,30 SOL
+**Total cerrado:** −0,345 SOL (−6,5%) · **abierto:** −0,016 SOL sobre 0,30 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
@@ -29,9 +29,9 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy (descartado) | 0,100 SOL | +7,9% | ×1,50 | 22,4 h |
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −24,5% | ×1,00 | 15,9 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | +9,5% | ×1,09 | 2,2 h |
+| [E28e…pump](https://dexscreener.com/solana/E28eQFoCPndfLUPnxYgEWHhbnEVqSpyNPgAacoAEpump) | peacefuldestroy (descartado) | 0,100 SOL | +7,4% | ×1,50 | 22,6 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −24,2% | ×1,00 | 16,1 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | +1,3% | ×1,09 | 2,4 h |
 
 ## Últimos trades cerrados (53 en total)
 
