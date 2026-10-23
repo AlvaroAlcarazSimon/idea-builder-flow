@@ -23,7 +23,7 @@ Nunca pedir al usuario que pegue claves en el chat. Siempre `DRY_RUN=true` hasta
 - **Verificador de wallets** `simulacion/verificar_wallets.py` (ver abajo: es el método fiable).
 
 ## Prueba de una semana (desde el 23/10, 14:11 hora de España)
-- Desde las 12:26 la simulación vigila **7gmj, 2Y8u, 7ciZ y 7q3C** (la lleva la sesión session_01RJgUZJybSAzKJzMCrKYubM con
+- Desde las 12:26 la simulación vigila **7gmj, 2Y8u, 7ciZ y 7q3C** (7q3C quitado el 23/10 a las 20:20: copiarle un trade de 5 s costó −40%) (la lleva la sesión session_01RJgUZJybSAzKJzMCrKYubM con
   una tarea horaria que reinicia simulación + temporizador y resume; no lanzar otra simulación en paralelo).
 - Desde las **14:11 la simulación descuenta comisiones estimadas** (`SIM_FEE_LAMPORTS`, por defecto 0,002005 SOL por compra
   o venta = tope de priority fee + base, y `SIM_TOKEN_ACCOUNT_LAMPORTS` 0,00204 SOL por token nuevo, que el bot no recupera
