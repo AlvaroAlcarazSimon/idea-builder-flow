@@ -23,7 +23,7 @@ Nunca pedir al usuario que pegue claves en el chat. Siempre `DRY_RUN=true` hasta
 - **Verificador de wallets** `simulacion/verificar_wallets.py` (ver abajo: es el método fiable).
 
 ## Estado de la simulación (22/10, 23:30)
-- Vigila (traders.json, lo que no lleva "(descartado)"): **big bags bobby, 7ciZ, 7q3C, 5vid, ADR2**.
+- Vigila (traders.json, lo que no lleva "(descartado)"): **7gmj, 2Y8u, 7ciZ, 7q3C** (cambio del 23/10 tras BUSQUEDA.md; fuera bobby, 5vid y ADR2).
 - Descartados (se conservan en la tabla): peacefuldestroy, Walta, Pikalosi, Killua, CookDoc, Jijo, AMTM.
 - Resultado: total cerrado **+0,075 SOL (+1,2%)**. Casi todo lo bueno viene de **ADR2** (+0,36 SOL en 9 trades,
   muchos con take profit al doblar + trailing). 5vid +0,085 (empezó fuerte y se desinfló). bobby +0,011.
