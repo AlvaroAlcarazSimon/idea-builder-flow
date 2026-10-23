@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 23/10 14:16 · **en marcha desde:** 22/10 12:40 (25,6 h) · hora de España
+**Actualizado:** 23/10 14:17 · **en marcha desde:** 22/10 12:40 (25,6 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
