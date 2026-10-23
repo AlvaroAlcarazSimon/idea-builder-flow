@@ -15,7 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.077884089
+      "lastValueSol": 0.081143541
     },
     "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC": {
       "mint": "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC",
@@ -725,6 +725,16 @@
       "closedAt": 1792791214426,
       "reason": "trailing stop (pico x1.59, ahora x1.00)",
       "feesSol": 0.00604928
+    },
+    {
+      "mint": "AVKYgzccwrWTNtW2ejz3VRthG3UYsVMmJ5piVEhzpump",
+      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": -0.048553604,
+      "openedAt": 1792794225042,
+      "closedAt": 1792794365797,
+      "reason": "stop loss (-44.8%)",
+      "feesSol": 0.00604928
     }
   ],
   "processed": [
@@ -1348,11 +1358,17 @@
     "41v91rSSXsddP1aDRTwPmG65um1utfwD8QMVZzP9SB3hJb1j9hz1mFC8kva5qmgyrAdENQG9AY6T211XFf3bpDKC",
     "3YrskWJ4jb7GkeHzWAFHUDEA91DtCeZwBotbDiQDVxUmES63uQbS3tvzvbvULV6YCMBmS6TWxkq8EduxCHqkiNR7",
     "5isan2FR8f92rUj2riPSspZK9mtutHSbDHX8PuaZosrT69k27hczbEgLJ4je8NzXTkDFYgy5nEEcFCq1AUYbHShy",
-    "3XLsAP7F24YhR1MZP1xjVXyvAibnDLboxkirrrQYYZGSceELo4rFPn8jWkf77Cq9XQAgUDDs4hhZTsNFJKgjRvyg"
+    "3XLsAP7F24YhR1MZP1xjVXyvAibnDLboxkirrrQYYZGSceELo4rFPn8jWkf77Cq9XQAgUDDs4hhZTsNFJKgjRvyg",
+    "sgmL7JKsEDk2NbNPNUoQJc8G9sD7gbfEsCqNkzMfywvmZqDizJ58jcR1i7LL8wPnaSNs6y3YKLicP8VMtYP7Ccb",
+    "5JzjC1HxxmT3uSTw6VPcnugYqa5t4fb9CPaSq4EGjqU4oHy4Nim5ciBXFL6jFmA8UkrVsmNfD3ib3DVuqzcWsqen",
+    "2vwWpEmwH3u1YHKtQ68cFwmkhKo4MPEKU1z93729vaUwVvKUxyCtp9NJhR3BCv3QiJqFrDWz2uXbGp5wzBqmf9n5",
+    "2oihtFxDjaFFkmyDYsoUngdt3tEqTbF5T2xfULY6g7ciExuz6NUV67Zt8s3TJUxk1z5qbYPHaHp8uHsW49Z87m5Q",
+    "4gqvuSNBJWE1KhY26AjNVch4pCjvmjGfu6CiadKsaGbc33GGUYq7zxbqtSADmt7eToE1sUghM91YHvPA4rcUVPrY",
+    "4LpRwkJg9yGmWtnEMboKv9i3T5L24C8UusUYbGh68rcqLQU5nLc2CuD2vNzPZCVHekUcEEXf1JjTw46EDLXHYibv"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
     "2026-10-22": 0.19621871799999985,
-    "2026-10-23": -0.012019601000000053
+    "2026-10-23": -0.060573205000000054
   }
 }
