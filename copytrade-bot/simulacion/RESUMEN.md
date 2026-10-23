@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 23/10 02:00 · **en marcha desde:** 22/10 12:40 (13,3 h) · hora de España
+**Actualizado:** 23/10 02:12 · **en marcha desde:** 22/10 12:40 (13,5 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,20 +8,20 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
-| Racha reciente (ADR2) | 36 | 11 | 9 | 56% | +0,362 SOL (+40,2%) | 2 (+45,5%) |
+| Racha reciente (ADR2) | 36 | 11 | 9 | 56% | +0,362 SOL (+40,2%) | 2 (+44,3%) |
 | Pequeño constante (5vid) | 12 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | big bags bobby | 41 | 9 | 9 | 44% | +0,084 SOL (+9,3%) | — |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
 | CookDoc (descartado) | 0 | 0 | 0 | — | — | — |
 | Killua (descartado) | 0 | 0 | 0 | — | — | — |
-| Constante (7q3C) | 2 | 0 | 0 | — | — | — |
 | Sin seguidores (AMTM) (descartado) | 0 | 0 | 0 | — | — | — |
-| Holder paciente (7ciZ) | 3 | 1 | 0 | — | — | 1 (−11,3%) |
+| Holder paciente (7ciZ) | 3 | 1 | 0 | — | — | 1 (−11,0%) |
+| Constante (7q3C) | 5 | 1 | 1 | 0% | −0,041 SOL (−41,3%) | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
 | peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−31,2%) |
 
-**Total cerrado:** +0,147 SOL (+2,2%) · **abierto:** +0,048 SOL sobre 0,40 SOL
+**Total cerrado:** +0,106 SOL (+1,6%) · **abierto:** +0,046 SOL sobre 0,40 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
@@ -29,15 +29,16 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −31,2% | ×1,00 | 22,9 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −22,6% | ×1,09 | 9,2 h |
-| [Q1iJ…pump](https://dexscreener.com/solana/Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump) | Racha reciente (ADR2) | 0,050 SOL | +120,8% | ×2,21 | 5,2 h |
-| [J2zE…pump](https://dexscreener.com/solana/J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump) | Holder paciente (7ciZ) | 0,100 SOL | −11,3% | ×1,00 | 77 min |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −31,2% | ×1,00 | 23,1 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −22,6% | ×1,09 | 9,4 h |
+| [Q1iJ…pump](https://dexscreener.com/solana/Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump) | Racha reciente (ADR2) | 0,050 SOL | +116,2% | ×2,21 | 5,4 h |
+| [J2zE…pump](https://dexscreener.com/solana/J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump) | Holder paciente (7ciZ) | 0,100 SOL | −11,0% | ×1,00 | 1,5 h |
 
-## Últimos trades cerrados (66 en total)
+## Últimos trades cerrados (67 en total)
 
 | Cerrado (hora de España) | Token | Trader | Resultado | Duró | Motivo |
 |---|---|---|---|---|---|
+| 23/10 02:10 | [7qnz…pump](https://dexscreener.com/solana/7qnzP24K8QWbz4jk1Xi3h3F6TqTsuekcqT91KVEcpump) | Constante (7q3C) | −0,041 SOL (−41,3%) | 6 min | stop loss (-41.6%) |
 | 23/10 01:13 | [7Uby…pump](https://dexscreener.com/solana/7UbyjgAnW8ZYE6BwDmV7HGVYy4SYnKUp2aSUwidipump) | big bags bobby | −0,023 SOL (−22,9%) | 12 min | stop loss (-40.4%) |
 | 23/10 00:13 | [334j…pump](https://dexscreener.com/solana/334j9dCg9WBfvC56tzRsp7RVFcYzpF5R2zC54zJdpump) | big bags bobby | +0,144 SOL (+143,8%) | 7 min | trailing stop (pico x4.85, ahora x2.78) |
 | 22/10 23:42 | [D3Zs…pump](https://dexscreener.com/solana/D3ZsidqtYvNbR4a61vkAxwiMfSGkVnvwVR2mCVtrpump) | big bags bobby | −0,014 SOL (−13,8%) | 2 min | trailing stop (pico x1.33, ahora x0.86) |
@@ -57,4 +58,3 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 | 22/10 16:56 | [62FG…qSq6](https://dexscreener.com/solana/62FGaimmKD1KBkG5tLc9HWDYyCc9qYyWP7mqESbRqSq6) | Pequeño constante (5vid) | −0,025 SOL (−24,5%) | 1 min | copia venta del trader |
 | 22/10 16:42 | [94d4…pump](https://dexscreener.com/solana/94d4MBmwqE5bKbzCUPEwzmt9Vfd9BxUy8wLyd6RGpump) | Pequeño constante (5vid) | −0,012 SOL (−11,7%) | 1 min | trailing stop (pico x1.38, ahora x0.88) |
 | 22/10 16:32 | [7WMk…odcf](https://dexscreener.com/solana/7WMk9U1g4kDafZFjzKkxpDBTqgYKBdnWJUoey88codcf) | Pequeño constante (5vid) | +0,009 SOL (+9,3%) | 8 min | trailing stop (pico x1.64, ahora x1.09) |
-| 22/10 16:23 | [2zFY…pump](https://dexscreener.com/solana/2zFYDCTeHdUBFVBAUzpU9A5wPT69VYbiJj12ndVPpump) | Pequeño constante (5vid) | −0,039 SOL (−38,8%) | 1 min | copia venta del trader |

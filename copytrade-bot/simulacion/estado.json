@@ -49,7 +49,7 @@
         "SIM-mvjw9j1w-3zv0tl"
       ],
       "sourceTokens": "44409431754004",
-      "lastValueSol": 0.110377024
+      "lastValueSol": 0.108121007
     },
     "J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump": {
       "mint": "J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump",
@@ -66,7 +66,7 @@
         "SIM-mvk4msqr-fgwlsl"
       ],
       "sourceTokens": "28397203411532",
-      "lastValueSol": 0.088739483
+      "lastValueSol": 0.08896098
     }
   },
   "closed": [
@@ -663,6 +663,15 @@
       "openedAt": 1792710124744,
       "closedAt": 1792710827134,
       "reason": "stop loss (-40.4%)"
+    },
+    {
+      "mint": "7qnzP24K8QWbz4jk1Xi3h3F6TqTsuekcqT91KVEcpump",
+      "source": "7q3Cw4w9HLsnXqf64RS6ZnkpNQxcPP4BEjG6kVKj2115",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.041272274000000005,
+      "openedAt": 1792713835290,
+      "closedAt": 1792714200509,
+      "reason": "stop loss (-41.6%)"
     }
   ],
   "processed": [
@@ -1220,10 +1229,14 @@
     "45pQ37cNiBTUeoHGzLzpSYAka1DSxFMntrRJw6h2XhygszA9aRf3kWvvWgnSVRyewCP5BsQYzWZsQRqLbWA1Pkp9",
     "1tUHE4qqjoyh3byKAfFbYez4kZk7tCUdMxPqpmkJx93UtCGGLnvqmWjQiHstTZLGPH1ucVNyieKZE7WHwD31NXZ",
     "3P8z6pSynPNmb9w1a9RGRPxAwph21TMPPbMYrkx2jtoefbUv8yDXx38DH2spsicHMGcsSgAJx5oSF1SanA7B7tyX",
-    "hMffQcSHshKczcLdugQ5jjKuUBLmGHCC9vuweJtrUe5CgbAnrHatQ3oMm4AxvbvjbnquhMn5VgaeNYpb98wfmcs"
+    "hMffQcSHshKczcLdugQ5jjKuUBLmGHCC9vuweJtrUe5CgbAnrHatQ3oMm4AxvbvjbnquhMn5VgaeNYpb98wfmcs",
+    "4YLPB2wHB2nYSAqztAxVs8ZWobXHZZ7n5kgUANLXQTa6Zamhw5P4icNoit2ACZvmbD1FuWDAhD7is5Nz3xcz96St",
+    "yRxzXTysgGCrDbcebe4hwDcCmBaNMTEjPssVZgtZY3qfCJ9nq56kNVeVHDPqakyhSo2wf5F4bdkcQL6xNHuavBi",
+    "4xzSv6BKR1H72B9AKHUfu28wEfswWwQuwz9HCovuNTBgJ9daVcAay2JDdf8GknUgYy1zbVitSRJsG11xWsc8Bu4g"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
-    "2026-10-22": 0.19621871799999985
+    "2026-10-22": 0.19621871799999985,
+    "2026-10-23": -0.041272274000000005
   }
 }
