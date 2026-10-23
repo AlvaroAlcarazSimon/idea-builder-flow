@@ -27,7 +27,7 @@ def verify(w, days=30):
         if len(r)<1000 or (r[-1].get("blockTime") or 0)<cut: break
     toks={}; own=0; fees=0; kinds={}; fail=0; sol_out={}; sol_in={}
     for i,s in enumerate(sigs):
-        tx=rpc("getTransaction",[s["signature"],{"encoding":"jsonParsed","maxSupportedTransactionVersion":0}])
+        tx=rpc("getTransaction",[s["signature"],{"encoding":"jsonParsed","maxSupportedTransactionVersion":1}])
         time.sleep(0.6)
         if not tx: fail+=1; continue
         keys=[k["pubkey"] for k in tx["transaction"]["message"]["accountKeys"]]

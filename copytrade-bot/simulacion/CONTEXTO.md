@@ -4,6 +4,16 @@ Todo el código está en la rama `claude/optimistic-mayer-rbu76f`, carpeta `copy
 El usuario habla español, no es técnico y quiere las horas en **hora de España**.
 Nunca pedir al usuario que pegue claves en el chat. Siempre `DRY_RUN=true` hasta que el usuario decida.
 
+## ✅ Búsqueda hecha (23/10, ~12:00) — ver `BUSQUEDA.md`
+- Finalistas verificadas (todas las operaciones, 30 d): **7gmjcpa** (+59 SOL, +35 sin sus 3 mejores, gana todas las semanas,
+  1,3 SOL/compra, aguanta ~5 min, sobreprecio +3,7%) — la mejor; **2Y8uSmX** (+44, 1,4 compras/día); **95FNTS9** (+9,9);
+  **DKFbE1h** (+7,5, aguanta 89 min, sobreprecio −4%).
+- Con el mismo método: **ADR2 −72,7 SOL, bobby −97, Ht6b −151, 8CSE −10, 5vid −2,8, 7q3C +3, 7ciZ +58,5, 42wu scalper**.
+  Lo que ADR2 da en la simulación sale de las reglas de venta del bot, no de que él gane.
+- Pendiente de decidir con el usuario: qué wallets entran/salen de la simulación (no se ha tocado `traders.json`).
+- Ojo: ya hay transacciones versión 1; usar `maxSupportedTransactionVersion: 1` (corregido en `verificar_wallets.py`).
+- Helius volvía a tener saldo el 23/10 (la búsqueda gastó ~5.400 llamadas).
+
 ## Qué hay hecho
 - **Bot de copytrade** para memecoins de Solana (README.md): detecta las operaciones del trader
   por cambios de saldo + lectura del bloque, copia compras/ventas vía Jupiter, con take profit, stop loss,
