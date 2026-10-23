@@ -22,6 +22,17 @@ Nunca pedir al usuario que pegue claves en el chat. Siempre `DRY_RUN=true` hasta
 - **Simulación continua** (`simulacion/simular.sh`, resultados en `simulacion/RESUMEN.md`, estado en `estado.json`).
 - **Verificador de wallets** `simulacion/verificar_wallets.py` (ver abajo: es el método fiable).
 
+## Prueba de una semana (desde el 23/10, 14:11 hora de España)
+- Desde las 12:26 la simulación vigila **7gmj, 2Y8u, 7ciZ y 7q3C** (la lleva la sesión session_01RJgUZJybSAzKJzMCrKYubM con
+  una tarea horaria que reinicia simulación + temporizador y resume; no lanzar otra simulación en paralelo).
+- Desde las **14:11 la simulación descuenta comisiones estimadas** (`SIM_FEE_LAMPORTS`, por defecto 0,002005 SOL por compra
+  o venta = tope de priority fee + base, y `SIM_TOKEN_ACCOUNT_LAMPORTS` 0,00204 SOL por token nuevo, que el bot no recupera
+  porque no cierra cuentas). Las operaciones anteriores no las incluyen. Con 0,1 SOL por operación es un 4-6% por trade.
+- Expectativa honesta dada al usuario: lo más probable es quedar cerca de 0 (7gmj solo gana ~+1% por operación las
+  2 últimas semanas; copiarle cuesta ~3,7% de entrada + salida tardía + comisiones; 2Y8u depende de pelotazos).
+- Criterio de éxito propuesto (sin confirmar): tras una semana, 7gmj y 2Y8u en positivo con comisiones, en más de
+  40 operaciones y sin depender de un solo trade. Si no, no se pasa a dinero real.
+
 ## Estado de la simulación (22/10, 23:30)
 - Vigila (traders.json, lo que no lleva "(descartado)"): **7gmj, 2Y8u, 7ciZ, 7q3C** (cambio del 23/10 tras BUSQUEDA.md; fuera bobby, 5vid y ADR2).
 - Descartados (se conservan en la tabla): peacefuldestroy, Walta, Pikalosi, Killua, CookDoc, Jijo, AMTM.
