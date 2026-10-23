@@ -15,7 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.068344624
+      "lastValueSol": 0.069849304
     },
     "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC": {
       "mint": "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC",
@@ -49,7 +49,7 @@
         "SIM-mvkf2omu-1gvfd1"
       ],
       "sourceTokens": "14230454836850",
-      "lastValueSol": 0.082138709
+      "lastValueSol": 0.080154286
     }
   },
   "closed": [
@@ -1287,7 +1287,8 @@
     "2erGbKJMLZb3nHeYmP7E54y42QuP9FJCFu3KQ7rHmE4b6ukmjX6Ng18rZhmXRx2ZwJth2iZqeRr4SUFUkFmkUP7m",
     "anT4rZvoyWKCREE4h8KzGs43gFP6iPHESuRTw3SbQKxwgE7WxYjgDwDL6cBNmCF4axHxYXcQGddjjauBgDkPD5C",
     "2foGJuFPM7yYi3wB4dU9pkqtEU5jm6CmjKZfw24GaSy5WSZzFdP5BxjymCWEcRKNAokrN7yjJ1U1y5BjZi16UY9S",
-    "qvTx5epYCnXLrxDMuScAeT8omKmQtcduLKHMYK2vuygRGiVWTZma3zMKAGGH9RccVTGJj1QoGNSquyh8RegWzVM"
+    "qvTx5epYCnXLrxDMuScAeT8omKmQtcduLKHMYK2vuygRGiVWTZma3zMKAGGH9RccVTGJj1QoGNSquyh8RegWzVM",
+    "4DTMLC6hWWudf7iAQXDxsaoSkPy38swEU7wKw7pZ6PZ2TPD8KskC6ZRLSEBFAcQFGXwumRfFgkBhkHskWZWUnRs1"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
