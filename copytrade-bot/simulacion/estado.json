@@ -43,13 +43,13 @@
       "totalCostSol": 0.1,
       "realizedPnlSol": 0.053090482999999994,
       "openedAt": 1792694912180,
-      "peakMultiple": 2.4193626999999998,
+      "peakMultiple": 2.86044572,
       "takeProfitDone": true,
       "buySignatures": [
         "SIM-mvjw9j1w-3zv0tl"
       ],
       "sourceTokens": "44409431754004",
-      "lastValueSol": 0.115630542
+      "lastValueSol": 0.143022286
     },
     "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump": {
       "mint": "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump",
@@ -60,13 +60,13 @@
       "totalCostSol": 0.1,
       "realizedPnlSol": 0,
       "openedAt": 1792726505526,
-      "peakMultiple": 1.0324976399999999,
+      "peakMultiple": 1.0658181299999998,
       "takeProfitDone": false,
       "buySignatures": [
         "SIM-mvkf2omu-1gvfd1"
       ],
       "sourceTokens": "14230454836850",
-      "lastValueSol": 0.091543892
+      "lastValueSol": 0.105385004
     }
   },
   "closed": [
