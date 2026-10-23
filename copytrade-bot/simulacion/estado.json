@@ -32,7 +32,7 @@
         "SIM-mvjnqjn8-njgip6"
       ],
       "sourceTokens": "14430616116979",
-      "lastValueSol": 0.076439198
+      "lastValueSol": 0.074314455
     },
     "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump": {
       "mint": "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump",
@@ -49,7 +49,7 @@
         "SIM-mvkf2omu-1gvfd1"
       ],
       "sourceTokens": "14230454836850",
-      "lastValueSol": 0.078463383
+      "lastValueSol": 0.078687998
     }
   },
   "closed": [
@@ -1286,7 +1286,8 @@
     "54zuxxcuMigPN28MNLEvMt92jk4Yt56CpauRt5cUWMHhqWt1bk9KQ7HnPjzjkrYmyQWpwpLKiHL99nxShU2sKjHp",
     "2erGbKJMLZb3nHeYmP7E54y42QuP9FJCFu3KQ7rHmE4b6ukmjX6Ng18rZhmXRx2ZwJth2iZqeRr4SUFUkFmkUP7m",
     "anT4rZvoyWKCREE4h8KzGs43gFP6iPHESuRTw3SbQKxwgE7WxYjgDwDL6cBNmCF4axHxYXcQGddjjauBgDkPD5C",
-    "2foGJuFPM7yYi3wB4dU9pkqtEU5jm6CmjKZfw24GaSy5WSZzFdP5BxjymCWEcRKNAokrN7yjJ1U1y5BjZi16UY9S"
+    "2foGJuFPM7yYi3wB4dU9pkqtEU5jm6CmjKZfw24GaSy5WSZzFdP5BxjymCWEcRKNAokrN7yjJ1U1y5BjZi16UY9S",
+    "qvTx5epYCnXLrxDMuScAeT8omKmQtcduLKHMYK2vuygRGiVWTZma3zMKAGGH9RccVTGJj1QoGNSquyh8RegWzVM"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
