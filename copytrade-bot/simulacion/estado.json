@@ -32,7 +32,7 @@
         "SIM-mvjnqjn8-njgip6"
       ],
       "sourceTokens": "14430616116979",
-      "lastValueSol": 0.077438715
+      "lastValueSol": 0.077080728
     },
     "Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump": {
       "mint": "Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump",
@@ -43,13 +43,13 @@
       "totalCostSol": 0.1,
       "realizedPnlSol": 0.053090482999999994,
       "openedAt": 1792694912180,
-      "peakMultiple": 2.20754048,
+      "peakMultiple": 2.22712466,
       "takeProfitDone": true,
       "buySignatures": [
         "SIM-mvjw9j1w-3zv0tl"
       ],
       "sourceTokens": "44409431754004",
-      "lastValueSol": 0.101296005
+      "lastValueSol": 0.103712003
     },
     "J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump": {
       "mint": "J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump",
@@ -67,6 +67,23 @@
       ],
       "sourceTokens": "28397203411532",
       "lastValueSol": 0.083118483
+    },
+    "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump": {
+      "mint": "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump",
+      "source": "ADR2siyXuAZwqqJixh2K7V6GiWCqkZw8szBCAF1nrkaC",
+      "decimals": 6,
+      "tokens": "438382945020",
+      "costSol": 0.1,
+      "totalCostSol": 0.1,
+      "realizedPnlSol": 0,
+      "openedAt": 1792726505526,
+      "peakMultiple": 1.0324976399999999,
+      "takeProfitDone": false,
+      "buySignatures": [
+        "SIM-mvkf2omu-1gvfd1"
+      ],
+      "sourceTokens": "9632335178586",
+      "lastValueSol": 0.089556795
     }
   },
   "closed": [
@@ -1240,7 +1257,21 @@
     "4ppsfEVdoEkSaaNJWnS3ji1qWZxy5VuMTiDrUyzweSXkEzgBGiAX98eWUtQ2W6JgbkYojtgsPcEP7LQdCs85wFcG",
     "qBxnjUyWsbmRLTy6SZEjiExowaDPqLLC1ScSkdtsUeFWP8vG2joKeMoccYKNuWzSzBdyEu9WtfQm7EQCcPgHGm2",
     "65uGum1fUUk6AQh71doM4Q6RQ7TGDNymMcjQyyXM2f7J58A9HdnVRrVZbnzzmDTaZd9qQaTGyQ1eG89qNREWy75H",
-    "jVb5LM9MGRYRZZDCuX8xG9Q6hwzwjhj7v6myriqrVVdxDyn2DNvGR9jCc8PGDRZr4aucvzBnPXMhYEV8q2gv86S"
+    "jVb5LM9MGRYRZZDCuX8xG9Q6hwzwjhj7v6myriqrVVdxDyn2DNvGR9jCc8PGDRZr4aucvzBnPXMhYEV8q2gv86S",
+    "32mHoYWv6ow2o7eDvFPT91bHxA33oQ29GKrd8kfZinU5vNxtz3mDHSKBV1Diyb2pXQ3NRQKW5kYjgGvzRTWwAb4k",
+    "4eD5WEqmu1519AewjjDxz4UXugqWym4TLiUtdgcvgzLYWB4exNnuLEjmXVmWf5LTBFmoEDP2sYmgRQNTzpT7DwfK",
+    "5s6xCE6BhzhgjuEq72ZnEnxpenvExyGhjWjdfDcJKJh4UbyNUbLXbyYTnNRXsJfnvB2M521yLA4N2geP5MYi5Cf",
+    "3i8EeB3gN9KUtTHvzdfN5jjjhr3jJDKSeZdGN4Cr1KN4kEMvNXmfHF9xQpfDyMDQcqYtFxwCL9ZDsTCZcoURLqNi",
+    "62f1f86vSA2AnxSjRNCb51h8dKU48G7EThG6cgrAqopBtGzzAn8QtZhnawPstxgqCYxugRanuYX2wS2EvBaxP8aN",
+    "4EDapj6SXYKrXaZ9Wuj33RkeRKVuZcsy7SXwtBWUJdHq7NYipYNdgnmz9YyR6g9e2TikYwNyByqhcd4jDe9kmzFE",
+    "2hTHZ1Lc93e3rVFcAgMgEJWcFx44AwCcidaoUVDZAf9dY97W2obESkYZYBtHouofm2V7qCcxKz1EPZKMR9iAo7fs",
+    "4PBoi319AET1nvhkepwzH7NPQXdYWgBv3GupRwuHY48yQTQABaiNZk8EmAEMrRFpzUs91GWNC2gpuWM9Fcj6JUKn",
+    "5y9L3GBwVQGHgKQ3e6yc7HqRj7PbZ1S2TUeUjQwbfW28wAbzFktD2Sef4WZhxwEcaW8psfaDWo1UMKopxxKMCuQ8",
+    "49vLEPMKz4UNniL2WLLa55Rf7TAe6Ckxwx2w9bdbMswLSWNTZoZe22cPY9u52AFpWyKCNpxzKNB2UHyAL6JqMwc8",
+    "3BXJ9rCrKaAntYQ68vtXaYnViKHWGAKq6Ag3NvyUe1CmSvpC93tMEYyTBX4P6YfRoQfrZdpkqAxYvNuAMfnPTyh5",
+    "DHQ9mJph3dZSf9xr5XbBNHDPdJzoXuVTKejVakvJWqsCRJncDfZj95gTpMU7MME1zXn1MHpoGWnNKVzZzRAM3X6",
+    "35MsmDTNq28TQZY7PVc2bxJgqw8KoaZALtaoKasyBux3HEFcrvXZZ3ab3bwo2E2cUTq6eSsWnMJkpcMor14LmaqH",
+    "3sHkCSV9VeVMJCvaJFgQcwrMAS81ajMEayh8Qo8cQ1mAVL4xH6hWDPtvES86rzRxezFXdfz4VQZHjSyiNTJKDoXV"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
