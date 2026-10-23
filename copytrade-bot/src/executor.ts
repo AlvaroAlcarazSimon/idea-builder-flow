@@ -11,12 +11,16 @@ export interface SwapResult {
   inAmount: bigint;
   /** Cantidad realmente recibida (raw). */
   outAmount: bigint;
+  /** Solo en DRY_RUN: comisiones estimadas (SOL) ya incluidas en inAmount (compra) o descontadas de outAmount (venta). */
+  feeSol?: number;
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export class Executor {
   readonly pubkey: string | undefined;
+  /** DRY_RUN: tokens cuya cuenta ya existiría en la wallet (su depósito ya se pagó). */
+  private simAccounts = new Set<string>();
 
   constructor(
     readonly conn: Connection,
@@ -33,13 +37,32 @@ export class Executor {
     return getQuote(mint, WSOL_MINT, tokens, slippageBps);
   }
 
-  /** Ejecuta un quote de Jupiter. En DRY_RUN devuelve el resultado simulado del propio quote. */
+  /** DRY_RUN: marca tokens que ya se operaron (posiciones y trades guardados) para no cobrar otra vez el depósito de su cuenta. */
+  knowAccounts(mints: Iterable<string>) {
+    for (const m of mints) this.simAccounts.add(m);
+  }
+
+  /**
+   * Ejecuta un quote de Jupiter. En DRY_RUN devuelve el resultado del propio quote, con las comisiones que tendría la tx
+   * real: comisión por transacción y, al comprar un token nuevo, el depósito de su cuenta (en real lo mide actualAmounts).
+   */
   async execute(quote: QuoteResponse): Promise<SwapResult> {
     if (config.dryRun) {
+      const buying = quote.inputMint === WSOL_MINT;
+      let fee = BigInt(config.simFeeLamports);
+      if (buying && !this.simAccounts.has(quote.outputMint)) {
+        fee += BigInt(config.simTokenAccountLamports);
+        this.simAccounts.add(quote.outputMint);
+      }
+      const inAmount = BigInt(quote.inAmount);
+      const outAmount = BigInt(quote.outAmount);
+      // Como en real, lo recibido en una venta no baja de 0 aunque la comisión supere lo que vale
+      const received = outAmount > fee ? outAmount - fee : 0n;
       return {
         signature: `SIM-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`,
-        inAmount: BigInt(quote.inAmount),
-        outAmount: BigInt(quote.outAmount),
+        inAmount: buying ? inAmount + fee : inAmount,
+        outAmount: buying ? outAmount : received,
+        feeSol: Number(buying ? fee : outAmount - received) / LAMPORTS_PER_SOL,
       };
     }
     if (!this.keypair || !this.pubkey) throw new Error("No hay PRIVATE_KEY");

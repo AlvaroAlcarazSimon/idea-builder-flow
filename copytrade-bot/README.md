@@ -14,7 +14,7 @@ porque no mira qué app usa, sino cómo cambian sus balances.
 | 🎯 **Gestión propia** | Take profit parcial, stop loss, trailing stop y tiempo máximo. Tu salida no depende solo de él. |
 | 🛡️ **Anti-rug** | Rechaza tokens con mint/freeze authority, simula la venta antes de comprar (detecta honeypots y tax tokens), límite de price impact, filtros opcionales de liquidez y market cap. |
 | 💸 **Riesgo** | Máximo de posiciones abiertas, pérdida diaria máxima, reserva mínima de SOL, descarta señales que llegan tarde. |
-| 🧪 **Simulación** | `DRY_RUN=true` hace *paper trading* con precios reales de Jupiter. Ves cuánto habrías ganado/perdido sin arriesgar nada. |
+| 🧪 **Simulación** | `DRY_RUN=true` hace *paper trading* con precios reales de Jupiter, descontando las comisiones que pagaría cada operación real (`SIM_FEE_LAMPORTS`, `SIM_TOKEN_ACCOUNT_LAMPORTS`). Ves cuánto habrías ganado/perdido sin arriesgar nada. |
 | 📱 **Telegram** | Aviso de cada compra, venta, cierre con PnL y alertas de posible rug. |
 | 🔍 **Analizador** | `npm run analyze` revisa el historial del trader **antes** de copiarle (win rate, PnL, tiempo en posición…) o le escucha en directo con `--live`. |
 

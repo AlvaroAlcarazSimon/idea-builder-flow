@@ -21,6 +21,8 @@ export interface Position {
   buySignatures: string[];
   /** Tokens que tenía el trader la última vez que lo vimos (raw): sirve para medir sus ventas. */
   sourceTokens?: string;
+  /** Solo en simulación: comisiones estimadas ya incluidas en el coste y en lo recibido. */
+  feesSol?: number;
 }
 
 export interface ClosedTrade {
@@ -31,6 +33,7 @@ export interface ClosedTrade {
   openedAt: number;
   closedAt: number;
   reason: string;
+  feesSol?: number;
 }
 
 interface StateData {
@@ -97,6 +100,7 @@ export class State {
       openedAt: p.openedAt,
       closedAt: Date.now(),
       reason,
+      feesSol: p.feesSol,
     });
     delete this.data.positions[mint];
     this.save();

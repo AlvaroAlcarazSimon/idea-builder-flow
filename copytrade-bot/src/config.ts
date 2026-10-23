@@ -82,6 +82,10 @@ function loadConfig() {
     sellSlippageBps: num("SELL_SLIPPAGE_BPS", 2500),
     priorityLevel: str("PRIORITY_LEVEL", "veryHigh") as "medium" | "high" | "veryHigh",
     priorityFeeMaxLamports: num("PRIORITY_FEE_MAX_LAMPORTS", 2_000_000),
+    /** Solo en DRY_RUN: comisión estimada por transacción (base + prioridad). Por defecto, el tope de prioridad. */
+    simFeeLamports: num("SIM_FEE_LAMPORTS", num("PRIORITY_FEE_MAX_LAMPORTS", 2_000_000) + 5_000),
+    /** Solo en DRY_RUN: depósito de la cuenta de cada token nuevo. El bot no la cierra al vender, así que no se recupera. */
+    simTokenAccountLamports: num("SIM_TOKEN_ACCOUNT_LAMPORTS", 2_039_280),
     maxPriceImpactPct: num("MAX_PRICE_IMPACT_PCT", 15),
     jupiterApiUrl: str("JUPITER_API_URL", "https://lite-api.jup.ag/swap/v1").replace(/\/$/, ""),
     jupiterApiKey: process.env.JUPITER_API_KEY?.trim() || undefined,

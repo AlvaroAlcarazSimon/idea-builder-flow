@@ -26,6 +26,13 @@ async function main() {
       ` · trailing ${config.trailingStopPct}% · copiar ventas: ${config.mirrorSells ? "sí" : "no"}`,
   );
   log.info(`Posiciones abiertas recuperadas: ${state.positions.length}`);
+  if (config.dryRun) {
+    exec.knowAccounts([...state.positions.map((p) => p.mint), ...state.closed.map((t) => t.mint)]);
+    log.info(
+      `Comisiones simuladas: ${config.simFeeLamports / 1e9} SOL por compra o venta` +
+        ` + ${config.simTokenAccountLamports / 1e9} SOL de depósito por cada token nuevo`,
+    );
+  }
 
   const watcher = new Watcher(conn, config.targets, (tx, signature, wallet) => {
     if (!state.markProcessed(signature)) return;

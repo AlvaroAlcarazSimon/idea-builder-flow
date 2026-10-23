@@ -78,6 +78,15 @@ const started = firstLogTime ?? Math.min(...state.closed.map((t) => t.openedAt),
 out.push("# 🧪 Simulación del bot de copytrade", "");
 out.push(`**Actualizado:** ${when(Date.now())} · **en marcha desde:** ${when(started)} (${ago(started)}) · ${TZ_LABEL}`, "");
 out.push("Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.", "");
+const withFees = [...state.closed, ...state.positions].filter((t) => t.feesSol);
+if (withFees.length) {
+  const fees = withFees.reduce((s, t) => s + (t.feesSol ?? 0), 0);
+  out.push(
+    `Comisiones estimadas ya descontadas en los resultados: ${fees.toFixed(3).replace(".", ",")} SOL en ${withFees.length} operaciones ` +
+      "(comisión de cada compra/venta + depósito de la cuenta de cada token nuevo). Las operaciones anteriores a activar este cálculo no las incluyen.",
+    "",
+  );
+}
 
 out.push("## Resultado por trader", "");
 out.push("| Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |");

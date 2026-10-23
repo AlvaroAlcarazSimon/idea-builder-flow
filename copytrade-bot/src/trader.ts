@@ -130,12 +130,14 @@ export class Trader {
 
     const res = await this.exec.execute(quote);
     const spent = sol(res.inAmount);
-    log.trade(`${tag} ✅ COMPRADO ${fmt(spent)} SOL → ${res.outAmount} tokens (${res.signature})`);
+    const feeNote = res.feeSol ? ` (incl. ${fmt(res.feeSol)} SOL de comisiones)` : "";
+    log.trade(`${tag} ✅ COMPRADO ${fmt(spent)} SOL${feeNote} → ${res.outAmount} tokens (${res.signature})`);
 
     if (existing) {
       existing.tokens = (BigInt(existing.tokens) + res.outAmount).toString();
       existing.costSol += spent;
       existing.totalCostSol += spent;
+      if (res.feeSol) existing.feesSol = (existing.feesSol ?? 0) + res.feeSol;
       existing.buySignatures.push(res.signature);
       this.state.upsertPosition(existing);
     } else {
@@ -152,6 +154,7 @@ export class Trader {
         takeProfitDone: false,
         buySignatures: [res.signature],
         sourceTokens: ev.tokenPost.toString(),
+        feesSol: res.feeSol,
       };
       this.state.upsertPosition(pos);
     }
@@ -224,6 +227,7 @@ export class Trader {
       try {
         const quote = await this.exec.quoteSell(pos.mint, amount, slippage);
         const res = await this.exec.execute(quote);
+        if (res.feeSol) pos.feesSol = (pos.feesSol ?? 0) + res.feeSol;
         this.recordSell(pos, held, res.inAmount, sol(res.outAmount), reason, res.signature, fraction >= 1);
         return;
       } catch (e) {
