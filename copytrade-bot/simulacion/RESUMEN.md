@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 23/10 03:13 · **en marcha desde:** 22/10 12:40 (14,5 h) · hora de España
+**Actualizado:** 23/10 04:00 · **en marcha desde:** 22/10 12:40 (15,3 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,20 +8,20 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
-| Racha reciente (ADR2) | 36 | 11 | 9 | 56% | +0,362 SOL (+40,2%) | 2 (+44,2%) |
+| Racha reciente (ADR2) | 36 | 11 | 9 | 56% | +0,362 SOL (+40,2%) | 2 (+43,5%) |
 | Pequeño constante (5vid) | 12 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | big bags bobby | 41 | 9 | 9 | 44% | +0,084 SOL (+9,3%) | — |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
 | CookDoc (descartado) | 0 | 0 | 0 | — | — | — |
 | Killua (descartado) | 0 | 0 | 0 | — | — | — |
 | Sin seguidores (AMTM) (descartado) | 0 | 0 | 0 | — | — | — |
-| Holder paciente (7ciZ) | 3 | 1 | 0 | — | — | 1 (−11,0%) |
-| Constante (7q3C) | 5 | 1 | 1 | 0% | −0,041 SOL (−41,3%) | — |
+| Holder paciente (7ciZ) | 3 | 1 | 0 | — | — | 1 (−16,9%) |
+| Constante (7q3C) | 9 | 1 | 1 | 0% | −0,041 SOL (−41,3%) | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−33,7%) |
+| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−33,9%) |
 
-**Total cerrado:** +0,106 SOL (+1,6%) · **abierto:** +0,044 SOL sobre 0,40 SOL
+**Total cerrado:** +0,106 SOL (+1,6%) · **abierto:** +0,036 SOL sobre 0,40 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
@@ -29,10 +29,10 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −33,7% | ×1,00 | 24,1 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −22,6% | ×1,09 | 10,4 h |
-| [Q1iJ…pump](https://dexscreener.com/solana/Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump) | Racha reciente (ADR2) | 0,050 SOL | +115,7% | ×2,21 | 6,4 h |
-| [J2zE…pump](https://dexscreener.com/solana/J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump) | Holder paciente (7ciZ) | 0,100 SOL | −11,0% | ×1,00 | 2,5 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −33,9% | ×1,00 | 24,9 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −22,6% | ×1,09 | 11,2 h |
+| [Q1iJ…pump](https://dexscreener.com/solana/Q1iJ6Nf8WUy1pohkYcx8SaPoHPKWeWDPuyZ2aq7pump) | Racha reciente (ADR2) | 0,050 SOL | +112,9% | ×2,21 | 7,2 h |
+| [J2zE…pump](https://dexscreener.com/solana/J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump) | Holder paciente (7ciZ) | 0,100 SOL | −16,9% | ×1,00 | 3,3 h |
 
 ## Últimos trades cerrados (67 en total)
 
