@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 23/10 11:00 · **en marcha desde:** 22/10 12:40 (22,3 h) · hora de España
+**Actualizado:** 23/10 11:13 · **en marcha desde:** 22/10 12:40 (22,6 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -8,7 +8,7 @@ Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso r
 
 | Trader | Señales | Copiadas | Cerradas | Aciertos | Resultado cerrado | Abiertas (valor ahora) |
 |---|---|---|---|---|---|---|
-| Racha reciente (ADR2) | 42 | 13 | 11 | 55% | +0,510 SOL (+46,3%) | 2 (−21,6%) |
+| Racha reciente (ADR2) | 42 | 13 | 11 | 55% | +0,510 SOL (+46,3%) | 2 (−21,3%) |
 | Pequeño constante (5vid) | 12 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | big bags bobby | 41 | 9 | 9 | 44% | +0,084 SOL (+9,3%) | — |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
@@ -29,9 +29,9 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −31,1% | ×1,00 | 31,9 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −23,4% | ×1,09 | 18,2 h |
-| [Hxdu…pump](https://dexscreener.com/solana/Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump) | Racha reciente (ADR2) | 0,100 SOL | −19,9% | ×1,14 | 5,4 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −31,1% | ×1,00 | 32,1 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) | 0,100 SOL | −23,4% | ×1,09 | 18,4 h |
+| [Hxdu…pump](https://dexscreener.com/solana/Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump) | Racha reciente (ADR2) | 0,100 SOL | −19,2% | ×1,14 | 5,6 h |
 
 ## Últimos trades cerrados (70 en total)
 
