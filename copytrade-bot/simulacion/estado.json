@@ -15,7 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.07869648
+      "lastValueSol": 0.088035037
     },
     "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC": {
       "mint": "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC",
@@ -33,6 +33,24 @@
       ],
       "sourceTokens": "14430616116979",
       "lastValueSol": 0.062547223
+    },
+    "592LAoUi3g6PuhaYwkhsiym7JN3wNFpUJDvawEX1pump": {
+      "mint": "592LAoUi3g6PuhaYwkhsiym7JN3wNFpUJDvawEX1pump",
+      "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
+      "decimals": 6,
+      "tokens": "2733964151071",
+      "costSol": 0.10404428,
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": 0,
+      "openedAt": 1792789428758,
+      "peakMultiple": 1.5620636040731888,
+      "takeProfitDone": false,
+      "buySignatures": [
+        "SIM-mvlgjcie-9ofepl"
+      ],
+      "sourceTokens": "28918801517569",
+      "feesSol": 0.00404428,
+      "lastValueSol": 0.162523783
     }
   },
   "closed": [
@@ -1337,7 +1355,8 @@
     "64zL9uukqmyT2sfrPQ4B1kL8SEjJ9tJuj7JDda5oR6JkSC5E2C6h8bAue4M1YhfA3X2Zsj5aXP3PwRZ1WzS8EDaA",
     "41v91rSSXsddP1aDRTwPmG65um1utfwD8QMVZzP9SB3hJb1j9hz1mFC8kva5qmgyrAdENQG9AY6T211XFf3bpDKC",
     "3YrskWJ4jb7GkeHzWAFHUDEA91DtCeZwBotbDiQDVxUmES63uQbS3tvzvbvULV6YCMBmS6TWxkq8EduxCHqkiNR7",
-    "5isan2FR8f92rUj2riPSspZK9mtutHSbDHX8PuaZosrT69k27hczbEgLJ4je8NzXTkDFYgy5nEEcFCq1AUYbHShy"
+    "5isan2FR8f92rUj2riPSspZK9mtutHSbDHX8PuaZosrT69k27hczbEgLJ4je8NzXTkDFYgy5nEEcFCq1AUYbHShy",
+    "3XLsAP7F24YhR1MZP1xjVXyvAibnDLboxkirrrQYYZGSceELo4rFPn8jWkf77Cq9XQAgUDDs4hhZTsNFJKgjRvyg"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
