@@ -43,13 +43,13 @@
       "totalCostSol": 0.1,
       "realizedPnlSol": 0,
       "openedAt": 1792726505526,
-      "peakMultiple": 1.12226122,
+      "peakMultiple": 1.13929108,
       "takeProfitDone": false,
       "buySignatures": [
         "SIM-mvkf2omu-1gvfd1"
       ],
       "sourceTokens": "14230454836850",
-      "lastValueSol": 0.112226122
+      "lastValueSol": 0.112652817
     }
   },
   "closed": [
