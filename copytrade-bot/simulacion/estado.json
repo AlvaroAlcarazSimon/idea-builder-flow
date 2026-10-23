@@ -15,7 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.070046693
+      "lastValueSol": 0.070046548
     },
     "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC": {
       "mint": "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC",
@@ -34,23 +34,6 @@
       "sourceTokens": "14430616116979",
       "lastValueSol": 0.074314455
     },
-    "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump": {
-      "mint": "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump",
-      "source": "ADR2siyXuAZwqqJixh2K7V6GiWCqkZw8szBCAF1nrkaC",
-      "decimals": 6,
-      "tokens": "438382945020",
-      "costSol": 0.1,
-      "totalCostSol": 0.1,
-      "realizedPnlSol": 0,
-      "openedAt": 1792726505526,
-      "peakMultiple": 1.13929108,
-      "takeProfitDone": false,
-      "buySignatures": [
-        "SIM-mvkf2omu-1gvfd1"
-      ],
-      "sourceTokens": "14230454836850",
-      "lastValueSol": 0.063783254
-    },
     "38r8duUAicWjJqJk9i8DShKdL75QF9KQprMQsXVnpump": {
       "mint": "38r8duUAicWjJqJk9i8DShKdL75QF9KQprMQsXVnpump",
       "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
@@ -67,7 +50,7 @@
       ],
       "sourceTokens": "26715822553259",
       "feesSol": 0.00404428,
-      "lastValueSol": 0.074424397
+      "lastValueSol": 0.070015908
     }
   },
   "closed": [
@@ -700,6 +683,16 @@
       "openedAt": 1792694912180,
       "closedAt": 1792740309253,
       "reason": "trailing stop (pico x5.42, ahora x3.73)"
+    },
+    {
+      "mint": "Hxdu2shgZLMry7c4Gt9sRfEu6qePW9w2udSaRmGNpump",
+      "source": "ADR2siyXuAZwqqJixh2K7V6GiWCqkZw8szBCAF1nrkaC",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.04211054400000001,
+      "openedAt": 1792726505526,
+      "closedAt": 1792777405266,
+      "reason": "stop loss (-40.1%)",
+      "feesSol": 0.002005
     }
   ],
   "processed": [
@@ -1312,11 +1305,12 @@
     "iF5dKmpB7xLYib5VY9GWJcSTAr98QDDqcqGjD2GKBhyDVxSP1cHyzUhqrU4jcL172bmSQwp6eEsmi8fruGmFo8b",
     "4qmC1PpfGUQZisQ9zMgxVCGtEMmDcZqbfSDVvafc14rfLUgoVNeXdgT9JSjdYiucSnGAogEGGBw6Aap7a4AAA8Ad",
     "2HYM24hhCtNuY5g7UFVJiXm6vau3EdcdXYYZZpPnP5hQeMUxJpDVYL1LRyS3UkdJtT85Gh3ssnzAPUorBVC8EvnF",
-    "2KEkLFubizBvMNnPYTyqetFrJNJKn4W9APBET8jnEKDirLoyGGgzi4FkTTaL9XhhQhaTrQnFo9zRUa1nxARaJBUC"
+    "2KEkLFubizBvMNnPYTyqetFrJNJKn4W9APBET8jnEKDirLoyGGgzi4FkTTaL9XhhQhaTrQnFo9zRUa1nxARaJBUC",
+    "4iLGeEqJartE9RUxmSsGtMyJAsE3pKcPfD6dqJRUeARc5dCpJufhm5gd9QfBZTf1jFBwAxiurKf17ucGnFSG1QYu"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
     "2026-10-22": 0.19621871799999985,
-    "2026-10-23": 0.027645597999999966
+    "2026-10-23": -0.014464946000000041
   }
 }
