@@ -15,24 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.085813208
-    },
-    "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC": {
-      "mint": "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC",
-      "source": "ADR2siyXuAZwqqJixh2K7V6GiWCqkZw8szBCAF1nrkaC",
-      "decimals": 6,
-      "tokens": "459674920682",
-      "costSol": 0.1,
-      "totalCostSol": 0.1,
-      "realizedPnlSol": 0,
-      "openedAt": 1792680589556,
-      "peakMultiple": 1.0948180299999999,
-      "takeProfitDone": false,
-      "buySignatures": [
-        "SIM-mvjnqjn8-njgip6"
-      ],
-      "sourceTokens": "14430616116979",
-      "lastValueSol": 0.062547223
+      "lastValueSol": 0.07946255
     },
     "ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump": {
       "mint": "ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump",
@@ -803,6 +786,16 @@
       "closedAt": 1792846571481,
       "reason": "copia venta del trader",
       "feesSol": 0.00604928
+    },
+    {
+      "mint": "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC",
+      "source": "ADR2siyXuAZwqqJixh2K7V6GiWCqkZw8szBCAF1nrkaC",
+      "totalCostSol": 0.1,
+      "realizedPnlSol": -0.045349477000000006,
+      "openedAt": 1792680589556,
+      "closedAt": 1792846853297,
+      "reason": "stop loss (-43.3%)",
+      "feesSol": 0.002005
     }
   ],
   "processed": [
@@ -1463,6 +1456,6 @@
     "2026-10-21": 0.004081600999999879,
     "2026-10-22": 0.19621871799999985,
     "2026-10-23": -0.055489801000000054,
-    "2026-10-24": 0.05320636099999998
+    "2026-10-24": 0.007856883999999974
   }
 }
