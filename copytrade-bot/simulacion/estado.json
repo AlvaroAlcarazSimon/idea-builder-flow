@@ -15,25 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.081899114
-    },
-    "ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump": {
-      "mint": "ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump",
-      "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
-      "decimals": 6,
-      "tokens": "2354369928305",
-      "costSol": 0.10404428,
-      "totalCostSol": 0.10404428,
-      "realizedPnlSol": 0,
-      "openedAt": 1792846398251,
-      "peakMultiple": 1,
-      "takeProfitDone": false,
-      "buySignatures": [
-        "SIM-mvmegega-rfzxz3"
-      ],
-      "sourceTokens": "28224783935491",
-      "feesSol": 0.00404428,
-      "lastValueSol": 0.068408407
+      "lastValueSol": 0.082228459
     }
   },
   "closed": [
@@ -816,6 +798,16 @@
       "closedAt": 1792859086630,
       "reason": "copia venta del trader",
       "feesSol": 0.00604928
+    },
+    {
+      "mint": "ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump",
+      "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": -0.041188608,
+      "openedAt": 1792846398251,
+      "closedAt": 1792861763443,
+      "reason": "copia venta del trader",
+      "feesSol": 0.00604928
     }
   ],
   "processed": [
@@ -1482,12 +1474,15 @@
     "4RXgacM9dwCxAJM6Xy88WFytwJqvYvQHe2GtoYcBLEHwQvQW6FpLqvvp1aYYrJQZLcvqSLwUQu93e4ce8fRow7Ne",
     "pSHXNUsvXQW4EFfWXQMcLhjGMrJfC5Hcu64xjXksMvPgoxhPsJah38u9R5a12namTLK7GwwX2CUDMizWiVEv3wp",
     "zSKoow9EPbxTi3Eftjwj44Wg82YJb5n4v5rKWQF8H5bZkTSo7jJuQtD1YvuMYpwLyEn7YoK3hN3JszmN5zjfWrg",
-    "5WccJpzu1x5qHqji65HvK4BWqgWEBTtduQo254m2BAKLy7uLTq7xJqhS8nftMtxQiyhk9UG72Hc8BJj5YUVUVoSS"
+    "5WccJpzu1x5qHqji65HvK4BWqgWEBTtduQo254m2BAKLy7uLTq7xJqhS8nftMtxQiyhk9UG72Hc8BJj5YUVUVoSS",
+    "2c8aHBs4eWfy3eJ5vDnXrAQeKziRpYKtKSik2rsnV81r25TLc6ArWi8K2JABpUcjwiF1szxiKJbZDzj6Etx6jaJ4",
+    "2eq7y91KAJaddwBh9oQew6ey9DALSYvYzTw3QxHDRXot7bXsAGQPYD5jF8bUXn8TyCsPq31Vm4sD5KZ8cbnMVDez",
+    "u1h1hXfwGXBJ1s4h6YuVS7mnF8b1Gx1VazoQnun6REyEwNG7KwrgVvjCU5vdfc11wbNmgc4JXuqGVxuwRayFLER"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
     "2026-10-22": 0.19621871799999985,
     "2026-10-23": -0.055489801000000054,
-    "2026-10-24": 0.06407352499999995
+    "2026-10-24": 0.02288491699999995
   }
 }

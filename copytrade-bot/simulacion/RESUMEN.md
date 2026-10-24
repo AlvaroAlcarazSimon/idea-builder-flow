@@ -1,10 +1,10 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 24/10 19:00 · **en marcha desde:** 22/10 12:40 (54,3 h) · hora de España
+**Actualizado:** 24/10 19:13 · **en marcha desde:** 22/10 12:40 (54,5 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
-Comisiones estimadas ya descontadas en los resultados: 0,105 SOL en 16 operaciones (comisión de cada compra/venta + depósito de la cuenta de cada token nuevo). Las operaciones anteriores a activar este cálculo no las incluyen.
+Comisiones estimadas ya descontadas en los resultados: 0,107 SOL en 16 operaciones (comisión de cada compra/venta + depósito de la cuenta de cada token nuevo). Las operaciones anteriores a activar este cálculo no las incluyen.
 
 ## Resultado por trader
 
@@ -20,26 +20,26 @@ Comisiones estimadas ya descontadas en los resultados: 0,105 SOL en 16 operacion
 | Sin seguidores (AMTM) (descartado) | 0 | 0 | 0 | — | — | — |
 | Pocas y buenas (2Y8u) | 0 | 0 | 0 | — | — | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
-| Holder paciente (7ciZ) | 15 | 8 | 7 | 14% | −0,043 SOL (−6,0%) | 1 (−34,3%) |
 | Constante (7q3C) (descartado) | 13 | 2 | 2 | 0% | −0,082 SOL (−40,4%) | — |
+| Holder paciente (7ciZ) | 16 | 8 | 8 | 13% | −0,085 SOL (−10,2%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−18,1%) |
+| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−17,8%) |
 
-**Total cerrado:** +0,209 SOL (+2,4%) · **abierto:** −0,054 SOL sobre 0,20 SOL
+**Total cerrado:** +0,168 SOL (+1,9%) · **abierto:** −0,018 SOL sobre 0,10 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
-## Posiciones abiertas (2)
+## Posiciones abiertas (1)
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −18,1% | ×1,04 | 63,9 h |
-| [ZmCw…pump](https://dexscreener.com/solana/ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump) | Holder paciente (7ciZ) | 0,104 SOL | −34,3% | ×1,00 | 4,1 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −17,8% | ×1,04 | 64,1 h |
 
-## Últimos trades cerrados (85 en total)
+## Últimos trades cerrados (86 en total)
 
 | Cerrado (hora de España) | Token | Trader | Resultado | Duró | Motivo |
 |---|---|---|---|---|---|
+| 24/10 19:09 | [ZmCw…pump](https://dexscreener.com/solana/ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump) | Holder paciente (7ciZ) | −0,041 SOL (−39,6%) | 256 min | copia venta del trader |
 | 24/10 18:24 | [GY48…pump](https://dexscreener.com/solana/GY48qsaDYstNbYZ2utkEqdG8Let2VTGb8hrranq8pump) | Holder paciente (7ciZ) | −0,031 SOL (−29,8%) | 1 min | copia venta del trader |
 | 24/10 15:29 | [HwGY…pump](https://dexscreener.com/solana/HwGYjtbj1Sgued8GQH923pEaKnEXC4iLKuFbufr1pump) | Constante copiable (7gmj) | +0,087 SOL (+83,9%) | 3 min | trailing stop (pico x2.81, ahora x1.84) |
 | 24/10 15:00 | [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) (descartado) | −0,045 SOL (−45,3%) | 2771 min | stop loss (-43.3%) |
@@ -59,4 +59,3 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 | 23/10 07:28 | [E7DT…MUZ2](https://dexscreener.com/solana/E7DTr6RANsHApnidgGT1VqzAJKcqYXBEvf2QeyvJMUZ2) | Racha reciente (ADR2) (descartado) | −0,041 SOL (−41,4%) | 72 min | stop loss (-41.4%) |
 | 23/10 07:16 | [J2zE…pump](https://dexscreener.com/solana/J2zEUivEdF3VAPb7kbqBHQ65BWoAnhZVRQVqPYv2pump) | Holder paciente (7ciZ) | −0,026 SOL (−26,2%) | 393 min | copia venta del trader |
 | 23/10 02:10 | [7qnz…pump](https://dexscreener.com/solana/7qnzP24K8QWbz4jk1Xi3h3F6TqTsuekcqT91KVEcpump) | Constante (7q3C) (descartado) | −0,041 SOL (−41,3%) | 6 min | stop loss (-41.6%) |
-| 23/10 01:13 | [7Uby…pump](https://dexscreener.com/solana/7UbyjgAnW8ZYE6BwDmV7HGVYy4SYnKUp2aSUwidipump) | big bags bobby (descartado) | −0,023 SOL (−22,9%) | 12 min | stop loss (-40.4%) |
