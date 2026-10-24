@@ -806,6 +806,16 @@
       "closedAt": 1792848548528,
       "reason": "trailing stop (pico x2.81, ahora x1.84)",
       "feesSol": 0.01206428
+    },
+    {
+      "mint": "GY48qsaDYstNbYZ2utkEqdG8Let2VTGb8hrranq8pump",
+      "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": -0.031052113000000006,
+      "openedAt": 1792859046649,
+      "closedAt": 1792859086630,
+      "reason": "copia venta del trader",
+      "feesSol": 0.00604928
     }
   ],
   "processed": [
@@ -1470,12 +1480,14 @@
     "58sGmJoFXLBTpsDyvv3J7Lnqvp2hCfYrvCr6pNLCkjBMXF7Zb8kt3fAY1EQZ64As5873AuYmqPj3M5sTUkD1XZAG",
     "T5NghGuhEThMnZ72EFSjZuFhbetqoqj2y9qQ9Mtg95fNzja5n61FDSybCwV6JjygCXSUrBhBBhNP2pXhz9FvrfY",
     "4RXgacM9dwCxAJM6Xy88WFytwJqvYvQHe2GtoYcBLEHwQvQW6FpLqvvp1aYYrJQZLcvqSLwUQu93e4ce8fRow7Ne",
-    "pSHXNUsvXQW4EFfWXQMcLhjGMrJfC5Hcu64xjXksMvPgoxhPsJah38u9R5a12namTLK7GwwX2CUDMizWiVEv3wp"
+    "pSHXNUsvXQW4EFfWXQMcLhjGMrJfC5Hcu64xjXksMvPgoxhPsJah38u9R5a12namTLK7GwwX2CUDMizWiVEv3wp",
+    "zSKoow9EPbxTi3Eftjwj44Wg82YJb5n4v5rKWQF8H5bZkTSo7jJuQtD1YvuMYpwLyEn7YoK3hN3JszmN5zjfWrg",
+    "5WccJpzu1x5qHqji65HvK4BWqgWEBTtduQo254m2BAKLy7uLTq7xJqhS8nftMtxQiyhk9UG72Hc8BJj5YUVUVoSS"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
     "2026-10-22": 0.19621871799999985,
     "2026-10-23": -0.055489801000000054,
-    "2026-10-24": 0.09512563799999996
+    "2026-10-24": 0.06407352499999995
   }
 }
