@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 24/10 07:13 · **en marcha desde:** 22/10 12:40 (42,5 h) · hora de España
+**Actualizado:** 24/10 08:00 · **en marcha desde:** 22/10 12:40 (43,3 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -13,7 +13,7 @@ Comisiones estimadas ya descontadas en los resultados: 0,079 SOL en 12 operacion
 | Racha reciente (ADR2) (descartado) | 42 | 13 | 12 | 50% | +0,468 SOL (+39,0%) | 1 (−37,5%) |
 | Pequeño constante (5vid) (descartado) | 12 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | big bags bobby (descartado) | 41 | 9 | 9 | 44% | +0,084 SOL (+9,3%) | — |
-| Constante copiable (7gmj) | 11 | 5 | 4 | 50% | +0,080 SOL (+19,2%) | 1 (−30,6%) |
+| Constante copiable (7gmj) | 11 | 5 | 4 | 50% | +0,080 SOL (+19,2%) | 1 (−30,8%) |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
 | CookDoc (descartado) | 0 | 0 | 0 | — | — | — |
 | Killua (descartado) | 0 | 0 | 0 | — | — | — |
@@ -23,7 +23,7 @@ Comisiones estimadas ya descontadas en los resultados: 0,079 SOL en 12 operacion
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Constante (7q3C) (descartado) | 13 | 2 | 2 | 0% | −0,082 SOL (−40,4%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−13,9%) |
+| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−13,7%) |
 
 **Total cerrado:** +0,238 SOL (+2,9%) · **abierto:** −0,083 SOL sobre 0,30 SOL
 
@@ -33,9 +33,9 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −13,9% | ×1,04 | 52,1 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) (descartado) | 0,100 SOL | −37,5% | ×1,09 | 38,4 h |
-| [28CL…pump](https://dexscreener.com/solana/28CL3m1ZVNZived32qGbv1H8NpUqM6q5cq6hfefDpump) | Constante copiable (7gmj) | 0,104 SOL | −30,6% | ×1,06 | 3,9 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −13,7% | ×1,04 | 52,9 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) (descartado) | 0,100 SOL | −37,5% | ×1,09 | 39,2 h |
+| [28CL…pump](https://dexscreener.com/solana/28CL3m1ZVNZived32qGbv1H8NpUqM6q5cq6hfefDpump) | Constante copiable (7gmj) | 0,104 SOL | −30,8% | ×1,06 | 4,6 h |
 
 ## Últimos trades cerrados (81 en total)
 
