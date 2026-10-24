@@ -15,25 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.079858509
-    },
-    "4vYNt561GoSr4MJMJo1DTqMw6qVykncxw1E78DiXpump": {
-      "mint": "4vYNt561GoSr4MJMJo1DTqMw6qVykncxw1E78DiXpump",
-      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
-      "decimals": 6,
-      "tokens": "1430752273962",
-      "costSol": 0.10404428,
-      "totalCostSol": 0.10404428,
-      "realizedPnlSol": 0,
-      "openedAt": 1792870220605,
-      "peakMultiple": 1,
-      "takeProfitDone": false,
-      "buySignatures": [
-        "SIM-mvmsmzwd-gtnim9"
-      ],
-      "sourceTokens": "15016092613255",
-      "feesSol": 0.00404428,
-      "lastValueSol": 0.091003273
+      "lastValueSol": 0.082222037
     }
   },
   "closed": [
@@ -836,6 +818,16 @@
       "closedAt": 1792871349778,
       "reason": "copia venta del trader",
       "feesSol": 0.00604928
+    },
+    {
+      "mint": "4vYNt561GoSr4MJMJo1DTqMw6qVykncxw1E78DiXpump",
+      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": -0.022117512000000006,
+      "openedAt": 1792870220605,
+      "closedAt": 1792872088378,
+      "reason": "copia venta del trader",
+      "feesSol": 0.00604928
     }
   ],
   "processed": [
@@ -1514,12 +1506,14 @@
     "2UuZqFnW1RBKgHHbEAKd8kQeWvRQpYsopFMaNhumVcJGWuNNJNcfRpTg6RT2CSbQWBovQvzDGSWgXFhAyoinFSLW",
     "25ZeRnhwXTVwmgran1JjxjzAtGdh1iGpGQqyJeShHufZdiHsVFhffSZBftCgTTYwivxMTzXZQaKjGr1JZCfsWz4u",
     "DdKLfQ6Jf4uESDB8BE5uQTCJDkKbdJYtq1b383g9oy9maBVDtZNACbhyyrtVUnEWp48e3SC8VbY6nSo4SHfLGSf",
-    "3NS96ESJQ4SRPi5nEb6sfSvNuYya78EQn36T592cUngYscqtcxV9i72VixMCXumdEaiDPj21XHduPT7b1AffAev8"
+    "3NS96ESJQ4SRPi5nEb6sfSvNuYya78EQn36T592cUngYscqtcxV9i72VixMCXumdEaiDPj21XHduPT7b1AffAev8",
+    "KhyWq852a1BMmViz3DeGKegJTxUBiKXJSvJRUVzgKVy79gBjviL44ujmNYpshGsQ8MQmzMtuWvAmK1REooYQi9m",
+    "5RmZYE5EHFfwQWSrSP5ZX3Guhsc7UK6vS82vYruz6HmvN5CfrRfmuCig2XmZx82jTorUrQu5X3ii1JAimPxBtLgF"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
     "2026-10-22": 0.19621871799999985,
     "2026-10-23": -0.055489801000000054,
-    "2026-10-24": 0.0035665509999999456
+    "2026-10-24": -0.01855096100000006
   }
 }
