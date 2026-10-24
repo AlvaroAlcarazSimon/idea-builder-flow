@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 24/10 11:13 · **en marcha desde:** 22/10 12:40 (46,5 h) · hora de España
+**Actualizado:** 24/10 12:00 · **en marcha desde:** 22/10 12:40 (47,3 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -23,7 +23,7 @@ Comisiones estimadas ya descontadas en los resultados: 0,079 SOL en 12 operacion
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Constante (7q3C) (descartado) | 13 | 2 | 2 | 0% | −0,082 SOL (−40,4%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−14,8%) |
+| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−14,7%) |
 
 **Total cerrado:** +0,238 SOL (+2,9%) · **abierto:** −0,084 SOL sobre 0,30 SOL
 
@@ -33,9 +33,9 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −14,8% | ×1,04 | 56,1 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) (descartado) | 0,100 SOL | −37,5% | ×1,09 | 42,4 h |
-| [28CL…pump](https://dexscreener.com/solana/28CL3m1ZVNZived32qGbv1H8NpUqM6q5cq6hfefDpump) | Constante copiable (7gmj) | 0,104 SOL | −30,8% | ×1,06 | 7,9 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −14,7% | ×1,04 | 56,9 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) (descartado) | 0,100 SOL | −37,5% | ×1,09 | 43,2 h |
+| [28CL…pump](https://dexscreener.com/solana/28CL3m1ZVNZived32qGbv1H8NpUqM6q5cq6hfefDpump) | Constante copiable (7gmj) | 0,104 SOL | −30,8% | ×1,06 | 8,6 h |
 
 ## Últimos trades cerrados (81 en total)
 
