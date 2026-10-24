@@ -9,13 +9,13 @@
       "totalCostSol": 0.1,
       "realizedPnlSol": 0,
       "openedAt": 1792631254523,
-      "peakMultiple": 1,
+      "peakMultiple": 1.0419201,
       "takeProfitDone": false,
       "buySignatures": [
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.080309299
+      "lastValueSol": 0.09960578
     },
     "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC": {
       "mint": "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC",
