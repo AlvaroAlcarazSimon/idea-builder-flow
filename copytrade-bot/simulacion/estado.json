@@ -15,7 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.078665693
+      "lastValueSol": 0.078931435
     },
     "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC": {
       "mint": "shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC",
@@ -735,6 +735,16 @@
       "closedAt": 1792794365797,
       "reason": "stop loss (-44.8%)",
       "feesSol": 0.00604928
+    },
+    {
+      "mint": "3w67qwokqjcS6KbZhzNonhmFNGjYbWneB7g5HTXwpump",
+      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": 0.005083404,
+      "openedAt": 1792798144600,
+      "closedAt": 1792799182098,
+      "reason": "trailing stop (pico x1.63, ahora x1.07)",
+      "feesSol": 0.00604928
     }
   ],
   "processed": [
@@ -1364,11 +1374,16 @@
     "2vwWpEmwH3u1YHKtQ68cFwmkhKo4MPEKU1z93729vaUwVvKUxyCtp9NJhR3BCv3QiJqFrDWz2uXbGp5wzBqmf9n5",
     "2oihtFxDjaFFkmyDYsoUngdt3tEqTbF5T2xfULY6g7ciExuz6NUV67Zt8s3TJUxk1z5qbYPHaHp8uHsW49Z87m5Q",
     "4gqvuSNBJWE1KhY26AjNVch4pCjvmjGfu6CiadKsaGbc33GGUYq7zxbqtSADmt7eToE1sUghM91YHvPA4rcUVPrY",
-    "4LpRwkJg9yGmWtnEMboKv9i3T5L24C8UusUYbGh68rcqLQU5nLc2CuD2vNzPZCVHekUcEEXf1JjTw46EDLXHYibv"
+    "4LpRwkJg9yGmWtnEMboKv9i3T5L24C8UusUYbGh68rcqLQU5nLc2CuD2vNzPZCVHekUcEEXf1JjTw46EDLXHYibv",
+    "22SxyGzW1tx9jzZQwuiXdgX1MFaBbRoKZbM4RycdBHMGgTVteJBrpZ4zRrVSwq8KU3ffYd2NY8AA3sG2GmyD1qqf",
+    "3oR7GFBjWZbGdAcxC5Fi2Df943Vg2XnjLEK6gT3b5gNKyd2WXV873xS6uYueCduLh69VUccddKqhDJeQFHv1irRh",
+    "5AAtB3ExYbv4eHKfxH2sLaiZnfMywJFaLVYN98yWAFLdZjPHNcNzW2VSEMFRfa4PTAvuJ82DzufjZDoWd2FMy7Yp",
+    "5Qo1ZHxiz2D57zjMY1ANsXU19k38nivDncQjqPXknufsHcUDV5WqGN2CQtBeJ3wreeaPkkgk7D9ssNZ4xQcke9L3",
+    "38oNr8Ak15L2okgZPmdDuJSBHgbfY94DzNg4VB5FuhH1bJchvTWv7MBGmEBZ1V6kWuAVXTGb91EnkmsPAAtN6afC"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
     "2026-10-22": 0.19621871799999985,
-    "2026-10-23": -0.060573205000000054
+    "2026-10-23": -0.055489801000000054
   }
 }
