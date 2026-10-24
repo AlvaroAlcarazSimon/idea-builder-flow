@@ -34,7 +34,7 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
 | [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −20,5% | ×1,04 | 61,1 h |
-| [ZmCw…pump](https://dexscreener.com/solana/ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump) | Holder paciente (7ciZ) | 0,104 SOL | −30,1% | ×1,00 | 79 min |
+| [ZmCw…pump](https://dexscreener.com/solana/ZmCw5EPRCYup1iLiZXFJscSq4WMcBYW8gdyzb31pump) | Holder paciente (7ciZ) | 0,104 SOL | −30,1% | ×1,00 | 80 min |
 
 ## Últimos trades cerrados (84 en total)
 
