@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 24/10 04:00 · **en marcha desde:** 22/10 12:40 (39,3 h) · hora de España
+**Actualizado:** 24/10 04:13 · **en marcha desde:** 22/10 12:40 (39,5 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -33,10 +33,10 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −21,0% | ×1,00 | 48,9 h |
-| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) (descartado) | 0,100 SOL | −37,5% | ×1,09 | 35,2 h |
-| [9q6K…pump](https://dexscreener.com/solana/9q6KfxRpxq9jimaNLXoXg8iegUKPMHojpgFrEbYupump) | Holder paciente (7ciZ) | 0,104 SOL | −22,4% | ×1,00 | 1,9 h |
-| [28CL…pump](https://dexscreener.com/solana/28CL3m1ZVNZived32qGbv1H8NpUqM6q5cq6hfefDpump) | Constante copiable (7gmj) | 0,104 SOL | −27,9% | ×1,06 | 39 min |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −21,0% | ×1,00 | 49,1 h |
+| [shor…XGhC](https://dexscreener.com/solana/shortZ7bdHShxXp2r33P6ya2BS2GKtyk2wyFfLGXGhC) | Racha reciente (ADR2) (descartado) | 0,100 SOL | −37,5% | ×1,09 | 35,4 h |
+| [9q6K…pump](https://dexscreener.com/solana/9q6KfxRpxq9jimaNLXoXg8iegUKPMHojpgFrEbYupump) | Holder paciente (7ciZ) | 0,104 SOL | −22,4% | ×1,00 | 2,2 h |
+| [28CL…pump](https://dexscreener.com/solana/28CL3m1ZVNZived32qGbv1H8NpUqM6q5cq6hfefDpump) | Constante copiable (7gmj) | 0,104 SOL | −27,9% | ×1,06 | 52 min |
 
 ## Últimos trades cerrados (80 en total)
 
