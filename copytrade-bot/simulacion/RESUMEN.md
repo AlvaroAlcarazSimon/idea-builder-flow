@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 25/10 10:00 · **en marcha desde:** 22/10 12:40 (70,3 h) · hora de España
+**Actualizado:** 25/10 10:12 · **en marcha desde:** 22/10 12:40 (70,5 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -22,10 +22,10 @@ Comisiones estimadas ya descontadas en los resultados: 0,171 SOL en 27 operacion
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Constante (7q3C) (descartado) | 13 | 2 | 2 | 0% | −0,082 SOL (−40,4%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (+7,1%) |
+| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (+6,4%) |
 | Holder paciente (7ciZ) | 25 | 16 | 15 | 13% | −0,305 SOL (−19,6%) | 1 (−20,6%) |
 
-**Total cerrado:** −0,105 SOL (−1,1%) · **abierto:** −0,014 SOL sobre 0,20 SOL
+**Total cerrado:** −0,105 SOL (−1,1%) · **abierto:** −0,015 SOL sobre 0,20 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
@@ -33,8 +33,8 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | +7,1% | ×1,25 | 79,9 h |
-| [AVe2…pump](https://dexscreener.com/solana/AVe23os7QSoekDzaSLLgX19CMvxn4JXoLM91oTuppump) | Holder paciente (7ciZ) | 0,104 SOL | −20,6% | ×1,00 | 2 min |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | +6,4% | ×1,25 | 80,1 h |
+| [AVe2…pump](https://dexscreener.com/solana/AVe23os7QSoekDzaSLLgX19CMvxn4JXoLM91oTuppump) | Holder paciente (7ciZ) | 0,104 SOL | −20,6% | ×1,00 | 15 min |
 
 ## Últimos trades cerrados (96 en total)
 
