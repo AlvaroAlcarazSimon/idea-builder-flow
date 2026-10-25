@@ -15,7 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.107884826
+      "lastValueSol": 0.105899093
     },
     "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump": {
       "mint": "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump",
@@ -26,14 +26,14 @@
       "totalCostSol": 0.10404428,
       "realizedPnlSol": 0,
       "openedAt": 1792925892043,
-      "peakMultiple": 1.3112822444443846,
+      "peakMultiple": 1.3330844136746394,
       "takeProfitDone": false,
       "buySignatures": [
         "SIM-mvnps896-jjlng5"
       ],
       "sourceTokens": "21691907933050",
       "feesSol": 0.00404428,
-      "lastValueSol": 0.134390668
+      "lastValueSol": 0.136784783
     },
     "nC3to2NNeCNRa8bAGbjAoxqreJegfP8Wuf4yHzypump": {
       "mint": "nC3to2NNeCNRa8bAGbjAoxqreJegfP8Wuf4yHzypump",
@@ -1660,7 +1660,12 @@
     "4ncZWpyrbHqNNQpJpJd8f5zA9SHS1MjmFKZCxM35KHxAtLfb87YvDssUE5Sqj5a41oq4sU7m2KLz1rzaweGvRjVX",
     "4Q8uqY65A6g3peR9bAUuHsTe7P1ctbSDAqzWBPgScYWvNuxd1qgp7ay9unp15mvM2z1ozicUBDf5NaiJgPTvWwiL",
     "2nXjwGdr7cEC9pvT461EAHXH1H5LL4BvaGqLh931aJEvViCafPSB8a56U4HLSJXjkR5bEC4HaVoggYoYLoVATUcj",
-    "2w1g91oQUGwVbky13U2zxVwcmcgsbKqoUHahGXoBumV1wbtHA9z79qzed2w7HixqTKRx7L4vgbUyiKmD6QbeuzAA"
+    "2w1g91oQUGwVbky13U2zxVwcmcgsbKqoUHahGXoBumV1wbtHA9z79qzed2w7HixqTKRx7L4vgbUyiKmD6QbeuzAA",
+    "5EpymwM7UtmSabKMouyFTsY5zKTxTdqYga8yoRAQxRsEApkPh4TBnFe4udarU7ERhVJUYE7FwwN25kGr1mjWQq3q",
+    "4fDCisDrL9Uf8PMBkPFv1YBcsDRHdhQxVw2qjjzoShsK13QE78i7u6tmTh5T1uEQdNytw12cscze1XrCEUYwvTr5",
+    "nRjjSKbQbgyDDggN9qMQm7yFZQ3s6jWkkJWWJvqnCDRDBwjEf1j4wycpBRaUDtM4m3A1x2Q2GjJptAV8nEhcLGS",
+    "Jg8BG2mDompPYqw5MSgQeumPesj3ZZRsGd9JgY9iSJWmAn4beQiX4KCA61K6qN7DoqYpQyWWoikkEBTPfvA6SRM",
+    "4UgSxu8KQqMiTgd8yFjfrHpkyzznEABJFntunmP4inwsqXhpfzqa4QNK7s71Hdh3QtpNinmNxy3dv67BjeeiUxmn"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
