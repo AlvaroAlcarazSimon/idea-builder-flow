@@ -4,18 +4,19 @@
       "mint": "6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump",
       "source": "8AtQ4ka3dgtrH1z4Uq3Tm4YdMN3cK5RRj1eKuGNnvenm",
       "decimals": 6,
-      "tokens": "157774753241",
-      "costSol": 0.1,
+      "tokens": "118331064931",
+      "costSol": 0.0750001,
       "totalCostSol": 0.1,
-      "realizedPnlSol": 0,
+      "realizedPnlSol": -0.0023140650000000006,
       "openedAt": 1792631254523,
       "peakMultiple": 1.25474092,
       "takeProfitDone": false,
       "buySignatures": [
         "SIM-mviud4hm-b6kepb"
       ],
-      "sourceTokens": "18073385188251",
-      "lastValueSol": 0.103966261
+      "sourceTokens": "13555038891188",
+      "lastValueSol": 0.069414615,
+      "feesSol": 0.002005
     },
     "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump": {
       "mint": "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump",
@@ -33,7 +34,7 @@
       ],
       "sourceTokens": "21691907933050",
       "feesSol": 0.00604928,
-      "lastValueSol": 0.108736937
+      "lastValueSol": 0.106216998
     }
   },
   "closed": [
@@ -1665,6 +1666,6 @@
     "2026-10-22": 0.19621871799999985,
     "2026-10-23": -0.055489801000000054,
     "2026-10-24": -0.13878526100000005,
-    "2026-10-25": -0.142729524
+    "2026-10-25": -0.145043589
   }
 }
