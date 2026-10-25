@@ -23,7 +23,7 @@ Comisiones estimadas ya descontadas en los resultados: 0,177 SOL en 28 operacion
 | Constante (7q3C) (descartado) | 13 | 2 | 2 | 0% | −0,082 SOL (−40,4%) | — |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
 | peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (+5,3%) |
-| Holder paciente (7ciZ) | 26 | 17 | 16 | 13% | −0,342 SOL (−20,6%) | 1 (+4,5%) |
+| Holder paciente (7ciZ) | 26 | 17 | 16 | 13% | −0,342 SOL (−20,6%) | 1 (+4,4%) |
 
 **Total cerrado:** −0,142 SOL (−1,5%) · **abierto:** +0,010 SOL sobre 0,20 SOL
 
@@ -34,7 +34,7 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
 | [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | +5,3% | ×1,25 | 82,1 h |
-| [8uNf…pump](https://dexscreener.com/solana/8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump) | Holder paciente (7ciZ) | 0,104 SOL | +4,5% | ×1,17 | 14 min |
+| [8uNf…pump](https://dexscreener.com/solana/8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump) | Holder paciente (7ciZ) | 0,104 SOL | +4,4% | ×1,17 | 15 min |
 
 ## Últimos trades cerrados (97 en total)
 
