@@ -1,10 +1,10 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 25/10 14:13 · **en marcha desde:** 22/10 12:40 (74,5 h) · hora de España
+**Actualizado:** 25/10 15:00 · **en marcha desde:** 22/10 12:40 (75,3 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
-Comisiones estimadas ya descontadas en los resultados: 0,177 SOL en 28 operaciones (comisión de cada compra/venta + depósito de la cuenta de cada token nuevo). Las operaciones anteriores a activar este cálculo no las incluyen.
+Comisiones estimadas ya descontadas en los resultados: 0,181 SOL en 29 operaciones (comisión de cada compra/venta + depósito de la cuenta de cada token nuevo). Las operaciones anteriores a activar este cálculo no las incluyen.
 
 ## Resultado por trader
 
@@ -13,7 +13,7 @@ Comisiones estimadas ya descontadas en los resultados: 0,177 SOL en 28 operacion
 | Racha reciente (ADR2) (descartado) | 42 | 13 | 13 | 46% | +0,422 SOL (+32,5%) | — |
 | Pequeño constante (5vid) (descartado) | 12 | 10 | 10 | 50% | +0,085 SOL (+8,5%) | — |
 | big bags bobby (descartado) | 41 | 9 | 9 | 44% | +0,084 SOL (+9,3%) | — |
-| Constante copiable (7gmj) | 20 | 9 | 9 | 33% | +0,074 SOL (+8,0%) | — |
+| Constante copiable (7gmj) | 22 | 10 | 9 | 33% | +0,074 SOL (+8,0%) | 1 (−14,2%) |
 | Pikalosi (descartado) | 3 | 6 | 6 | 17% | +0,034 SOL (+5,6%) | — |
 | CookDoc (descartado) | 0 | 0 | 0 | — | — | — |
 | Killua (descartado) | 0 | 0 | 0 | — | — | — |
@@ -22,20 +22,21 @@ Comisiones estimadas ya descontadas en los resultados: 0,177 SOL en 28 operacion
 | Aguanta 1,5 h (DKFb) | 0 | 0 | 0 | — | — | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Constante (7q3C) (descartado) | 13 | 2 | 2 | 0% | −0,082 SOL (−40,4%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (+10,4%) |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| Holder paciente (7ciZ) (descartado) | 26 | 17 | 16 | 13% | −0,342 SOL (−20,6%) | 1 (+7,4%) |
+| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (+7,9%) |
+| Holder paciente (7ciZ) (descartado) | 26 | 17 | 16 | 13% | −0,342 SOL (−20,6%) | 1 (+29,2%) |
 
-**Total cerrado:** −0,142 SOL (−1,5%) · **abierto:** +0,018 SOL sobre 0,20 SOL
+**Total cerrado:** −0,142 SOL (−1,5%) · **abierto:** +0,023 SOL sobre 0,31 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
-## Posiciones abiertas (2)
+## Posiciones abiertas (3)
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | +10,4% | ×1,25 | 84,1 h |
-| [8uNf…pump](https://dexscreener.com/solana/8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump) | Holder paciente (7ciZ) (descartado) | 0,104 SOL | +7,4% | ×1,17 | 2,2 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | +7,9% | ×1,25 | 84,9 h |
+| [8uNf…pump](https://dexscreener.com/solana/8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump) | Holder paciente (7ciZ) (descartado) | 0,104 SOL | +29,2% | ×1,31 | 3,0 h |
+| [nC3t…pump](https://dexscreener.com/solana/nC3to2NNeCNRa8bAGbjAoxqreJegfP8Wuf4yHzypump) | Constante copiable (7gmj) | 0,104 SOL | −14,2% | ×1,00 | 37 min |
 
 ## Últimos trades cerrados (97 en total)
 

@@ -15,7 +15,7 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.110420985
+      "lastValueSol": 0.107884826
     },
     "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump": {
       "mint": "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump",
@@ -26,14 +26,32 @@
       "totalCostSol": 0.10404428,
       "realizedPnlSol": 0,
       "openedAt": 1792925892043,
-      "peakMultiple": 1.1722925854261281,
+      "peakMultiple": 1.3112822444443846,
       "takeProfitDone": false,
       "buySignatures": [
         "SIM-mvnps896-jjlng5"
       ],
       "sourceTokens": "21691907933050",
       "feesSol": 0.00404428,
-      "lastValueSol": 0.11179402
+      "lastValueSol": 0.134390668
+    },
+    "nC3to2NNeCNRa8bAGbjAoxqreJegfP8Wuf4yHzypump": {
+      "mint": "nC3to2NNeCNRa8bAGbjAoxqreJegfP8Wuf4yHzypump",
+      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
+      "decimals": 6,
+      "tokens": "227844299377",
+      "costSol": 0.10404428,
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": 0,
+      "openedAt": 1792934575961,
+      "peakMultiple": 1,
+      "takeProfitDone": false,
+      "buySignatures": [
+        "SIM-mvnuyct4-ss1u3n"
+      ],
+      "sourceTokens": "3445130492870",
+      "feesSol": 0.00404428,
+      "lastValueSol": 0.089298334
     }
   },
   "closed": [
@@ -1639,7 +1657,10 @@
     "4ahwyTwWKyfQAfVpqtB5PjpRPtXMe4j5GZY1CVrBLZGKarpPU8UgJdN3AAn5Pdo6Ekvhvw3AfqQxhvFP3Mfs8zTp",
     "3o2bhz5XvScdpZ2Px1wvcPRmp5C87ktCS2NhZWtspwqmikWsVaCaN8heTthEqBVhsXKG7Q7V2nEnCywD8dSnEV1f",
     "53QQwxRzqA56uMgLT4qkcxRsSNyVr9wTQ1H7UCBKt4pYcBYEdyeqaYUzQM9rHKpFQ9srcT8MAyxBy2AVCFZQ8k7K",
-    "4ncZWpyrbHqNNQpJpJd8f5zA9SHS1MjmFKZCxM35KHxAtLfb87YvDssUE5Sqj5a41oq4sU7m2KLz1rzaweGvRjVX"
+    "4ncZWpyrbHqNNQpJpJd8f5zA9SHS1MjmFKZCxM35KHxAtLfb87YvDssUE5Sqj5a41oq4sU7m2KLz1rzaweGvRjVX",
+    "4Q8uqY65A6g3peR9bAUuHsTe7P1ctbSDAqzWBPgScYWvNuxd1qgp7ay9unp15mvM2z1ozicUBDf5NaiJgPTvWwiL",
+    "2nXjwGdr7cEC9pvT461EAHXH1H5LL4BvaGqLh931aJEvViCafPSB8a56U4HLSJXjkR5bEC4HaVoggYoYLoVATUcj",
+    "2w1g91oQUGwVbky13U2zxVwcmcgsbKqoUHahGXoBumV1wbtHA9z79qzed2w7HixqTKRx7L4vgbUyiKmD6QbeuzAA"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
