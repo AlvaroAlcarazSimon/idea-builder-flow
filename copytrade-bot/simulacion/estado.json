@@ -15,7 +15,25 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.105542642
+      "lastValueSol": 0.105332207
+    },
+    "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump": {
+      "mint": "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump",
+      "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
+      "decimals": 6,
+      "tokens": "2017740392986",
+      "costSol": 0.10404428,
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": 0,
+      "openedAt": 1792925892043,
+      "peakMultiple": 1.0867577535257105,
+      "takeProfitDone": false,
+      "buySignatures": [
+        "SIM-mvnps896-jjlng5"
+      ],
+      "sourceTokens": "21691907933050",
+      "feesSol": 0.00404428,
+      "lastValueSol": 0.099101967
     }
   },
   "closed": [
@@ -1619,7 +1637,8 @@
     "3pjY9SEEzQfdmgQSSYa92yP4Jh7DMP4CrooLsRjQopGPkFM3g4pFsT6UM9vWEeYyP2H98SyXyqRaH6YwR7fAcykh",
     "CaGAxkp8UX3Bg7M3eMTzVSXGgzQENf56ApTnpcaxdpaA1hBm7fWSQrR8YXPQ6ns67m18VtsyzUVax6aZCj71FSB",
     "4ahwyTwWKyfQAfVpqtB5PjpRPtXMe4j5GZY1CVrBLZGKarpPU8UgJdN3AAn5Pdo6Ekvhvw3AfqQxhvFP3Mfs8zTp",
-    "3o2bhz5XvScdpZ2Px1wvcPRmp5C87ktCS2NhZWtspwqmikWsVaCaN8heTthEqBVhsXKG7Q7V2nEnCywD8dSnEV1f"
+    "3o2bhz5XvScdpZ2Px1wvcPRmp5C87ktCS2NhZWtspwqmikWsVaCaN8heTthEqBVhsXKG7Q7V2nEnCywD8dSnEV1f",
+    "53QQwxRzqA56uMgLT4qkcxRsSNyVr9wTQ1H7UCBKt4pYcBYEdyeqaYUzQM9rHKpFQ9srcT8MAyxBy2AVCFZQ8k7K"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
