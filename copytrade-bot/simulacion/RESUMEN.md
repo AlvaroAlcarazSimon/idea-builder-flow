@@ -1,10 +1,10 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 25/10 05:16 · **en marcha desde:** 22/10 12:40 (65,6 h) · hora de España
+**Actualizado:** 25/10 06:00 · **en marcha desde:** 22/10 12:40 (66,3 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
-Comisiones estimadas ya descontadas en los resultados: 0,165 SOL en 26 operaciones (comisión de cada compra/venta + depósito de la cuenta de cada token nuevo). Las operaciones anteriores a activar este cálculo no las incluyen.
+Comisiones estimadas ya descontadas en los resultados: 0,167 SOL en 26 operaciones (comisión de cada compra/venta + depósito de la cuenta de cada token nuevo). Las operaciones anteriores a activar este cálculo no las incluyen.
 
 ## Resultado por trader
 
@@ -21,25 +21,25 @@ Comisiones estimadas ya descontadas en los resultados: 0,165 SOL en 26 operacion
 | Pocas y buenas (2Y8u) | 0 | 0 | 0 | — | — | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Constante (7q3C) (descartado) | 13 | 2 | 2 | 0% | −0,082 SOL (−40,4%) | — |
+| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (+10,3%) |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (+8,0%) |
-| Holder paciente (7ciZ) | 24 | 15 | 14 | 14% | −0,262 SOL (−18,0%) | 1 (−28,6%) |
+| Holder paciente (7ciZ) | 24 | 15 | 15 | 13% | −0,305 SOL (−19,6%) | — |
 
-**Total cerrado:** −0,062 SOL (−0,6%) · **abierto:** −0,022 SOL sobre 0,20 SOL
+**Total cerrado:** −0,105 SOL (−1,1%) · **abierto:** +0,010 SOL sobre 0,10 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
-## Posiciones abiertas (2)
+## Posiciones abiertas (1)
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | +8,0% | ×1,25 | 75,1 h |
-| [Hp48…pump](https://dexscreener.com/solana/Hp48kbT3Scan455jx5LwZyfMiqRaDH8xa6PBwBGhpump) | Holder paciente (7ciZ) | 0,104 SOL | −28,6% | ×1,00 | 3,8 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | +10,3% | ×1,25 | 75,9 h |
 
-## Últimos trades cerrados (95 en total)
+## Últimos trades cerrados (96 en total)
 
 | Cerrado (hora de España) | Token | Trader | Resultado | Duró | Motivo |
 |---|---|---|---|---|---|
+| 25/10 05:58 | [Hp48…pump](https://dexscreener.com/solana/Hp48kbT3Scan455jx5LwZyfMiqRaDH8xa6PBwBGhpump) | Holder paciente (7ciZ) | −0,043 SOL (−41,2%) | 270 min | copia venta del trader |
 | 25/10 03:44 | [3U6d…pump](https://dexscreener.com/solana/3U6d1mhaouqXPcQtYhmRxwTpmm8J18ekAxrR4fggpump) | Holder paciente (7ciZ) | −0,037 SOL (−35,2%) | 9 min | copia venta del trader |
 | 25/10 02:32 | [E3QP…pump](https://dexscreener.com/solana/E3QPjy4m5GGRDzs98953U6Dn37XnYQDDmTF4TTJ5pump) | Holder paciente (7ciZ) | −0,031 SOL (−30,2%) | 1 min | copia venta del trader |
 | 25/10 01:33 | [6cFf…pump](https://dexscreener.com/solana/6cFfwCnaWT8UjrUqCKdora9mck4CAiA9GYRqMpVhpump) | Holder paciente (7ciZ) | −0,012 SOL (−11,8%) | 5 min | trailing stop (pico x1.32, ahora x0.90) |
@@ -59,4 +59,3 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 | 24/10 02:50 | [3w67…pump](https://dexscreener.com/solana/3w67qwokqjcS6KbZhzNonhmFNGjYbWneB7g5HTXwpump) | Constante copiable (7gmj) | +0,152 SOL (+148,6%) | 34 min | copia venta del trader |
 | 24/10 01:46 | [3w67…pump](https://dexscreener.com/solana/3w67qwokqjcS6KbZhzNonhmFNGjYbWneB7g5HTXwpump) | Constante copiable (7gmj) | +0,005 SOL (+4,9%) | 17 min | trailing stop (pico x1.63, ahora x1.07) |
 | 24/10 00:26 | [AVKY…pump](https://dexscreener.com/solana/AVKYgzccwrWTNtW2ejz3VRthG3UYsVMmJ5piVEhzpump) | Constante copiable (7gmj) | −0,049 SOL (−46,7%) | 2 min | stop loss (-44.8%) |
-| 23/10 23:33 | [592L…pump](https://dexscreener.com/solana/592LAoUi3g6PuhaYwkhsiym7JN3wNFpUJDvawEX1pump) | Holder paciente (7ciZ) | −0,002 SOL (−1,8%) | 30 min | trailing stop (pico x1.59, ahora x1.00) |
