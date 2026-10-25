@@ -26,14 +26,14 @@
       "totalCostSol": 0.10404428,
       "realizedPnlSol": 0,
       "openedAt": 1792925892043,
-      "peakMultiple": 1.0867577535257105,
+      "peakMultiple": 1.1722925854261281,
       "takeProfitDone": false,
       "buySignatures": [
         "SIM-mvnps896-jjlng5"
       ],
       "sourceTokens": "21691907933050",
       "feesSol": 0.00404428,
-      "lastValueSol": 0.099101967
+      "lastValueSol": 0.108752359
     }
   },
   "closed": [
