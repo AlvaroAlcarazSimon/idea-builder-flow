@@ -97,4 +97,8 @@ simulación ha sacado beneficio incluso con traders mediocres.
   el resumen. Un temporizador (`resumen_en_punto.sh`, en el scratchpad de esa sesión) sube RESUMEN.md a GitHub
   a la hora en punto. **Si se sigue en una sesión nueva, hay que desactivar esa tarea programada** (o pedir al
   usuario que pare la sesión anterior) para no tener dos simulaciones, y recrear el sistema aquí.
+- **26/10, 00:03: el usuario pidió parar los avisos.** Tarea programada desactivada (`enabled=false`) y simulación +
+  temporizador parados, con el estado guardado en `estado.json` (sin la tarea, la simulación no sobrevive en la nube).
+  Para retomarla: reactivar la tarea (`update_trigger enabled=true`) y relanzar simulación + temporizador; arranca
+  desde `estado.json`. Mientras esté parada no se copian las operaciones de 7gmj ni de DKFb.
 - Para 24/7 de verdad: un VPS barato (~5 €/mes) con `simular.sh primer-plano` bajo pm2/systemd.
