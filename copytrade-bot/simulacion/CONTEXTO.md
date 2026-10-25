@@ -25,17 +25,23 @@ Nunca pedir al usuario que pegue claves en el chat. Siempre `DRY_RUN=true` hasta
 ## Prueba de una semana (desde el 23/10, 14:11 hora de España)
 - Desde las 12:26 la simulación vigila **7gmj, 2Y8u, 7ciZ y 7q3C** (7q3C quitado el 23/10 a las 20:20: copiarle un trade de 5 s costó −40%) (la lleva la sesión session_01RJgUZJybSAzKJzMCrKYubM con
   una tarea horaria que reinicia simulación + temporizador y resume; no lanzar otra simulación en paralelo).
+- **25/10 hacia las 12:37: fuera 7ciZ y 2Y8u, entra DKFbE1h** (decisión del usuario). 7ciZ: 2 aciertos de 16, −0,34 SOL
+  (−20,6%), y en sus últimos trades perdía también él. 2Y8u: sin operar desde el 22/10 23:05. DKFbE1h es la más copiable
+  de BUSQUEDA.md (aguanta ~1,5 h, sobreprecio −4%), pero tampoco opera desde el 24/10 10:31 (95FNTS9, la otra finalista,
+  desde el 23/10 05:35). Ahora vigila **7gmj y DKFb**. La posición que le quedó abierta a 7ciZ se cierra igual: la red de
+  seguridad mira el saldo del trader de cada posición abierta aunque ya no se le vigile, y siguen take profit / stop loss.
 - Desde las **14:11 la simulación descuenta comisiones estimadas** (`SIM_FEE_LAMPORTS`, por defecto 0,002005 SOL por compra
   o venta = tope de priority fee + base, y `SIM_TOKEN_ACCOUNT_LAMPORTS` 0,00204 SOL por token nuevo, que el bot no recupera
   porque no cierra cuentas). Las operaciones anteriores no las incluyen. Con 0,1 SOL por operación es un 4-6% por trade.
 - Expectativa honesta dada al usuario: lo más probable es quedar cerca de 0 (7gmj solo gana ~+1% por operación las
   2 últimas semanas; copiarle cuesta ~3,7% de entrada + salida tardía + comisiones; 2Y8u depende de pelotazos).
-- Criterio de éxito propuesto (sin confirmar): tras una semana, 7gmj y 2Y8u en positivo con comisiones, en más de
+- Criterio de éxito propuesto (sin confirmar): tras una semana, 7gmj y DKFb (antes 2Y8u) en positivo con comisiones, en más de
   40 operaciones y sin depender de un solo trade. Si no, no se pasa a dinero real.
 
 ## Estado de la simulación (22/10, 23:30)
-- Vigila (traders.json, lo que no lleva "(descartado)"): **7gmj, 2Y8u, 7ciZ, 7q3C** (cambio del 23/10 tras BUSQUEDA.md; fuera bobby, 5vid y ADR2).
-- Descartados (se conservan en la tabla): peacefuldestroy, Walta, Pikalosi, Killua, CookDoc, Jijo, AMTM.
+- Vigila (traders.json, lo que no lleva "(descartado)"): **7gmj y DKFb** (desde el 25/10; antes 7gmj, 2Y8u, 7ciZ y 7q3C).
+- Descartados (se conservan en la tabla): peacefuldestroy, Walta, Pikalosi, Killua, CookDoc, Jijo, AMTM, bobby, 5vid,
+  ADR2, 7q3C, 7ciZ y 2Y8u.
 - Resultado: total cerrado **+0,075 SOL (+1,2%)**. Casi todo lo bueno viene de **ADR2** (+0,36 SOL en 9 trades,
   muchos con take profit al doblar + trailing). 5vid +0,085 (empezó fuerte y se desinfló). bobby +0,011.
   7ciZ y 7q3C apenas han dado señales (sus compras se saltaron por sobreprecio >25% o mint authority activa).
