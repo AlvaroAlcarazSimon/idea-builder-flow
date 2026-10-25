@@ -15,26 +15,8 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "13555038891188",
-      "lastValueSol": 0.069414615,
+      "lastValueSol": 0.065292362,
       "feesSol": 0.002005
-    },
-    "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump": {
-      "mint": "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump",
-      "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
-      "decimals": 6,
-      "tokens": "1008870196493",
-      "costSol": 0.05202214,
-      "totalCostSol": 0.10404428,
-      "realizedPnlSol": 0.050598838,
-      "openedAt": 1792925892043,
-      "peakMultiple": 2.59692167604024,
-      "takeProfitDone": true,
-      "buySignatures": [
-        "SIM-mvnps896-jjlng5"
-      ],
-      "sourceTokens": "21691907933050",
-      "feesSol": 0.00604928,
-      "lastValueSol": 0.098750225
     }
   },
   "closed": [
@@ -947,6 +929,36 @@
       "closedAt": 1792939708649,
       "reason": "stop loss (-41.4%)",
       "feesSol": 0.00604928
+    },
+    {
+      "mint": "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump",
+      "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": 0.091104264,
+      "openedAt": 1792925892043,
+      "closedAt": 1792952822319,
+      "reason": "trailing stop (pico x2.60, ahora x1.82)",
+      "feesSol": 0.00805428
+    },
+    {
+      "mint": "GaqxG5xhtEiSLx8CePrW7x2CvHhPZoYyoc5GfA7Cpump",
+      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": -0.040095739000000005,
+      "openedAt": 1792952954967,
+      "closedAt": 1792953085325,
+      "reason": "copia venta del trader",
+      "feesSol": 0.00604928
+    },
+    {
+      "mint": "8nrSoc45B84PPcrgqUN19qqZJ1JV6TtzHh11wu2bLQ8D",
+      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": -0.018929524000000003,
+      "openedAt": 1792952717306,
+      "closedAt": 1792953100842,
+      "reason": "copia venta del trader",
+      "feesSol": 0.00604928
     }
   ],
   "processed": [
@@ -1659,13 +1671,19 @@
     "nRjjSKbQbgyDDggN9qMQm7yFZQ3s6jWkkJWWJvqnCDRDBwjEf1j4wycpBRaUDtM4m3A1x2Q2GjJptAV8nEhcLGS",
     "Jg8BG2mDompPYqw5MSgQeumPesj3ZZRsGd9JgY9iSJWmAn4beQiX4KCA61K6qN7DoqYpQyWWoikkEBTPfvA6SRM",
     "4UgSxu8KQqMiTgd8yFjfrHpkyzznEABJFntunmP4inwsqXhpfzqa4QNK7s71Hdh3QtpNinmNxy3dv67BjeeiUxmn",
-    "4eBPzH4nB7HFZDRpckHkeJjV5k5LRMhYVncnp24V3RHs7azPJn5M1dEHFcttDeVygkkUy7jNpw2Xnpz66ZFsVRXS"
+    "4eBPzH4nB7HFZDRpckHkeJjV5k5LRMhYVncnp24V3RHs7azPJn5M1dEHFcttDeVygkkUy7jNpw2Xnpz66ZFsVRXS",
+    "Fo4spGm5i9bJnSUoaJxJpAP4EawVaww59K1FwNQtHnDw7DRP6Yh1atsgL9Nx92tzovGKGQt6AacrwHG3DG7cWpM",
+    "3sy4jjss9pmeKTmQGRHiHaBaoy1Tyhev5ADJfkDpXejbcX8hEJZUi4sFQnAE4FWmZvHZNRpGMmmC6ebZTx2uVi2F",
+    "28c3qa5spJtf5tPS28pkCAUyNrcCUMMKiPWDaNsgVUub6HGU2HdLuJoYEZmWYjZR1PitxVJfRyvEX23apz5xsMy3",
+    "2Yp96vqJWXo8FMmm2vo3235TzqceMSpCYcnd4fgV3asvHDRHi71gZoTMTJqRgJ51hbhYGmeyfAvgRy2k6cMzcegr",
+    "2p9XLu6AS766W2dyyCTdXr5Y97ZxzBJpnA4pA9U2GY1upeHQnncjSsxZkxATjfU1jgSzLDEs5XeutDiHpgaNWg8z",
+    "5Zgmdu48UZZmq95GQ3nXwqzPqExgetvSRXP4KiQHAHCbF4sLYy63B9TxQz7mMJcgrQGMdyGPq5zvTDhwRef7SPRv"
   ],
   "dailyPnl": {
     "2026-10-21": 0.004081600999999879,
     "2026-10-22": 0.19621871799999985,
     "2026-10-23": -0.055489801000000054,
     "2026-10-24": -0.13878526100000005,
-    "2026-10-25": -0.145043589
+    "2026-10-25": -0.16356342599999998
   }
 }
