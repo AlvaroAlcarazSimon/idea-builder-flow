@@ -15,43 +15,25 @@
         "SIM-mviud4hm-b6kepb"
       ],
       "sourceTokens": "18073385188251",
-      "lastValueSol": 0.105899093
+      "lastValueSol": 0.104204927
     },
     "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump": {
       "mint": "8uNfPfgGW4SfhX8qCm9MUSpSEbfd6qNPSY7yHUS3pump",
       "source": "7ciZHB9e1UH7TDvPUHnKqKHAgPFwAzmHuEqXVHTTwPbb",
       "decimals": 6,
-      "tokens": "2017740392986",
-      "costSol": 0.10404428,
+      "tokens": "1008870196493",
+      "costSol": 0.05202214,
       "totalCostSol": 0.10404428,
-      "realizedPnlSol": 0,
+      "realizedPnlSol": 0.050598838,
       "openedAt": 1792925892043,
-      "peakMultiple": 1.3330844136746394,
-      "takeProfitDone": false,
+      "peakMultiple": 2.0075268818237775,
+      "takeProfitDone": true,
       "buySignatures": [
         "SIM-mvnps896-jjlng5"
       ],
       "sourceTokens": "21691907933050",
-      "feesSol": 0.00404428,
-      "lastValueSol": 0.137108146
-    },
-    "nC3to2NNeCNRa8bAGbjAoxqreJegfP8Wuf4yHzypump": {
-      "mint": "nC3to2NNeCNRa8bAGbjAoxqreJegfP8Wuf4yHzypump",
-      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
-      "decimals": 6,
-      "tokens": "227844299377",
-      "costSol": 0.10404428,
-      "totalCostSol": 0.10404428,
-      "realizedPnlSol": 0,
-      "openedAt": 1792934575961,
-      "peakMultiple": 1,
-      "takeProfitDone": false,
-      "buySignatures": [
-        "SIM-mvnuyct4-ss1u3n"
-      ],
-      "sourceTokens": "3445130492870",
-      "feesSol": 0.00404428,
-      "lastValueSol": 0.089298334
+      "feesSol": 0.00604928,
+      "lastValueSol": 0.098323143
     }
   },
   "closed": [
@@ -954,6 +936,16 @@
       "closedAt": 1792919981155,
       "reason": "copia venta del trader",
       "feesSol": 0.00604928
+    },
+    {
+      "mint": "nC3to2NNeCNRa8bAGbjAoxqreJegfP8Wuf4yHzypump",
+      "source": "7gmjcpamkRrWmsUhQqc9H4EKN4cADnQb8SwJdgRFEkui",
+      "totalCostSol": 0.10404428,
+      "realizedPnlSol": -0.045111496,
+      "openedAt": 1792934575961,
+      "closedAt": 1792939708649,
+      "reason": "stop loss (-41.4%)",
+      "feesSol": 0.00604928
     }
   ],
   "processed": [
@@ -1672,6 +1664,6 @@
     "2026-10-22": 0.19621871799999985,
     "2026-10-23": -0.055489801000000054,
     "2026-10-24": -0.13878526100000005,
-    "2026-10-25": -0.148216866
+    "2026-10-25": -0.142729524
   }
 }
