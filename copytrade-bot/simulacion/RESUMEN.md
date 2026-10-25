@@ -1,6 +1,6 @@
 # 🧪 Simulación del bot de copytrade
 
-**Actualizado:** 25/10 03:00 · **en marcha desde:** 22/10 12:40 (63,3 h) · hora de España
+**Actualizado:** 25/10 03:12 · **en marcha desde:** 22/10 12:40 (63,5 h) · hora de España
 
 Dinero ficticio: 0,1 SOL por trade, con precios reales de Jupiter y el retraso real del bot. No se ha gastado nada.
 
@@ -21,11 +21,11 @@ Comisiones estimadas ya descontadas en los resultados: 0,159 SOL en 25 operacion
 | Pocas y buenas (2Y8u) | 0 | 0 | 0 | — | — | — |
 | Walta (descartado) | 0 | 1 | 1 | 0% | −0,042 SOL (−42,3%) | — |
 | Constante (7q3C) (descartado) | 13 | 2 | 2 | 0% | −0,082 SOL (−40,4%) | — |
+| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (+20,5%) |
 | Jijo (descartado) | 0 | 4 | 4 | 0% | −0,183 SOL (−45,8%) | — |
-| peacefuldestroy (descartado) | 0 | 28 | 27 | 33% | −0,191 SOL (−7,1%) | 1 (−3,8%) |
 | Holder paciente (7ciZ) | 23 | 14 | 13 | 15% | −0,225 SOL (−16,7%) | 1 (−28,6%) |
 
-**Total cerrado:** −0,025 SOL (−0,3%) · **abierto:** −0,033 SOL sobre 0,20 SOL
+**Total cerrado:** −0,025 SOL (−0,3%) · **abierto:** −0,009 SOL sobre 0,20 SOL
 
 _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiado tras pasar los filtros._
 
@@ -33,8 +33,8 @@ _Señales = compras del trader que ha visto el bot. Copiadas = las que ha copiad
 
 | Token | Trader | Coste | Valor ahora | Pico | Abierta hace |
 |---|---|---|---|---|---|
-| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | −3,8% | ×1,08 | 72,9 h |
-| [Hp48…pump](https://dexscreener.com/solana/Hp48kbT3Scan455jx5LwZyfMiqRaDH8xa6PBwBGhpump) | Holder paciente (7ciZ) | 0,104 SOL | −28,6% | ×1,00 | 1,5 h |
+| [6QYi…pump](https://dexscreener.com/solana/6QYik2YpgbndorAAVnkv4gmRYDJ73TuGAdRssG7Vpump) | peacefuldestroy (descartado) | 0,100 SOL | +20,5% | ×1,25 | 73,1 h |
+| [Hp48…pump](https://dexscreener.com/solana/Hp48kbT3Scan455jx5LwZyfMiqRaDH8xa6PBwBGhpump) | Holder paciente (7ciZ) | 0,104 SOL | −28,6% | ×1,00 | 1,7 h |
 
 ## Últimos trades cerrados (94 en total)
 
